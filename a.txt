@@ -1,2 +1,8 @@
-This is Ankit Arora
+<<<<<<< HEAD
+hello.This is Ankit Arora
+=======
+ Arora
+>>>>>>> 705c60f8be3b10a835043c28cf5f477ecee3103d
 Hi. This is Vikram.
+hello..
+
