@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 hi
 Hi. This is Vikram.
@@ -17,3 +18,6 @@ Hi. This is Vikram.
 hello..
 
 
+=======
+This is th final file by NItish
+>>>>>>> 5288497c36edf8b8ab40a678e248f8927dedca7e
