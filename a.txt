@@ -1,6 +1,17 @@
+kkk<<<<<<< HEAD
 hi
 Hi. This is Vikram.
 <<<<<<< HEAD
 neha sharma
 =======
 >>>>>>> 1588f3ba72165c7ff9f648aafc70ade86bf6a325
+=======
+first line
+
+Ankit Arora
+Hi. This is Vikram.
+
+ Arora
+Hi. This is Vikram.
+hello..
+>>>>>>> 53f730986c4f087576604c61844abc3a9cda3ff1
