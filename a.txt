@@ -1,11 +1,1 @@
-Ankit Arora                                  |  Ankit Arora                                  |  Ankit Arora
-  bbye ankit arora 
-
-Ankit Arora
-  bbye ankit arora                             |  ---------------------------------------------|  Hi. This is Vikram. 
-Ankit Arora
-<<<<<<< HEAD
-bbye ankit arora
-=======
-Hi. This is Vikram.
->>>>>>> 1588f3ba72165c7ff9f648aafc70ade86bf6a325
+This is th final file
