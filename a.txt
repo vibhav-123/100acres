@@ -1,6 +1,10 @@
-<<<<<<< HEAD
-hello.This is Ankit Arora
-=======
+hi
+Hi. This is Vikram.
+first line
+
+Ankit Arora
+Hi. This is Vikram.
+
  Arora
 Hi. This is Vikram.
 hello..
