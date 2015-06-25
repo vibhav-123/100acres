@@ -1,0 +1,51 @@
+<style> 
+.bgImage {
+    background-image: url("http://www.project.com/images/Investment111.jpg");
+    background-size: 1300px 700px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+div.title{
+position: absolute;
+top:0px;
+width:100%;
+color:#00ff00;
+text-align:left;
+text-indent:20 px;
+height:46;
+font-size:50px;
+}
+div.button{
+position: absolute;
+bottom: 50px;
+left: 30px;
+}
+div.button2{
+position: absolute;
+bottom: 50px;
+left: 100px;
+}
+div.button3{
+position: absolute;
+bottom: 50px;
+left: 170px;
+width:2000px;
+}
+
+#flip{
+text-align: center;
+}
+#panel, #flip {
+	margin-top:10%;
+	margin-left: 70%;
+    width:300px;
+    padding: 5px;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    display: none;
+}
+
+</style>

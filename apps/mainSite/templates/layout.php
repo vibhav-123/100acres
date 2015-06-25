@@ -10,8 +10,12 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
   </head>
-  <body>
+  <body style="background-image:url('http://www.100acres.com/images/bg.jpg');background-size: 1300px 700px;
+    background-repeat: no-repeat;
+    padding-top: 40px">
+	
     <?php echo $sf_content ?>
+
   </body>
 </html>
 
