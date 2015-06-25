@@ -1,0 +1,8 @@
+<input type='button' id='myPr-Click' value='Rent' class="btn btn-lg btn-outline" onclick="javascript::myFun()" />
+
+<script>
+function myFun()
+{
+	window.location.href='/mainSite_dev.php/login';
+}
+</script>
