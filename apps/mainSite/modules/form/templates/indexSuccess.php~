@@ -3,7 +3,7 @@
 <p align="center">Start posting your property and add property features	</p>
 <div style="margin-left:200px">
 <hr>
-<form method = "POST" action="/mainSite_dev.php/form">
+<form method = "POST" action="/form">
 <ol>
 *I am: <input type="radio" name="iam" value="1">Owner
 <input type="radio" name="iam" value="2">Broker

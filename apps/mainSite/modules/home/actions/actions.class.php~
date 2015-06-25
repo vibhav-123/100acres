@@ -17,8 +17,8 @@ class homeActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    //$this->forward('default', 'module');
-    $obj = new myClass();
-    $obj->doIt();
+   //$this->forward('default', 'module');
+	 $obj = new connectdb();
+       
   }
 }

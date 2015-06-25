@@ -1,17 +1,16 @@
 
 <h1 align="center" >Basic Property Details</h1>
-<p align="center">Start posting your property and add property features	</p>
-<div style="margin-left:200px">
+<div style="margin-left:200px">Start posting your property and add property features	
 <hr>
-<form method = "POST" action="/mainSite_dev.php/form">
+<form method = "POST" action="">
 <ol>
-*I am: <input type="radio" name="iam" value="1">Owner
-<input type="radio" name="iam" value="2">Broker
-<input type="radio" name="iam" value="3">Builder
+*I am: <input type="radio" name="iam" value="owner">Owner
+<input type="radio" name="iam" value="broker">Broker
+<input type="radio" name="iam" value="builder">Builder
 <br>
 <br>
-*I want to: <input type="radio" name="iwantto" value="1">Sell
-<input type="radio" name="iwantto" value="2">Rent/Lease Out
+*I want to: <input type="radio" name="iwantto" value="sell">Sell
+<input type="radio" name="iwantto" value="Rent">Rent/Lease Out
 <br><br>
 *Type of Property: <select name='property'> 
 	

@@ -2023,3 +2023,307 @@ Jun 25 13:16:52 symfony [info] {sfWebDebugLogger} Factories 3.38 ms (1)
 Jun 25 13:16:52 symfony [info] {sfWebDebugLogger} Action "home/index" 0.05 ms (1)
 Jun 25 13:16:52 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 1.10 ms (1)
 Jun 25 13:16:52 symfony [info] {sfWebResponse} Send content (29211 o)
+Jun 25 13:42:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 13:42:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 13:42:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 13:42:20 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 13:42:20 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 13:42:20 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 13:42:20 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 13:42:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 13:42:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 13:42:20 symfony [info] {sfWebDebugLogger} Configuration 25.44 ms (9)
+Jun 25 13:42:20 symfony [info] {sfWebDebugLogger} Factories 16.00 ms (1)
+Jun 25 13:42:20 symfony [info] {sfWebDebugLogger} Action "home/index" 0.06 ms (1)
+Jun 25 13:42:20 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 2.94 ms (1)
+Jun 25 13:42:20 symfony [info] {sfWebResponse} Send content (29214 o)
+Jun 25 13:42:50 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 13:42:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 13:42:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 13:42:50 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 13:42:50 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 13:42:50 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 13:42:50 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 13:42:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 13:42:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 13:42:50 symfony [info] {sfWebDebugLogger} Configuration 0.43 ms (9)
+Jun 25 13:42:50 symfony [info] {sfWebDebugLogger} Factories 3.39 ms (1)
+Jun 25 13:42:50 symfony [info] {sfWebDebugLogger} Action "home/index" 0.05 ms (1)
+Jun 25 13:42:50 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 1.83 ms (1)
+Jun 25 13:42:50 symfony [info] {sfWebResponse} Send content (29244 o)
+Jun 25 14:29:17 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 14:29:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 14:29:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 14:29:17 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 14:29:17 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 14:29:17 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 14:29:17 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 14:29:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 14:29:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 14:29:17 symfony [info] {sfWebDebugLogger} Configuration 0.53 ms (9)
+Jun 25 14:29:17 symfony [info] {sfWebDebugLogger} Factories 35.32 ms (1)
+Jun 25 14:29:17 symfony [info] {sfWebDebugLogger} Action "home/index" 0.06 ms (1)
+Jun 25 14:29:17 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 1.41 ms (1)
+Jun 25 14:29:17 symfony [info] {sfWebResponse} Send content (29015 o)
+Jun 25 15:25:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 15:25:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 15:25:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 15:25:26 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 15:25:26 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 15:25:26 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 15:25:26 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 15:25:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 15:25:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 15:25:26 symfony [info] {sfWebDebugLogger} Configuration 0.53 ms (9)
+Jun 25 15:25:26 symfony [info] {sfWebDebugLogger} Factories 2.97 ms (1)
+Jun 25 15:25:26 symfony [info] {sfWebDebugLogger} Action "home/index" 0.06 ms (1)
+Jun 25 15:25:26 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 1.40 ms (1)
+Jun 25 15:25:26 symfony [info] {sfWebResponse} Send content (29046 o)
+Jun 25 15:25:48 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 15:25:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 15:25:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 15:25:48 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 15:25:48 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 15:25:48 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 15:25:48 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 15:25:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 15:25:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 15:25:48 symfony [info] {sfWebDebugLogger} Configuration 37.04 ms (9)
+Jun 25 15:25:48 symfony [info] {sfWebDebugLogger} Factories 22.92 ms (1)
+Jun 25 15:25:48 symfony [info] {sfWebDebugLogger} Action "home/index" 0.06 ms (1)
+Jun 25 15:25:48 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 3.30 ms (1)
+Jun 25 15:25:48 symfony [info] {sfWebResponse} Send content (29246 o)
+Jun 25 15:27:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 15:27:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 15:27:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 15:27:45 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 15:27:45 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 15:27:45 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 15:27:45 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 15:27:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 15:27:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 15:27:45 symfony [info] {sfWebDebugLogger} Configuration 0.77 ms (9)
+Jun 25 15:27:45 symfony [info] {sfWebDebugLogger} Factories 4.92 ms (1)
+Jun 25 15:27:45 symfony [info] {sfWebDebugLogger} Action "home/index" 0.10 ms (1)
+Jun 25 15:27:45 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 2.54 ms (1)
+Jun 25 15:27:45 symfony [info] {sfWebResponse} Send content (29212 o)
+Jun 25 17:15:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 17:15:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 17:15:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 17:15:19 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 17:15:19 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 17:15:19 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 17:15:19 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 17:15:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 17:15:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 17:15:19 symfony [info] {sfWebDebugLogger} Configuration 20.24 ms (10)
+Jun 25 17:15:19 symfony [info] {sfWebDebugLogger} Factories 16.32 ms (1)
+Jun 25 17:15:19 symfony [info] {sfWebDebugLogger} Action "home/index" 0.04 ms (1)
+Jun 25 17:15:19 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 2.12 ms (1)
+Jun 25 17:15:19 symfony [info] {sfWebResponse} Send content (29050 o)
+Jun 25 17:16:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 17:16:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 17:16:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 17:16:44 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 17:16:44 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 17:16:44 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 17:16:44 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 17:16:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 17:16:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 17:16:44 symfony [info] {sfWebDebugLogger} Configuration 0.39 ms (9)
+Jun 25 17:16:44 symfony [info] {sfWebDebugLogger} Factories 3.72 ms (1)
+Jun 25 17:16:44 symfony [info] {sfWebDebugLogger} Action "home/index" 1.51 ms (1)
+Jun 25 17:16:44 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 17.57 ms (1)
+Jun 25 17:16:44 symfony [info] {sfWebResponse} Send content (29245 o)
+Jun 25 17:58:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 17:58:02 symfony [info] {myUser} Automatic user logout due to timeout
+Jun 25 17:58:02 symfony [info] {myUser} User is not authenticated
+Jun 25 17:58:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 17:58:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 17:58:02 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 17:58:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 17:58:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 17:58:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 17:58:43 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 17:58:43 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 17:58:43 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 17:58:43 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 17:58:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 17:58:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 17:58:43 symfony [info] {sfWebDebugLogger} Configuration 0.43 ms (9)
+Jun 25 17:58:43 symfony [info] {sfWebDebugLogger} Factories 2.15 ms (1)
+Jun 25 17:58:43 symfony [info] {sfWebDebugLogger} Action "home/index" 1.63 ms (1)
+Jun 25 17:58:43 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 1.26 ms (1)
+Jun 25 17:58:43 symfony [info] {sfWebResponse} Send content (29245 o)
+Jun 25 18:02:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /home with parameters array (  'module' => 'home',  'action' => 'index',)
+Jun 25 18:02:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:02:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:02:23 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Jun 25 18:02:23 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/home/templates/indexSuccess.php"
+Jun 25 18:02:23 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:02:23 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:02:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 18:02:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:02:23 symfony [info] {sfWebDebugLogger} Configuration 0.35 ms (9)
+Jun 25 18:02:23 symfony [info] {sfWebDebugLogger} Factories 2.56 ms (1)
+Jun 25 18:02:23 symfony [info] {sfWebDebugLogger} Action "home/index" 1.33 ms (1)
+Jun 25 18:02:23 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 1.26 ms (1)
+Jun 25 18:02:23 symfony [info] {sfWebResponse} Send content (29243 o)
+Jun 25 18:02:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:02:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:02:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:02:27 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:03:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:03:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:03:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:03:12 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:03:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:03:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:03:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:03:13 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:03:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:03:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:03:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:03:13 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:03:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:03:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:03:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:03:13 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:03:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:03:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:03:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:03:45 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:03:45 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/form/templates/indexSuccess.php"
+Jun 25 18:03:45 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:03:45 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:03:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 18:03:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:03:45 symfony [info] {sfWebDebugLogger} Configuration 1.74 ms (10)
+Jun 25 18:03:45 symfony [info] {sfWebDebugLogger} Factories 2.05 ms (1)
+Jun 25 18:03:45 symfony [info] {sfWebDebugLogger} Action "form/index" 0.05 ms (1)
+Jun 25 18:03:45 symfony [info] {sfWebDebugLogger} View "Success" for "form/index" 2.61 ms (1)
+Jun 25 18:03:45 symfony [info] {sfWebResponse} Send content (29640 o)
+Jun 25 18:04:17 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/actions.class.php" (/).
+Jun 25 18:04:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jun 25 18:04:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:04:17 symfony [info] {sfWebDebugLogger} Configuration 0.52 ms (5)
+Jun 25 18:04:17 symfony [info] {sfWebDebugLogger} Factories 3.52 ms (1)
+Jun 25 18:06:50 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/actions.class.php" (/).
+Jun 25 18:06:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jun 25 18:06:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:06:50 symfony [info] {sfWebDebugLogger} Configuration 0.25 ms (5)
+Jun 25 18:06:50 symfony [info] {sfWebDebugLogger} Factories 2.15 ms (1)
+Jun 25 18:06:56 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:06:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:06:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:06:56 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:06:56 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/form/templates/indexSuccess.php"
+Jun 25 18:06:56 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:06:56 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:06:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 18:06:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:06:56 symfony [info] {sfWebDebugLogger} Configuration 0.40 ms (9)
+Jun 25 18:06:56 symfony [info] {sfWebDebugLogger} Factories 2.62 ms (1)
+Jun 25 18:06:56 symfony [info] {sfWebDebugLogger} Action "form/index" 0.05 ms (1)
+Jun 25 18:06:56 symfony [info] {sfWebDebugLogger} View "Success" for "form/index" 1.32 ms (1)
+Jun 25 18:06:56 symfony [info] {sfWebResponse} Send content (29594 o)
+Jun 25 18:07:30 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:07:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:07:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:07:30 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:07:30 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/form/templates/indexSuccess.php"
+Jun 25 18:07:30 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:07:30 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:07:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 18:07:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:07:30 symfony [info] {sfWebDebugLogger} Configuration 0.41 ms (9)
+Jun 25 18:07:30 symfony [info] {sfWebDebugLogger} Factories 2.30 ms (1)
+Jun 25 18:07:30 symfony [info] {sfWebDebugLogger} Action "form/index" 0.05 ms (1)
+Jun 25 18:07:30 symfony [info] {sfWebDebugLogger} View "Success" for "form/index" 1.00 ms (1)
+Jun 25 18:07:30 symfony [info] {sfWebResponse} Send content (29593 o)
+Jun 25 18:07:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:07:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:07:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:07:52 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:07:52 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/form/templates/indexSuccess.php"
+Jun 25 18:07:52 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:07:52 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:07:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 18:07:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:07:52 symfony [info] {sfWebDebugLogger} Configuration 0.38 ms (9)
+Jun 25 18:07:52 symfony [info] {sfWebDebugLogger} Factories 2.60 ms (1)
+Jun 25 18:07:52 symfony [info] {sfWebDebugLogger} Action "form/index" 0.05 ms (1)
+Jun 25 18:07:52 symfony [info] {sfWebDebugLogger} View "Success" for "form/index" 1.38 ms (1)
+Jun 25 18:07:52 symfony [info] {sfWebResponse} Send content (29643 o)
+Jun 25 18:07:57 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:07:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:07:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:07:57 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:07:57 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/modules/form/templates/indexSuccess.php"
+Jun 25 18:07:57 symfony [info] {sfPHPView} Decorate content with "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:07:57 symfony [info] {sfPHPView} Render "/var/www/html/myProj/apps/mainSite/templates/layout.php"
+Jun 25 18:07:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 25 18:07:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 25 18:07:57 symfony [info] {sfWebDebugLogger} Configuration 0.54 ms (9)
+Jun 25 18:07:57 symfony [info] {sfWebDebugLogger} Factories 2.98 ms (1)
+Jun 25 18:07:57 symfony [info] {sfWebDebugLogger} Action "form/index" 0.06 ms (1)
+Jun 25 18:07:57 symfony [info] {sfWebDebugLogger} View "Success" for "form/index" 1.24 ms (1)
+Jun 25 18:07:57 symfony [info] {sfWebResponse} Send content (30432 o)
+Jun 25 18:48:37 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:48:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:48:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:48:37 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:50:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:50:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:50:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:50:15 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:50:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:50:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:50:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:50:23 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:51:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:51:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:51:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:51:20 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:51:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:51:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:51:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:51:46 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:52:11 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:52:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:52:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:52:11 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:53:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:53:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:53:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:53:22 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:53:22 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/html/myProj/apps/mainSite/lib/property.class.php on line 25 (Undefined variable: conn)
+Jun 25 18:54:08 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:54:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:54:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:54:08 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:54:08 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/html/myProj/apps/mainSite/lib/property.class.php on line 25 (Undefined variable: conn)
+Jun 25 18:54:11 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:54:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:54:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:54:11 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:54:11 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/html/myProj/apps/mainSite/lib/property.class.php on line 25 (Undefined variable: conn)
+Jun 25 18:54:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:54:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:54:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:54:20 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 18:54:20 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/html/myProj/apps/mainSite/lib/property.class.php on line 25 (Undefined variable: obj)
+Jun 25 18:54:20 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/html/myProj/apps/mainSite/lib/property.class.php on line 25 (Undefined variable: conn)
+Jun 25 18:54:20 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/html/myProj/apps/mainSite/lib/property.class.php on line 25 (Trying to get property of non-object)
+Jun 25 18:56:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 18:56:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 18:56:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 18:56:46 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 19:00:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 19:00:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 19:00:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 19:00:02 symfony [info] {formActions} Call "formActions->executeIndex()"
+Jun 25 19:00:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /form with parameters array (  'module' => 'form',  'action' => 'index',)
+Jun 25 19:00:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 25 19:00:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 25 19:00:46 symfony [info] {formActions} Call "formActions->executeIndex()"
