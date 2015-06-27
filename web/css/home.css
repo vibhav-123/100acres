@@ -34,9 +34,10 @@ width:2000px;
 
 #flip{
 text-align: center;
+margin-top:10%;
 }
 #panel, #flip {
-	margin-top:10%;
+	
 	margin-left: 70%;
     width:300px;
     padding: 5px;
@@ -47,5 +48,11 @@ text-align: center;
 #panel {
     display: none;
 }
+
+div.contact{
+color: #ffffff;
+position: absolute;
+bottom: 50px;
+right: 170px;
 
 </style>

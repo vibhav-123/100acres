@@ -5,7 +5,7 @@ class myClass{
 	private $var1 = "Hi";
 	public function __construct()
 	{
-		echo "I m ctor";
+		echo "tor";
 	}
 	
 	private function Process()

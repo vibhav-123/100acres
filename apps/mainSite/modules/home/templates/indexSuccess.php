@@ -1,3 +1,5 @@
+
+<?php include_partial('global/header');?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script> 
 $(document).ready(function(){
@@ -7,13 +9,17 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="title" id="titile">
-100 Acres.com
 
-<a href="file:///var/www/html/myProj/form.html"><img src="http://www.100acres.com/images/login.jpeg" align="right"
-     width="72" height="46" border="0" 
- /></a></div>
+<div class="title" id="title1">
+<a href="http://www.100acres.com/mainSite_dev.php/login"><img src="http://www.100acres.com/images/login.jpeg" align="right"
+     width="72" height="46" border="0"></a></div>
+
+
+<div class="title" id="title2">
+<center><a href="http://www.100acres.com/mainSite_dev.php/login"><h3 text-align="right">Post A Property</h3>
+</div></center></a>
  
+
 
 <div class="button" id="button1">
  <button type="button" font-size="100px">Buy</button> 
@@ -76,6 +82,4 @@ $(document).ready(function(){
 </form>
 
 </div>
-
-
 

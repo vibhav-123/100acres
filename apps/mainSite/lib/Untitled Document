@@ -1,0 +1,8 @@
+$connec = Doctrine_Manager::connection();
+
+$c="INSERT INTO users(mobile,username,email,password) VALUES ($mobile,$username,$email,$password)";
+
+$q = Doctrine_Core::getTable('users')
+->createQuery('c');
+
+$comments = $q->execute();

@@ -17,6 +17,19 @@ class formActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+//    $this->forward('default', 'module');
+//	$postParameters=$request->getPostParameters();
+//	$prop=new property();	
+//	if($postParameters)
+//	$prop->postRecords($postParameters);
+  }
+
+  public function executeSubmit(sfWebRequest $request)
+  {
+//    $this->forward('default', 'module');
+	$postParameters=$request->getPostParameters();
+	$prop=new property();	
+	if($postParameters)
+	$prop->postRecords($postParameters);
   }
 }

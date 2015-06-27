@@ -1,0 +1,24 @@
+<?php 
+
+class users{
+
+public function postUsers($parameters)
+{
+//global connectdb::$conn;
+$username=$parameters['username'];
+$mobile=$parameters['contact'];
+$email=$parameters['email'];
+$password=$parameters['p'];
+
+$connec = Doctrine_Manager::connection();
+
+$sql="INSERT INTO users(mobile,username,email,password) VALUES (:m,:usr,:eml,:pswd)";
+$q=$connec->prepare($sql);
+$q->execute(array(':m'=>$mobile,
+		':usr'=>$username,
+		':eml'=>$email,
+		':pswd'=>$password,
+		));
+}
+}
+?>
