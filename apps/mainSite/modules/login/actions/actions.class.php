@@ -50,9 +50,6 @@ public function executeLog(sfWebRequest $request)
 
   public function executeRegister(sfWebRequest $request)
   {
-
-	    if(($request->getMethod())=="POST")
-    {
    	 $postParameters=$request->getPostParameters();
    	 $validate=new validate();
    	 if($postParameters)
@@ -63,20 +60,17 @@ public function executeLog(sfWebRequest $request)
 			$prop=new users();	
 			$prop->postUsers($postParameters);
 			$result="You have been successfully registered.";
-			echo "registration successful";
+			echo "registration successful\n";
 			header("Location: http://www.100acres.com/mainSite_dev.php/home");
 			exit("bye");
 			}
 		else{
-		$result= "Server side validation failed. $err";}
+		$result= "Server side validation failed. $err";
+		$response = json_encode($result);
+	         echo "<script type='text/javascript'>alert('$response');</script>";}
+
    	 }
-   	 
-   	 
-    }
-	else 
-	$result = "Invalid method used. courtesy: register";  
-	$response = json_encode($result);
-      
+	 
  }
 }
 ?>

@@ -1,5 +1,12 @@
 
-<?php include_partial('global/header');?>
+<?php include_partial('global/header');
+function checkMethod()
+{
+if(isset($_POST['submit'])){}
+else
+{echo "<script type='text/javascript'>alert('Invalid method used.finall.'); </script>";}
+}
+?>
 
 <font color="#FE2E2E">
 <h1 align="center" >Registration Form</h1>
@@ -14,7 +21,7 @@
 <p>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="email"></p>
 <p>Contact No      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="contact"></p>
 
-<p><input type="submit" value="Register" style=margin-left:40%;"></p> 
+<p><input type="submit" name="submit" value="Register" onclick="checkMethod()" style="margin-left:40%;"></p> 
 </form>
 </div>
 </font>

@@ -4,24 +4,16 @@ class validate{
 
 public function validateRegister($parameters)
 {
-//global connectdb::$conn;
 $username=$parameters['username'];
 $emp_password=$parameters['p'];
 $emp_cpassword=$parameters['pwd2'];
 $email=$parameters['email'];
 $contact=$parameters['contact'];
-
-//$errorMsg;
-
-//if(isset($_POST['Register'])){
+//$methodCheck=$parameters['Register'];
 
 $emp_name=trim($username);
 $emp_email=trim($email);
 $emp_contact=trim($contact);
-//$emp_password=$_POST["p"];
-//$emp_cpassword=$_POST["pwd2"];
-
-//$errorMsg="true";
 
 if($emp_name =="") {
   $errorMsg=  "error : You did not enter a name.";
