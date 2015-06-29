@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/07-Databases
+
+all:
+<<<<<<< HEAD
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      pdo_mysql:host=localhost;dbname=acres100
+      username: root
+      password: dynamite
+=======
+  doctrine: 
+    class: 
+    param:
+      dsn:      mysql:host=;dbname
+      username: 
+      password: 
+>>>>>>> 61ad375df32eed2c36e8e461dee17db654623d87

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+=======
 
 
-
+<div class="title" id="titile">
+100 Acres.com
+>>>>>>> 61ad375df32eed2c36e8e461dee17db654623d87
 
 <?php include_partial('global/header');?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -85,6 +89,4 @@ $(document).ready(function(){
 </form>
 
 </div>
-
-
 

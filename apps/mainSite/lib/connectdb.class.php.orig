@@ -3,9 +3,9 @@
 class connectdb{
 
 <<<<<<< HEAD
-public  $conn=null;
+public  static $conn=null;
 =======
-public $conn=null;
+public static $conn=null;
 >>>>>>> 61ad375df32eed2c36e8e461dee17db654623d87
 private $servername = "localhost";
 private $username = "root";

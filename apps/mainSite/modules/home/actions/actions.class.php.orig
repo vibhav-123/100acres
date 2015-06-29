@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * home actions.
+ *
+ * @package    mysite
+ * @subpackage home
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class homeActions extends sfActions
+{
+ /**
+  * Executes index action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeIndex(sfWebRequest $request)
+  {
+   //$this->forward('default', 'module');
+<<<<<<< HEAD
+	//$obj = new connectdb();
+=======
+	 $obj = new connectdb();
+>>>>>>> 61ad375df32eed2c36e8e461dee17db654623d87
+	//print_r($request);	
+	//$result = $obj->getRecords(10);
+       
+  }
+}
