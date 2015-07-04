@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+<?php
+	class postproperty_model extends CI_Model{
+=======
+ <?php
+	class postproperty_model extends CI_Model
+	{
+>>>>>>> c95117ff644f2977ab237c154f17c581322630c9
+		function __construct() {
+			parent::__construct();
+			$this->load->database();
+		}
+		
+		function form_insert($data){
+			$this->db->insert('property', $data);
+			
+		}
+	}
+?>
