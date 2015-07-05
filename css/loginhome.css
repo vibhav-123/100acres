@@ -1,4 +1,5 @@
-body {
+body 
+{
     background-image: url("http://www.100acres.com/images/bgimage3.jpg");
     background-repeat: no-repeat;
     background-position: left top;
@@ -14,54 +15,56 @@ body {
   	text-align: left;
   	top: 0px;
 }
-	#nav ul{}
-		#nav ul li{
-			display: inline-block;
-			height: 62px;
-		}
-			#nav ul li a{
-				padding: 20px;
-				background: orange;
-				color: white;
-			}
-			#nav ul li a:hover{
-				background-color: #ffb424;
-				box-shadow: 0px 1px 1px #666;
-			}
-			#nav ul li a:active{ background-color: #ff8f00; }
-				#nav ul li.bluebutton a
-				{
-					top: 3px;
-					width: 100px;
-    				height: 10px;
-					color: #FFFFFF;
-					border-radius: 5px;
-					border: 4px solid #000A1A;
-					font-family: Verdana, Arial, Sans-Serif;
-					font-size: 1em;
-					font-weight: bold;
-					text-align: center;
-					box-shadow: 5px 5px 5px #888;
-					display: inline-block;
-					margin-right: 20px;
-					background-color: #001F4C;
-				}
-				#nav ul li.another_bluebutton a
-				{
-					top:3px;
-					width: 100px;
-    				height: 10px;
-					background-color: #00008A;
-					color: #FFFFFF;
-					border-radius: 5px;
-					border: 4px solid #00004C;
-					font-family: Verdana, Arial, Sans-Serif;
-					font-size: 1em;
-					font-weight: bold;
-					text-align: center;
-					box-shadow: 5px 5px 5px #888;
-					display: inline-block;
-					margin-right: 20px;
-
-				}
-							
+#nav ul{}
+#nav ul li
+{
+	display: inline-block;
+	height: 62px;
+}
+#nav ul li a
+{
+	padding: 20px;
+	background: orange;
+	color: white;
+}
+#nav ul li a:hover
+{
+	background-color: #ffb424;
+	box-shadow: 0px 1px 1px #666;
+}
+#nav ul li a:active{ background-color: #ff8f00; }
+#nav ul li.bluebutton a
+{
+	top: 3px;
+	width: 100px;
+	height: 10px;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: 4px solid #000A1A;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	box-shadow: 5px 5px 5px #888;
+	display: inline-block;
+	margin-right: 20px;
+	background-color: #001F4C;
+}
+#nav ul li.another_bluebutton a
+{
+	top:3px;
+	width: 100px;
+	height: 10px;
+	background-color: #00008A;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: 4px solid #00004C;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	box-shadow: 5px 5px 5px #888;
+	display: inline-block;
+	margin-right: 20px;
+}
+			

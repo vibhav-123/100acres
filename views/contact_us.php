@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--contact us page-->
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -111,6 +112,7 @@
 		<li class="blue"><a href="http://www.100acres.com/About_us">About Us</a></li>
 		<li class="another_blue"><a href="http://www.100acres.com/Contact_us">Contact Us</a></li>
 		<li class="blue"><a href="http://www.100acres.com/Form">Register</a></li>
+		<!--If name is set then it implies that session is created.Accordingly show the LOGIN and LOGOUT button-->
         <?php
 				if($Name!='NULL') 
         {?>

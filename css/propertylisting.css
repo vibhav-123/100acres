@@ -1,10 +1,12 @@
-#header {
+#header 
+{
     background-color:black;
     color:white;
     text-align:left;
     padding:5px;
 }
-#nav {
+#nav 
+{
     line-height:30px;
     height:auto;
     width:250px;
@@ -13,7 +15,8 @@
     background-color: #6699FF;
     font-weight: bold;     
 }
-#section {
+#section
+ {
     width:350px;
     height: auto;
     float:left;
@@ -21,22 +24,24 @@
 }
 #main
 {
- width:1000px;
- height:200px;
- float:left; 
- border: 1px solid black;
- margin-bottom: 5px;
- margin-bottom: 5px;
+     width:1000px;
+     height:200px;
+     float:left; 
+     border: 1px solid black;
+     margin-bottom: 5px;
+     margin-bottom: 5px;
 
 }
-#footer {
+#footer 
+{
     background-color:black;
     color:white;
     clear:both;
     text-align:center;
-   padding:5px;    
+    padding:5px;    
 }
-.list_item {
+.list_item 
+{
     border: 1px solid gray;
     width: 50%;
     height: 100%;
@@ -45,8 +50,8 @@
     position: relative;
    
 }
-.list_item1{
-    
+.list_item1
+{
     padding: 5px;
     border: 1px solid gray;
     width: 45%;

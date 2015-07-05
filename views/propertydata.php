@@ -1,88 +1,18 @@
+<!-- Property Listing form -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script type = "text/javascript" src="http://www.100acres.com/js/searchvalidation.js"></script>
     <title>Property Listing</title>
-    <style>
-#header {
-    background-color:black;
-    color:white;
-    text-align:left;
-    padding:5px;
-}
-#nav {
-    line-height:30px;
-    height:auto;
-    width:250px;
-    float:left;
-    padding:5px;   
-    background-color: #6699FF;
-    font-weight: bold;     
-}
-#error_min,#error_max{
-  color:red;
-}
-#section {
-    width:350px;
-    height: auto;
-    float:left;
-    padding:10px;    
-}
-#main
-{
- width:1000px;
- height:200px;
- float:left; 
- border: 1px solid black;
- margin-bottom: 5px;
- margin-bottom: 5px;
-
-}
-#footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-   padding:5px;    
-}
-.list_item {
-    border: 1px solid gray;
-    width: 50%;
-    height: 100%;
-    float: left;
-    display: inline;
-    position: relative;
-   
-}
-.list_item1{
-    
-    padding: 5px;
-    border: 1px solid gray;
-    width: 45%;
-    height: 70%;
-    float: right;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 10px;
-    display: inline;
-    position: relative;
-    text-align: center;
-    font-weight: bold;
-    background-color: cornflowerblue;
-    
-}
-#seller{
-  border: 1px solid black;
-  text-align: right;
-  margin-left: 70px;
-  margin-top: 40px;
-}
-
-</style>
+    <link rel=stylesheet type="text/css" href="http://localhost/codeigniter/css/propertysearchpage.css">
   </head>
-  <body>
+<body>
 <div id="header">
+  <div id="button">
+      <ul>
+        <li class="another_blue"><a href="http://www.100acres.com/Homenew">Home</a></li>
+      <ul>
+  </div>
 <h1>100 ACRES</h1>
 </div>
 <?php
@@ -90,19 +20,19 @@
     {
       $array=array();
       $i=0;
+      //array $saved_values used for saving form values 
       $city=$saved_values[0];
       $minprice=$saved_values[1];
       $maxprice=$saved_values[2];
       $Bedrooms=$saved_values[3];
       $sellorrent=$saved_values[4];
       $sort=$saved_values[5];
-      //echo $users['totalres']; die;
       $results_per_page=4.0;
-      $total_pages=ceil($users['totalres']/$results_per_page);
+      $total_pages=ceil($users['totalres']/$results_per_page); //total pages to be displayed
+      //url for the next pages 
       for ($i = 1; $i <= $total_pages; $i++){
         echo '<a href="http://www.100acres.com/property?select_city=' . $city . '&minprice='.$minprice.'&maxprice='.$maxprice.'&select_value='.$Bedrooms.'&sellorrent='.$sellorrent.'&sort='.$sort.'&submit=Submit&page='.$i.'">'.$i.'</a>';echo " ";
-
-       
+   
       }
   }
     
@@ -153,14 +83,12 @@
       <br>
       </form>
 </div>
-
 <div id="section">
 <h1>Property listings</h1>
 <p>
    <?php
-
         if($users){
-        foreach($users['result'] as $user) {
+       foreach($users['result'] as $user) {
           ?>
         <div id ="main">
           <div class="list_item"> 
@@ -181,21 +109,18 @@
           </div>
         </div>
         <?php
-        } }
+        }
+        }
         else
         {
-
-            echo "NO RESULTS TO DISPLAY!";
-
+          echo "NO RESULTS TO DISPLAY!";
         } 
-      ?>
-    
-    
+      ?>   
 </p>
 </div>
 <div id="footer">
 Copyright © 100acres.com
 </div>
-   
-  </body>
+<script type = "text/javascript" src="http://www.100acres.com/js/searchvalidation.js"></script> 
+</body>
 </html>

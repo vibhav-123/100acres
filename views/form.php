@@ -1,19 +1,11 @@
+<!--User Registration page-->
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <link rel=stylesheet type="text/css" href="http://localhost/codeigniter/css/form.css">
-  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://www.100acres.com/js/jquery.validate.min.js"></script>-->
-  <script src="http://www.100acres.com/js/form.js"></script>
-  <style>
-    body {
-            background-image: url("http://localhost/codeigniter/images/formbg.jpg");
-            background-position: center; 
-          }
-  </style>
 </head>
 <body>
+<!--If message is set then echo that to screen-->
 <?php if (isset($message) ) { ?>
 <CENTER><h3 style="color:green;"><?php echo $message; ?></h3></CENTER><br>
 <?php } ?>
@@ -35,17 +27,14 @@
     <div id="form_name">
     <form action="http://www.100acres.com/insert_ctrl" method="POST" id="register-form" name="register_form" onsubmit="return validate()">
       <div class="firstnameorlastname">
-         <p><span class="error">* required field.</span></p>
-       <div id="errorBox"></div>
           NAME: <br>
           <input type="text" name="Name" value="" placeholder="Enter your name"  class="input_name" ><br>
-          <span id="error_name"></span>  
+          <span id="error_name"></span>       
       </div>
       <div id="email_form">
          EMAIL:<br>
         <input type="email" name="Email" value=""  placeholder="Your Email" id="Email" class="input_email"><br>
         <span id="error_email"></span>  
-      
       </div>
       <div id="Re_email_form">
        MOBILE: <br>
@@ -57,17 +46,24 @@
         <input type="password" name="Password" value=""  placeholder="New Password" class="input_password"><br>
         <span id="error_password"></span>  
       </div>
-        <div>
+      <div id="password_form">
+       CONFIRM PASSWORD:
+        <input type="password" name="Confirm_Password" value=""  placeholder="Confirm Password" class="input_password"><br>
+        <span id="error_confirm_password"></span>  
+      </div>
+      <div>
         <p id="sign_user"> <input type="submit" value="Create account"> </p>
       </div>
       <div>
         <p id="sign_user"> Already a user? </p>
         <br>
+        <!--If user is already registered then redirect to Login page-->
       <center> <a href="http://www.100acres.com/Login">Sign in</a> </center>
       </div>
      </form>
     </div>
     </div>
 </div>
+ <script src="http://www.100acres.com/js/form.js"></script>
 </body>
 </html>

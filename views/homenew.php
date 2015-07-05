@@ -1,3 +1,4 @@
+<!-- Home page of 100acres.com-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,41 +6,6 @@
 	<title>100 Acres</title>
 	<link rel="stylesheet" href="http://localhost/codeigniter/css/style.css" type="text/css" />
 	<link rel="stylesheet" href="http://localhost/codeigniter/css/search.css" type="text/css" />
-	<script type = "text/javascript" src="http://www.100acres.com/js/searchvalidation.js"></script>
-<script> 
-	var state='abcd';
-	function toggle_buy() {
-	    var div = document.getElementById('panel');
-	    console.log(div.style.display=='');
-	    if (div.style.display == '' || div.style.display == 'none')
-	    {
-	           	div.style.display = 'block';
-	           	document.searchform.sellorrent.value = 'Sell';
-	        	state='buy';
-	     }
-	    else{
-	    	if(state=='buy') {
-	        	div.style.display = 'none';
-	        }	
-	    }    
-	 };
-
-    function toggle_rent(){
-    	var div = document.getElementById('panel');
-    	if (div.style.display == '' || div.style.display == 'none') {
-	      	   	div.style.display = 'block';
-	      	   	document.searchform.sellorrent.value = 'Rent';
-	        	state='rent';
-	      
-	    }
-	    else{ 
-	    	if(state=='rent'){
-	       		div.style.display = 'none';
-	       	}		
-	    }
- 	
-    };
-</script>
 </head>
 <body>
 <div id="header">
@@ -55,6 +21,7 @@
 				<li class="blue"><a href="http://www.100acres.com/About_us">About Us</a></li>
 				<li class="another_blue"><a href="http://www.100acres.com/Contact_us">Contact Us</a></li>
 				<li class="blue"><a href="http://www.100acres.com/Form">Register</a></li>
+		<!--If name is set then it implies that session is created and accordingly show the LOGIN and LOGOUT button-->
         <?php
 				if($Name!='NULL') 
           { ?>
@@ -63,7 +30,6 @@
 				<li class="another_blue"><a href="http://www.100acres.com/Login">Login</a></li><?php } ?>
 			 </ul>	
 		</div>
-
 		<div id="flip"><h4>Find a property !!!!</h4></div>
         <div id="panel">
         <form action="property" method="get" id="search" name="searchform" onsubmit="return validate()">
@@ -117,5 +83,7 @@
 				<div id="rent" onclick="toggle_rent()"><li class="black" ><a href="#/rent.html">RENT</a></li></div>
 			</ul>	
 		</div>
+		<script type = "text/javascript" src="http://www.100acres.com/js/searchvalidation.js"></script>
+		<script type = "text/javascript" src="http://www.100acres.com/js/togglefunction.js"></script>
 </body>
 </html>

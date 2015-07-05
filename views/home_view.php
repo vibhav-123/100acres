@@ -1,3 +1,4 @@
+<!-- Home view which is to be displayed after user login -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,20 +12,20 @@
 <h1>100 ACRES</h1>
 </div>
 	<div id="page">
-		<h2><center>Welcome <?php echo $Name; ?>!</center></h2>
+		<!-- Echo user name -->
+		<h2><center>Welcome <?php echo $Name; ?>!</center></h2>    
 		<div id="logo">
-
 			<h2>India's no.1 property portal covering all the major cities and a large number of agents and developers..</h2>
-
-		 </div>
+		</div>
 		<div id="nav">
 			<ul>
 			<li class="another_bluebutton"><a href="http://www.100acres.com/Homenew">Home</a></li>
 			<li class="bluebutton"> <a href="home/logout">Logout</a></li>
+			<!-- Send user id via GET request to post property form -->
    			<li class="another_bluebutton"><a href="http://www.100acres.com/Postproperty_controller/register?<?php echo "User_id=".$User_id; ?>">Property details</a></li>
 			</ul>	
 		</div>		
-		</div>
-		</div>
+	</div>
+</div>
 </body>
 </html>
