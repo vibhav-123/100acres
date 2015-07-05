@@ -67,7 +67,7 @@
 			$attr=array('name'=>'maxprice','class'=>'forminput','placeholder'=>'Enter Maximum Price','size'=>'30');
 			echo "<li>";echo form_input($attr);echo "</li>";
 			
-			$attr= array('1' => '1 BHK','2'=>'2 BHK','3'=>'3 BHK','4'=>'4 BHK' );
+			$attr= array('1BHK' => '1 BHK','2BHK'=>'2 BHK','3BHK'=>'3 BHK','4BHK'=>'4 BHK' );
 			$js='class="forminput1" placeholder="Number of BHK"';
 			echo "<li>";echo form_dropdown('bedroom', $attr, 2,$js);echo "</li>";
 			
