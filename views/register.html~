@@ -1,0 +1,86 @@
+<html>
+<head>
+
+<title>Register Yourself</title>
+
+<link rel="stylesheet" type="text/css" href="http://100acres.com/styling.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<div style="height:105%;background-color:#F2F2F2;border:0px solid #BDBDBD">
+
+
+<form name="register_form" method="post" action="" >		<!--changed here from frm to register_form-->
+
+<table border=0 width=100% bgcolor="#F2F2F2" align=center cellpadding=10>
+<tr align=center>
+<td align=left><font face="calibri"><b>Enter the Details<br><hr>
+</tr>
+</table>
+<table border=0 width=100% bgcolor="#F2F2F2"align=center cellpadding=10>
+<tr  >
+<td><font face="calibri">Name: <td><input type="text" name="user_name" class="t2"><br>   <!--changed name from namee to user_name-->
+</tr>
+<tr  >
+<td><font face="calibri">E-mail: <td><input type="text" name="email" class="t2"><br>
+</tr>
+<tr >
+<td><font face="calibri">Password: <td><input type="password" name="pass"class="t2"><br>
+</tr>
+<tr>
+<td><font face="calibri">Confirm Password: <td><input type="password" name="cpass"class="t2"><br>
+</tr>
+<tr>
+<td><font face="calibri">Phone No.: <td><input type="text" name="phone"class="t2"><br>
+</tr>
+<tr>
+<td><font face="calibri">Security Question: <td><select name="ques" class="t2">
+		   <option value="Mothers_Name">What is your mother's name?			
+		   <option value="Favourite_Cousin">Your favourite cousin?
+		   <option value="Nickname">Your nickname?
+		   <option value="Pets_Name">Your first pet's name?
+		   <option value="Favourite_Actress">Your favourite actress?
+		   <option value="Holiday_Spot">Your dream holiday spot?
+		   
+		   </select><br>
+</tr>
+<tr>
+<td><font face="calibri">Answer: <td><input type="text" name="ans"class="t2"><br>
+</tr>
+
+
+</table>
+<table border=0 width=100% bgcolor="#F2F2F2"align=center cellpadding=10>
+<tr align=center>
+<td align=right><input type="button" onClick="validate_register();" value="Register"class="t1" > 	
+<td align=left><input type="reset"value="Reset"class="t1">
+</tr>
+</table>
+</form>
+
+<form name="validate_data" method="post" action="" >  <!-- changed form name from frm1 to validate_data-->
+<center><label class=t3 id="vv1"><font size=2 color=green>Verification code has been sent to your e-mail id.</font></center></label>
+<table border=0 width=100% bgcolor="#F2F2F2"align=center cellpadding=10 class=t3 id="vv2">
+<tr>
+<td><font face="calibri">Enter Verification Code:<td><input type="text" class="t2" name="verify_code"><br>
+<td align=left><input type="button" value="Verify" class="t1" onclick="validate_verify();">
+</tr>
+</table>
+</form>
+
+
+</div>
+
+
+
+
+
+<script src="http://100acres.com/validation_file.js"></script>
+
+
+</body>
+</html>

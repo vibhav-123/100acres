@@ -1,0 +1,65 @@
+
+<?php
+
+header("Access-Control-Allow-Origin: *");
+echo "model reached\n";
+
+
+class search_model extends CI_Model{
+	public function search_property($data){			
+
+		$servername = "localhost";
+		$username = "root";
+		$password = "jaisairam";
+		$dbname = "100acres";
+	
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+		    die("Connection failed: " . $conn->connect_error);
+		}
+		
+		if($data["buyrent"]=="Buy" && $data["prop_type"]=="Residential")
+		{
+			$sql ="Select * from property where bedrooms='$data[bedrooms]' and price>=$data[minpriceb] and price<=$data[maxpriceb] and sell_rent='Sell' and city='$data[city]' and address like '%$data[location]%'";
+		}
+		else if($data["buyrent"]=="Buy"&&$data["prop_type"]=="Commercial")
+		{
+			$sql ="Select * from property where area>=$data[minareab] and area<=$data[maxareab] and price>=$data[minpriceb] and price<=$data[maxpriceb] and sell_rent='Sell' and city='$data[city]' and address like '%$data[location]%'";
+		}
+		else if($data["buyrent"]=="Rent"&&$data["prop_type"]=="Residential")
+		{
+			$sql ="Select * from property where bedrooms='$data[bedrooms]' and price>=$data[minprices] and price<=$data[maxprices] and sell_rent='Rent' and city='$data[city]' and address like '%$data[location]%'";
+		}
+
+		else if($data["buyrent"]=="Rent" && $data["prop_type"]=="Commercial")
+		{
+			echo "yooo";
+			$sql ="Select * from property where area>=$data[minareab] and area<=$data[maxareab] and price>=$data[minprices] and price<=$data[maxprices] and sell_rent='Rent' and city='$data[city]' and address like '%$data[location]%'";
+		}
+		
+		
+		echo $sql;
+		$result = $conn->query($sql);
+		//var_dump($result);
+		//exit;
+		//$numRows = $result->num_rows;
+		//echo ($result->num_rows());
+		if ($result->num_rows>0) 
+		{
+			echo 'Search Details:<br><br><table border=0 width=40% cellpadding=5>';
+		    while($row = $result->fetch_assoc()) 
+			{
+			echo "<tr><td>Property id: " . "<td>".$row["pid"]. "<br>";
+		    	}
+			echo '</table><br><br>';
+		} 
+		else 
+		{
+		   	echo "logged in for the first time! No details stored yet.";
+		}
+	}
+}
+?> 

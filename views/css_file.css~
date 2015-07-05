@@ -1,0 +1,5 @@
+.t1{width:70;height:33;background-color:#CEE3F6}
+.t2{width:200;height:30;}
+.t3{display:none;}
+.t4{width:300;height:50;}
+table {border-spacing: 0.5rem;border-collapse: collapse;}

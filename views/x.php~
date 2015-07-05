@@ -1,0 +1,22 @@
+<html> 
+<head>
+<link rel="stylesheet" type="text/css" href="http://www.100acres.com/css/styling.css">
+<script src="http://www.100acres.com/validation_file.js"></script>
+</head>
+<body>
+
+<table border=0 width=100%  align=center cellpadding=5>
+<tr align=center>
+<td align=left><hr>
+</tr>
+<a href="http://www.100acres.com/application/views/contact_us.html"target="iframe1"> <img src="http://www.100acres.com/images/Contact us.png"width=100px height=30px></img>
+<a href="http://www.100acres.com/index.php/welcome/findSearchResults1?offset=0&flag=0"target=iframe2>hello</a>
+
+</table>
+</a><hr>
+</tr>
+<center>
+</center>
+</table>
+</body>
+</html>

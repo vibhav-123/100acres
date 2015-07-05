@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Search</title>
+</head>
+<body>
+
+<html>
+<head>
+<title>Search for Property</title>
+<link rel="stylesheet" type="text/css" href="css_file.css">
+
+<script src="javascript_file.js"></script>
+
+</head>
+<body>
+
+<form name=frm method="post" enctype="multipart/form-data" action="">
+	<table border=0 width=100% bgcolor="#F2F2F2" align=center cellpadding=10>
+		<tr align=center>
+		<td align=left><font face="calibri" size=5>Enter the Search Details<br><hr>
+		</tr>
+	</table>
+	<table border=0 width=100% bgcolor="#F2F2F2"align=center cellpadding=10>
+		<tr>
+		<td><font face="calibri">I want to: 
+		<td>	<input type=radio name=buy_rent value="Buy" checked onclick="validate_search1(this);">Buy
+			<input type=radio name=buy_rent value="Rent" onclick="validate_search1(this);">Rent
+		</tr>
+
+		<tr>
+		<td><font face="calibri">City: 
+		<td>	<select name="city"class="t2">
+				   <option value="Noida">Noida		
+				   <option value="Rohini">Rohini
+				   <option value="Dwarka">Dwarka
+			</select><br>
+		</tr>
+
+		<tr>
+		<td><font face="calibri">Location: 
+		<td><input type="text" name=location class=t2>
+		</tr>
+		
+		<tr>
+		<td><font face="calibri">Type of Property: 
+		<td>	<input type=radio name=prop_type value="Residential" checked onclick="validate_search2(this);">Residential
+			<input type=radio name=prop_type value="Commercial" onclick="validate_search2(this);">Commercial
+		</tr>
+		
+
+		<tr id=bedb>
+		<td><font face="calibri">Bedrooms:</td>	<!--Sell,Rent Residential wala-->
+		<td>	<select name="bedrooms" class=t2 >
+				   <option value="1 BHK">1 BHK			
+				   <option value="2 BHK">2 BHK
+				   <option value="3 BHK">3 BHK
+				   <option value="4 BHK">4 BHK		   
+				   <option value="5 BHK">5 BHK			
+				   <option value="6 BHK">6 BHK
+				   <option value="7 BHK">7 BHK
+				   <option value="7+ BHK">7+ BHK		   
+			</select><br></td>
+		</tr>
+
+		<tr id=minarea class=t3>
+		<td>Min Area:
+		<td><input type="text" name=min_area_b class=t2>Sq.Ft.
+		</tr>
+		<tr id=maxarea class=t3>
+		<td>Max Area:
+		<td><input type="text" name=max_area_b class=t2>Sq.Ft.
+		</tr>
+
+		<tr id=minpriceb>
+		<td><font face="calibri">Min Price:</td>	<!--Sell,Rent Residential wala-->
+		<td>	<select name="min_price_b" class=t2>
+				   <option value="Below 5 lacs">Below 5 lacs			
+				   <option value="5 lacs">5 lacs
+				   <option value="15 lacs">15 lacs
+				   <option value="20 lacs">20 lacs	   
+				   <option value="25 lacs">25 lacs		
+				   <option value="30 lacs">30 lacs
+				   <option value="40 lacs">40 lacs
+				   <option value="50 lacs">50 lacs
+				   <option value="60 lacs">60 lacs	   
+				   <option value="70 lacs">75 lacs		
+				   <option value="90 lacs">90 lacs
+				   <option value="1 crores">1 crores
+				   <option value="3 crores">3 crores							   
+			</select><br></td>
+		</tr>
+
+		<tr id=maxpriceb >
+		<td><font face="calibri">Max Price:</td>	<!--Sell,Rent Residential wala-->
+		<td>	<select name="max_price_b" class=t2>
+				   <option value="Below 5 lacs">Below 5 lacs			
+				   <option value="5 lacs">5 lacs
+				   <option value="15 lacs">15 lacs
+				   <option value="20 lacs">20 lacs	   
+				   <option value="25 lacs">25 lacs		
+				   <option value="30 lacs">30 lacs
+				   <option value="40 lacs">40 lacs
+				   <option value="50 lacs">50 lacs
+				   <option value="60 lacs">60 lacs	   
+				   <option value="70 lacs">75 lacs		
+				   <option value="90 lacs">90 lacs
+				   <option value="1 crores">1 crores
+				   <option value="3 crores">3 crores							   
+			</select><br></td>
+		</tr>
+
+		
+		
+		<tr id=minprices class=t3>
+		<td><font face="calibri">Min Price:</td>	<!--Sell,Rent Residential wala-->
+		<td>	<select name="min_price_s" class=t2>			
+				   <option value="Below 5000">Below 5000
+				   <option value="5000">5000
+				   <option value="10000">10000	   
+				   <option value="15000">15000		
+				   <option value="20000">20000
+				   <option value="30000">30000
+				   <option value="50000">50000
+				   <option value="70000">70000
+				   <option value="80000">80000
+				   <option value="90000">function validate_search1(myRadio)
+
+				   <option value="1 lacs">1 lacs
+				   <option value="1.5 lacs">1.5 lacs
+				   <option value="2 lacs">2 lacs							   
+			</select><br></td>
+		</tr>
+
+		<tr id=maxprices class=t3>
+		<td><font face="calibri">Max Price:</td>	<!--Sell,Rent Residential wala-->
+		<td>	<select name="max_price_s" class=t2>			
+				   <option value="Below 5000">Below 5000
+				   <option value="5000">5000
+				   <option value="10000">10000	   
+				   <option value="15000">15000		
+				   <option value="20000">20000
+				   <option value="30000">30000
+				   <option value="50000">50000
+				   <option value="70000">70000
+				   <option value="80000">80000
+				   <option value="90000">90000		
+				   <option value="1 lacs">1 lacs
+				   <option value="1.5 lacs">1.5 lacs
+				   <option value="2 lacs">2 lacs							   
+			</select><br></td>
+		</tr>
+
+	</table>
+	<table border=0 width=100% bgcolor="#F2F2F2"align=center cellpadding=10>
+	<tr align=center>
+	<td align=right><input type="button" value="Post It" name="post_property" class=t1 onclick="validate_search3();"> 	<!--changed here-->
+	<td align=left><input type="reset"value="Reset"class="t1">
+	</tr>
+	</table>
+    
+</form>
+</body>
+</html>

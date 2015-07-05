@@ -1,0 +1,54 @@
+<html>
+<head>
+
+<title>Sign In</title>
+
+<link rel="stylesheet" type="text/css" href="http://www.100acres.com/css/styling.css"><!-- changed name and path of file-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+</head>
+<body
+
+<div id="fb-root"></div>
+
+<div style="height:105%;background-color:#F2F2F2;border:0px solid #BDBDBD">
+
+<form name="login_form" id="login_form" method="get" action="" > <!--changing name of form from frm to login_form -->
+
+<table border=0 width=100% bgcolor="#F2F2F2" align=center cellpadding=10>
+<tr align=center>
+<td align=left><font face="Calibri"size=5>Sign In<br><hr>
+</tr>
+</table>
+<table border=0 width=100% bgcolor="#F2F2F2"align=center cellpadding=10>
+<tr>
+<td><font face="calibri">E-mail: <td><input type="text" name="email" class="t2"><br>
+</tr>
+<tr >
+<td><font face="calibri">Password: <td><input type="password" name="pass" class="t2"><br>
+</tr>
+
+</table>
+<table border=0 width=100% bgcolor="#F2F2F2"align=center cellpadding=10>
+<tr align=center>
+<td align=right><input type="button" onclick="validate_login();" id="submitbutton" value="Login"class="t1">
+<td align=left><input type="reset" value="Reset"class="t1">
+</tr>
+
+</table>
+
+</form>
+</div>
+
+<hr>
+<center>OR:</center>
+
+<center><button type="Button" name="Facebook_Login" onclick="validateFB();" align="center"><img src="http://www.100acres.com/images/fb_button.png"></img></button></center>
+
+<script src="http://www.100acres.com/javascript/validation_file.js"></script>
+<script src="http://www.100acres.com/javascript/fblogin.js"></script>
+
+</body>
+
+</html>

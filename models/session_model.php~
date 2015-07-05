@@ -1,0 +1,20 @@
+<?php
+echo "welcome\n";
+	class Session_model extends CI_Model{
+		
+	public function create_session($email,$pass){
+		echo "inside create_session\n";	
+		session_start();
+			if(isset($_GET["email"]))		
+			{	
+				$email=$_GET['email'];
+				echo $email;
+			}
+			else
+				echo "False";}}
+			/*$pass=$_GET['pass'];
+			$_SESSION=["email"]=$email;
+			$_SESSION=["pass"]=$pass;*/
+	}
+}
+?>

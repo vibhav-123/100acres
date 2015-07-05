@@ -1,0 +1,27 @@
+
+Function renames (do)
+Break controller (do)
+Getter Setter for Model-instantiate object
+clean REQUEST parameters in constructor
+Combine models (do)
+Check for empty fields isset (do)
+Connection object-one (d0)
+Make a constant file (do)
+dbname should not be initialized
+Queries rewrite according to conditions (do)
+account_details_model - remove view code (do)
+make different functions in account_details (do)
+header in controller
+
+js and css in html folder    (done)
+styles in classes-when reqd
+change class names in css (do)
+all php files in view instead of html(do)
+names of css files and javascript files-100acres.js&.css (done)
+remove different .js files on php pages (do)
+register page:namee (done)
+use classes for <td>-register(htm_register.php)
+validations inline-if we hav tym
+load views from controllers(if tym)
+column names in tables (do)
+

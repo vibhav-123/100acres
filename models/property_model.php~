@@ -1,0 +1,59 @@
+
+<?php
+session_start();
+
+echo "model reached\n";
+header("Access-Control-Allow-Origin: *");
+
+class Property_model extends CI_Model{
+	public function post_property($data){	
+		$email=$_SESSION["email"];		
+		//$image=strtr($data["image"],'%5C','%5C%5C');
+		$image=str_replace("%5C","%5C%5C",$data["image"],$i);
+		echo $image;		
+		$img= urldecode ($image);
+		//$str=strstr($img,'\\','\\\\');
+//		echo $str;
+		//echo $img;
+		//$img=addslashes($_FILES['image']['tmp_name']);
+		//$name=addslashes($_FILES['image']['name']);
+		//$img=file_get_contents($img);
+		//$img=base64_encode($img);
+		
+
+		$servername = "localhost";
+		$username = "root";
+		$password = "jaisairam";
+		$dbname = "100acres";
+	
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+		    die("Connection failed: " . $conn->connect_error);
+		}
+		//echo $prop_type;
+
+		//$sql = "INSERT into image_upload(name,image) values('$name','$image')";
+		if($data["prop_type"]=="Residential")
+			{ echo "residential wala";
+//$condition="'$data[bedrooms]',0";
+			$sql = "INSERT INTO property(email,user_type,sell_rent,prop_type,city,address,bedrooms,area,price,post_time,image,description) VALUES('$email','$data[agent_type]','$data[sell_rent]','$data[prop_type]','$data[city]','$data[address]','$data[bedrooms]',0,'$data[price]',NOW(),'$img','$data[description]')";}
+		else
+			{ echo "commercial wala";
+			$sql = "INSERT INTO property			(email,user_type,sell_rent,prop_type,city,address,bedrooms,area,price,post_time,image,description) VALUES('$email','$data[agent_type]',   '$data[sell_rent]','$data[prop_type]','$data[city]','$data[address]',0,'$data[area]','$data[price]',NOW(),'$img','$data[description]')";}
+//$sql="Insert".$condition."";
+		echo "chal ja oye";
+
+		if ($conn->query($sql) === TRUE) {
+//		    	echo "<script type='text/javascript'>alert('New Property Added');</script>";
+			return "S";
+		} else {
+//		   	echo "<script type='text/javascript'>alert('New Property Not Added');</script>";	
+			return "us";
+		}
+		$conn->close();
+	}
+}
+?> 

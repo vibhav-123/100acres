@@ -1,0 +1,105 @@
+<html>
+<head>
+
+<title>Post Property</title>
+
+<link rel="stylesheet" type="text/css" href="http://www.100acres.com/css/styling.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+<form name="formPost" id= "formPost" method="post" enctype="multipart/form-data" action="http://www.100acres.com/index.php/process/post_property"> <!--changed name and if of form from frm to formPost--> <!-- doubtful on the action part-->
+
+	<table border=0 width=100%  align=center cellpadding=10>
+		<tr align=center>
+		<td align=left><font face="calibri" size=5>Enter the Property Details<br><hr>
+		</tr>
+	</table>
+
+	<center><font color=red face=arial size=2><p id="error"></p></font></center>
+
+	<table border=0 width=100% align=center cellpadding=10>
+		<tr>
+		<td>I want to: 
+		<td>	<input type=radio name=sell_rent value="Sell" checked >Sell
+			<input type=radio name=sell_rent value="Rent">Rent
+		</tr>
+		<tr>
+		<td>I am: 
+		<td>	<input type=radio name=user value="Owner" checked >Owner
+			<input type=radio name=user value="Broker" >Broker
+			<input type=radio name=user value="Builder" >Builder
+		</tr>
+		
+		<tr>
+		<td>Type of Property: 
+		<td>	<input type=radio name=prop_type value="Residential" checked onclick="validate_post_property1(this);">Residential
+			<input type=radio name=prop_type value="Commercial" onclick="validate_post_property1(this);">Commercial
+		</tr>
+
+		<tr id=bed>
+		<td>Bedrooms:</td>	<!--Sell,Rent Residential wala-->
+		<td>	<select name="bedrooms" class=input_text>
+				   <option value="1 BHK">1 BHK			
+				   <option value="2 BHK">2 BHK
+				   <option value="3 BHK">3 BHK
+				   <option value="4 BHK">4 BHK		   
+				   <option value="5 BHK">5 BHK			
+				   <option value="6 BHK">6 BHK
+				   <option value="7 BHK">7 BHK
+				   <option value="7+ BHK">7+ BHK		   
+			</select><br></td>
+		</tr>
+		
+
+		<tr class="element_visibility" id=ar>
+		<td>Area:</td>	<!--Sell,Rent Commercial wala-->
+		<td><input type="text" name=area class=input_text>Sq.Ft.</td>
+		</tr>
+
+	
+	
+			
+		<tr>
+		<td>City: 
+		<td>	<select name="city"class="input_text">
+				   <option value="Noida">Noida		
+				   <option value="Rohini">Rohini
+				   <option value="Dwarka">Dwarka
+			</select><br>
+		</tr>
+		<tr>
+		<td>Address: 
+		<td><textarea rows="4" cols="30" name=address></textarea>
+		</tr>
+		<tr>
+		<td>Description: 
+		<td><textarea rows="4" cols="30" name=description></textarea><br>  <!--changed name to description-->
+		</tr>
+		<tr>
+		<td>Price: 
+		<td><input type="text" name=price class=input_text>
+		</tr>
+
+		<tr>
+		<td>Upload Property Photo: 
+		<td><input type="file" name="image" id="fileToUpload" class=input_text><br>
+		</tr>
+
+
+
+	</table>
+	<table border=0 width=100% align=center cellpadding=10>
+	<tr align=center>
+	<td align=right><input type="button" value="Post It" name="post_property" class=input_button onclick="validate_post_property();"> 	<!--changed here--> <!--refer payal's code again to c if this has to be changed-->
+	<td align=left><input type="reset"value="Reset"class="input_button">
+	</tr>
+	</table>
+    
+</form>
+
+<script src="http://www.100acres.com/javascripts/validation_file.js"></script>
+
+</body>
+</html>

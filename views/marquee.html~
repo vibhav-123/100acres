@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>100acres</title>
+<link rel="stylesheet" type="text/css" href="http://www.100acres.com/css/styling.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+<marquee behavior="scroll" direction="up"  scrollamount="4" font size="6" onmouseover="this.stop();" onmouseout="this.start();">
+<b><center><p><font color=#4B088A size=4 face="calibri">Welcome to 100acres</font></b></center></p> 
+
+<p><center><font face=arial size=2>We are a start-up in real estate space and we aim to provide the best property deals across the country</p></center>
+
+<p><center> Our vision is to help the world live better.We are on a journey to simplifying everything, so that you can focus on your loved ones and things that matter the most. We are here to get to the root of every challenge, find a solution and deliver to you a world that’s filled to the brim with optimism, innovation, transparency, and advancement. Live better with 100acres.</p></center>
+
+<p><center>We have built this project in under 2 weeks, so please pardon us for any glitches.</p><center>
+
+<p><center> For further assistance, please follow the link below:</p></center>
+
+<a href="http://www.100acres.com/application/views/contact_us.html" target="iframe1"> contact_us@100acres.com </a></marquee>
+
+
+<br><br><br><br><br>
+<marquee behavior="scroll" direction="left"  scrollamount="4" font size="6" onmouseover="this.stop();" onmouseout="this.start();">
+<a href="http://www.100acres.com/images/img1.jpg"target="iframe1"> <img src="http://www.100acres.com/images/img1.jpg"width=170px height=170px></img></a>
+&nbsp&nbsp
+<a href="http://www.100acres.com/images/img2.jpg"target="iframe1"> <img src="http://www.100acres.com/images/img2.jpg"width=170px height=170px></img></a>
+&nbsp&nbsp
+<a href="http://www.100acres.com/images/img3.jpg"target="iframe1"> <img src="http://www.100acres.com/images/img3.jpg"width=170px height=170px></img></a>
+&nbsp&nbsp
+<a href="http://www.100acres.com/images/img4.jpg"target="iframe1"> <img src="http://www.100acres.com/images/img4.jpg"width=170px height=170px></img></a>
+&nbsp&nbsp
+<a href="http://www.100acres.com/images/img5.jpg"target="iframe1"> <img src="http://www.100acres.com/images/img5.jpg"width=170px height=170px></img></a>
+</marquee>
+
+
+
+<script src="http://www.100acres.com/javascripts/validation_file.js"></script>
+</body>
+</html>
+
+

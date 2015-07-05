@@ -1,0 +1,34 @@
+<?php
+
+
+
+                // validation expected data exists
+
+                $email = $_GET['email']; // required
+                $pass = $_GET['pass']; // required
+		echo $_GET['email']; echo $_GET['pass'];
+
+
+
+                /*$obj['author']=$author;
+                $obj['message'] = $message;
+                $object=json_encode($obj) ;
+
+                //echo 'succ'.$object;
+                $ch = curl_init('http://localhost:8081/messenger/webapi/messages');
+                $headers = array("Content-Type: application/json");
+                curl_setopt_array($ch, array(
+                        CURLOPT_POST => TRUE,
+                        CURLOPT_RETURNTRANSFER => TRUE,
+                        CURLOPT_HTTPHEADER => $headers,
+                        CURLOPT_POSTFIELDS => $object
+                ));
+                $result= curl_exec ($ch);
+                curl_close ($ch);
+		$this->load->view('dfhsg',$result);
+                header('Location: http://sanity.com/form/get.php');
+                return $result;*/
+
+
+
+?>

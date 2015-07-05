@@ -1,0 +1,89 @@
+<?php
+	header("Access-Control-Allow-Origin: *");
+	class Homepage_model extends CI_Model{
+
+	public function curl_call($path,$object)
+	{
+
+                $headers = array("Content-Type: application/json");
+                curl_setopt_array($path, array(
+                        CURLOPT_POST => TRUE,
+                        CURLOPT_RETURNTRANSFER => TRUE,
+                        CURLOPT_HTTPHEADER => $headers,
+                        CURLOPT_POSTFIELDS => $object
+                ));
+		
+                $result= curl_exec ($path);
+                //curl_close ($path); 
+		return $result;
+	}
+
+        public function login_model($email,$pass){
+		
+		
+                $obj['email']=$email;
+                $obj['pass'] = $pass;
+                $object=json_encode($obj);
+			
+                //echo 'succ'.$object;
+                $ch = curl_init('http://localhost:8080/100acresProject/webapi/myresource');
+                $result= curl_call($ch,$object);
+                 
+		return $result;
+	}
+	
+
+
+    
+	public function register_model($email){
+		
+			
+		$servername = "localhost";
+		$username = "root";
+		$password = "jaisairam";
+		$dbname = "100acres";
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+		    die("Connection failed: " . $conn->connect_error);
+		}
+	
+		$sql = "SELECT * from registration where email='$email'";
+		$result = $conn->query($sql);
+		//echo $result;
+		if($result->num_rows > 0)
+			return("US");
+		else
+			return("S");
+	
+		$conn->close();
+	}
+	public function verify_model($name,$email,$pass,$mob,$sec,$ans)
+	{	
+		$obj['name']=$name;
+                $obj['email']=$email;
+                $obj['pass'] = $pass;
+		$obj['mob']=$mob;
+		$obj['sec']=$sec;
+		$obj['ans']=$ans;
+                $object=json_encode($obj) ;
+
+               
+                $ch = curl_init('http://localhost:8080/100acresProject/webapi/myresource1'); //changed here
+                $headers = array("Content-Type: application/json");
+                curl_setopt_array($ch, array(
+                        CURLOPT_POST => TRUE,
+                        CURLOPT_RETURNTRANSFER => TRUE,
+                        CURLOPT_HTTPHEADER => $headers,
+                        CURLOPT_POSTFIELDS => $object
+                ));
+		$result= curl_exec ($ch);
+		
+		return $result;
+                curl_close ($ch);
+	}
+
+}
+?>

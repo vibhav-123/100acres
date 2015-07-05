@@ -1,0 +1,435 @@
+var code;
+function validate_login()
+{
+ 	var v1=document.frm.email.value;
+ 	var v2=document.frm.pass.value;
+	//var v3=document.getElementById("error");
+	
+ 	if(v1==""||v2=="")
+ 	{
+		//v3.innerhtml="Hello";
+ 		alert("Fill the form properly.");
+ 		return false;
+ 	}
+	if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v1)))
+	{ 
+	    	alert("Not a valid e-mail address");
+	    	return false;
+	} 
+	
+	
+	else
+	{
+		//alert("yoyo");
+		var url="http://www.100acres.com/index.php/welcome/login/"+v1+"/"+v2;
+		//alert(url);
+		$.get(url,function(data,status)
+		{
+			
+			if(data=="S")
+			{
+				alert("you have successfully logged in!");
+				window.parent.location.href="http://www.100acres.com/index.php/welcome/personal_view";
+			}
+		}); 
+	}	
+   
+}
+
+
+function validate_register()
+{
+
+	var v1=document.frm.namee.value;
+	var v2=document.frm.email.value;
+	var v3=document.frm.pass.value;
+	var v4=document.frm.cpass.value;
+	var v5=document.frm.phone.value;
+	var v7=document.frm.ques.value;
+	var v6=document.frm.ans.value;
+	var letters=/^[a-zA-Z]+$/; 
+	var nums=/^[0-9]+$/;
+	
+	if(v1==""||v2==""||v3==""||v4==""||v5==""||v6=="")
+	{
+	 	alert("Fill the form properly.");
+	 	return false;
+	}
+
+	if(!v1.match(letters))   
+	{  
+		alert('Name must have only letters.');   
+		return false;  
+	}
+	
+	if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v2)))
+	{ 
+	    	alert("You have entered an invalid email address!");
+	    	return (false);
+	}    
+	
+	if(v3.length<7)
+	{
+		alert("Password length too short.(7 is minimum)");
+		return false;
+		
+	}
+	if(v3!=v4)
+	{
+		alert("Verified password not entered correctly.");
+		return false;
+	}
+	
+	if(!v5.match(nums))   
+	{  
+		alert('Phone number must have only digits.');   
+		return false;  
+	}
+
+	if(v5.length!=10)
+	{
+		alert('Invalid mobile number.');   
+		return false; 
+	}
+	
+	if(v6.length<2)
+	{
+		alert("Answer length too short.(2 is minimum)");
+		return false;
+			
+	}
+	else
+	{
+		
+
+		var url1="http://www.100acres.com/index.php/welcome/registerfn/"+v2;
+		//alert(url1);
+		$.get(url1,function(data,status)
+		{
+			code=data;
+			if(data==code)
+			{
+				document.getElementById("vv1").style.visibility = "visible";
+				document.getElementById("vv1").style.display = "inline";
+		 		document.getElementById("vv2").style.visibility = "visible";
+				document.getElementById("vv2").style.display = "inline";
+				document.frm1.verify_code.focus();
+			}
+		}); 
+		
+		
+ 		
+	}
+		
+}
+
+function validate_verify()
+{
+	var v11=document.frm1.verify_code.value;
+	var v1=document.frm.namee.value;
+	var v2=document.frm.email.value;
+	var v3=document.frm.pass.value;
+	var v5=document.frm.phone.value;
+	var v7=document.frm.ques.value;
+	var v6=document.frm.ans.value;
+	
+	
+	if(v11=="")
+	{
+	 	alert("Enter the Verification code.");
+	 	return false;
+	}
+	if(v11!=code)
+	{
+		alert("Wrong verification code entered.");
+	 	return false;
+	}
+	else 
+	{
+		//alert("hello\n");
+		var url1="http://www.100acres.com/index.php/welcome/verifyfn/"+v1+"/"+v2+"/"+v3+"/"+v5+"/"+v7+"/"+v6;	//changed here (do check)
+			 		
+		$.get(url1,function(data,status)
+		{
+			alert(data);
+		});
+		document.getElementById("vv1").style.visibility = "hidden";
+		document.getElementById("vv1").style.display = "none";
+ 		document.getElementById("vv2").style.visibility = "hidden";
+		document.getElementById("vv2").style.display = "none";
+		
+	}
+	
+}
+
+function validate_post_property()
+{
+
+	var v1=document.frm.address.value;
+	var v2=document.frm.price.value;
+	var v3=document.frm.user.value;
+	var v4=document.frm.sell_rent.value;
+	var v5=document.frm.prop_type.value;
+	var v6=document.frm.city.value;
+	var v7=document.frm.bedrooms.value;
+	var v8=document.frm.image.value;
+	
+	var v9=document.frm.descr.value;
+	var v10=document.frm.area.value;
+
+
+	var nums=/^[0-9]+$/;
+	
+	//alert(v8);
+	
+	if(v1==""||v2==""||v8==""||v9=="")
+	{
+	 	alert("Fill the form properly.");
+	 	return false;
+	}
+
+	if(v2<10000)   
+	{  
+		alert('Minimum price of property must be 10,000.');   
+		return false;  
+	}
+
+	if(!v2.match(nums))   
+	{  
+		alert('Price must have only digits.');   
+		return false;  
+	}
+	
+	
+	else{
+		alert("yoyo post property");
+		alert(v8);
+		var vv=document.getElementById("fileToUpload").files[0].name;
+		//var ss="/var/www/html/codeIgniter/application/views/Animals/";
+		var ss="http://www.100acres.com/application/views/Animals/";
+		var res=ss+vv;
+		var res = encodeURIComponent(res);
+		//var res = r.replace(/^.*\\/, "");
+		//var res=r.replace("C:\\fakepath\\", "");
+		
+		alert(res);
+		//alert(res);
+		//var v11=" "+v10;
+		//var url="http://www.100acres.com/index.php/welcome/image_validation";
+		//var url="http://www.100acres.com/index.php/welcome/post_property_controller/"+v3+"/"+v4+"/"+v5+"/"+v6+"/"+v1+"/"+v7+"/"+v2+"/"+v11+"/"+res+"/"+v9;
+		//alert(url);
+		/*$.get(url,function(data,status)
+		{
+			alert(data);
+		});*/ 
+		alert("reached here");
+		$.post("http://www.100acres.com/index.php/welcome/post_property_controller",
+        	{
+         		agent_type:v3 ,
+			sell_rent:v4,
+			prop_type:v5,
+         		city: v6,
+			address:v1,
+			bedrooms:v7,
+			price:v2,
+			image:res,
+			area:v10,
+			description:v9
+        },
+        function(data,status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+	}
+
+
+}
+
+
+function validate_post_property1(myRadio)
+{
+	var v11=myRadio.value;
+
+	//alert(v1);
+	if(v11=="Residential")
+	{
+		document.getElementById("bed").style.visibility = "visible";
+		document.getElementById("bed").style.display = "inline";
+		document.getElementById("ar").style.visibility = "hidden";
+		document.getElementById("ar").style.display = "none";
+		//rent_pg,bedrooms
+	}
+	if(v11=="Commercial")
+	{
+		document.getElementById("bed").style.visibility = "hidden";
+		document.getElementById("bed").style.display = "none";
+		document.getElementById("ar").style.visibility = "visible";
+		document.getElementById("ar").style.display = "inline";
+		//rent_pg,bedrooms
+	}
+}
+
+function validate_search1(myRadio)
+{
+	var v11=myRadio.value;
+
+	//alert(v1);
+	if(v11=="Buy")
+	{
+		//document.getElementById("minpriceb").style.visibility = "visible";
+		document.getElementById("minpriceb").style.display = "block";
+		//document.getElementById("maxpriceb").style.visibility = "visible";
+		document.getElementById("maxpriceb").style.display = "block";
+		//document.getElementById("minprices").style.visibility = "hidden";
+		document.getElementById("minprices").style.display = "none";
+		//document.getElementById("maxprices").style.visibility = "hidden";
+		document.getElementById("maxprices").style.display = "none";
+		//rent_pg,bedrooms
+	}
+	if(v11=="Rent")
+	{
+		//document.getElementById("minpriceb").style.visibility = "hidden";
+		document.getElementById("minpriceb").style.display = "none";
+		//document.getElementById("maxpriceb").style.visibility = "hidden";
+		document.getElementById("maxpriceb").style.display = "none";
+		//document.getElementById("minprices").style.visibility = "visible";
+		document.getElementById("minprices").style.display = "block";
+		//document.getElementById("maxprices").style.visibility = "visible";
+		document.getElementById("maxprices").style.display = "block";
+		//rent_pg,bedrooms
+	}
+}
+
+
+function validate_search2(myRadio)
+{
+	var v11=myRadio.value;
+
+	//alert(v1);
+	if(v11=="Residential")
+	{
+		//document.getElementById("minarea").style.visibility = "hidden";
+		document.getElementById("minarea").style.display = "none";
+		//document.getElementById("maxarea").style.visibility = "hidden";
+		document.getElementById("maxarea").style.display = "none";
+		//document.getElementById("bedb").style.visibility = "visible";
+		document.getElementById("bedb").style.display = "block";
+	
+		//rent_pg,bedrooms
+	}
+	if(v11=="Commercial")
+	{
+		//document.getElementById("minarea").style.visibility = "visible";
+		document.getElementById("minarea").style.display = "block";
+		//document.getElementById("maxarea").style.visibility = "visible";
+		document.getElementById("maxarea").style.display = "block";
+		//document.getElementById("bedb").style.visibility = "hidden";
+		document.getElementById("bedb").style.display = "none";
+		//rent_pg,bedrooms
+	}
+}
+
+function validate_search3()
+{
+	var v1=document.frm.min_area_b.value;
+	var v2=document.frm.max_area_b.value;
+	var v3=document.frm.prop_type.value;
+	var v4=document.frm.location.value;
+	var v5=document.frm.buy_rent.value;
+	var v6=document.frm.city.value;
+	var v7=document.frm.bedrooms.value;
+	var v8=document.frm.min_price_b.value;
+	var v9=document.frm.max_price_b.value;
+	var v10=document.frm.min_price_s.value;
+	var v11=document.frm.max_price_s.value;
+
+
+	var nums=/^[0-9]+$/;
+	if(v3=="Commercial")
+	{
+		if(v1=="")
+		{
+			alert("Enter minimum area.");
+			return false;
+		}
+		if(v2=="")
+		{
+			alert("Enter maximum area");
+			return false;
+		}
+		if(!v1.match(nums)||!v2.match(nums))
+		{
+			alert("Minimum and maximum area must be digits.");
+			return false;
+		}
+	}
+	if(v4=="")
+	{
+		alert("Enter Location.");
+		return false;
+	}
+	else
+	{
+		alert("yoyo post property");
+		$.post("http://www.100acres.com/index.php/welcome/search_controller",
+        	{
+         		buyrent:v5 ,
+			city:v6,
+			location:v4,
+			prop_type:v3,
+         		bedrooms:v7,
+			minareab:v1,
+			maxareab:v2,
+			minpriceb:v8,
+			maxpriceb:v9,
+			minprices:v10,
+			maxprices:v11
+		},
+		function(data,status){
+		    alert("Data: " + data + "\nStatus: " + status);
+		});
+	
+	}
+}
+
+function validate_enquiry()
+{
+	var v1=document.frm.user_name.value;
+	var v2=document.frm.email.value;
+	var v3=document.frm.phone.value;
+	var v4=document.frm.msg.value;
+	var nums=/^[0-9]+$/;
+	var letters=/^[a-zA-Z]+$/; 
+	
+	if(v1==""||v2==""||v3==""||v4=="")	
+	{
+		alert("Fill the form properly");
+		return false;
+	}
+	
+	if(!v1.match(letters))   
+	{  
+		alert('Name must have only letters.');   
+		return false;  
+	}
+	
+	if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v2)))
+	{ 
+	    	alert("You have entered an invalid email address!");
+	    	return (false);
+	}    
+	
+	if(v3.length!=10)
+	{
+		alert('Invalid mobile number.');   
+		return false; 
+	}
+
+	if(!v3.match(nums))
+	{
+		alert("Mobile number must have only digits.");
+		return false;
+	}
+	
+	
+}
+
