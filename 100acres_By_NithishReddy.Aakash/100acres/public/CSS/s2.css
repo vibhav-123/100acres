@@ -1,0 +1,94 @@
+#body
+{
+	margin: 0 auto; 
+}
+#main
+{
+	 width: 70%;
+	 margin-left: auto;
+	 margin-right: auto;
+
+}
+#header
+{
+	background-color:#b0c4de; height:50px; width:100%;position:relative;
+}
+
+#search
+{
+	background-color: yellow;
+	height: 90px;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#search_1
+{
+
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;	
+}
+#search_2
+{
+	display:inline;
+	width:150px;
+	height: 450px;
+	margin-left: 100px;
+}
+#search1
+{
+
+	height: 40px;
+
+}
+#place 
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 20px;
+	padding-right: 50px;
+	
+}
+#price
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+#mprice
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#bedroom
+{
+	margin-top: 10px;
+	display: inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+#sort
+{
+	float: right;
+	padding-bottom: 10px;
+	
+	height: 40px;
+}
+
+	
+.fmr
+{
+	margin-left: 230px;
+}

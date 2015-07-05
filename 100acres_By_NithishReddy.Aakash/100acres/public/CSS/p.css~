@@ -1,0 +1,53 @@
+.main
+{
+	height:660px;
+	width: 32%;
+	margin-top: 30px;
+	margin-left: 500px;
+margin-right:50px;
+	
+padding:20px;
+border: 1px solid blue;
+background-color: #e0ffff;
+float:right;
+}
+
+#header
+{
+	background-color:#b0c4de; height:50px; width:100%;position:relative;
+}
+
+
+.side
+{
+height:600px;
+	width: 32%;
+	margin-top: 3px;
+	margin-left: auto;
+	margin-right: 50px;
+padding:20px;
+
+float:left;
+}
+
+.left
+{
+	display:inline;
+	float:left;
+}
+.right
+{
+	float: right;
+}
+.pad
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#sellimage
+{
+  
+  position: absolute;
+  margin-left: 150px;
+margin-top:150px;
+}

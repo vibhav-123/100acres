@@ -1,0 +1,70 @@
+
+<<<<<<< HEAD
+
+(function($,W,D)
+=======
+ (function($,W,D)
+>>>>>>> 02815d1a9797876af583c9b381cedbb4bfa7a339
+{
+    var formvalidation = {};
+    formvalidation.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $.validator.addMethod("textOnly", 
+                             function(value, element) {
+                                  return (!/^[0-9]*$/.test(value));
+                              }, 
+                              "Alphabets Only."
+       );
+
+            $("#register-form").validate({
+                rules: {
+                    Name: {required:true,
+                    textOnly:true
+                    },
+                 
+                   Email: {
+                        required: true,
+                        email: true
+<<<<<<< HEAD
+                        
+=======
+                     
+>>>>>>> 02815d1a9797876af583c9b381cedbb4bfa7a339
+                           },
+                    Mobile:{required:true,
+                      number:true
+                      },
+
+                    Password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    
+                },
+                messages: {
+                    Name: {required: "Please enter your name"},
+                    Mobile: {required:" Please enter your Mobile no.",
+                    number:"Please enter a valid number"
+                    },
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    Email: "Please enter a valid email address",
+                   },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        formvalidation.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);

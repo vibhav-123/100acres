@@ -1,0 +1,81 @@
+#myform
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 70%;
+    text-align: center;
+  
+    border: 5px solid navy;  
+}
+
+#heading
+{
+    text-align:center;
+    height: 50px;
+}
+
+#heading2
+{
+	float:right;
+}
+
+
+#header_div
+{
+	background-color:#b0c4de; 
+	height:50px; 
+	width:100%;
+}
+
+#header_logo
+{
+	height: 50px;
+	width: 150px;
+	float: left;
+	margin-left: 40px;
+}
+
+#header_right
+{
+	float: right;
+}
+
+#header_sell
+{
+	float:left;
+	margin-right:100px;
+	margin-top:15px;
+}
+
+#header_login
+{
+	float:right;
+	margin-top:15px;
+	margin-right:10px;
+}
+
+#body1
+{
+  background-repeat: no-repeat;
+}
+
+#myform
+{
+  background: #FFFFFF;
+}
+
+#seven
+{
+   width:2px;
+}
+
+#eight
+{
+   width:2px;
+}
+
+#nine
+{
+ width:2px;
+}
