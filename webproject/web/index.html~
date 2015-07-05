@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function klikaj(i,j,k)
+{
+    document.getElementById(i).style.visibility='visible';
+    document.getElementById(j).style.visibility='hidden';
+    document.getElementById(k).style.visibility='visible';
+}
+</script>
+<style>
+body{
+    background:  url(bg.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div.dandi{
+opacity: 0.4;
+    filter: alpha(opacity=40);
+    max-width:100%;
+    height:auto;
+    position:relative;
+float: left;
+}
+div.icon{
+  float:left;
+  color:      #FF7F50;
+  font-size: 30px;
+  position:absolute;
+}
+div.icon2{
+  float:left;
+  color:  white;
+  font-size: 14px;
+  position:absolute;
+  top:40px;
+  left:20px;
+}
+div.login{
+float:right;
+
+position:absolute;
+right:10px;
+top:0px;
+}
+div.text{
+position:absolute;
+top:350px;
+left:200px;
+color:white;
+font-size:22px;
+}
+div.search{
+position:absolute;
+right:50px;
+top:400px;
+background-color: black;
+opacity: 0.6;
+padding: 15px;
+
+}
+div.findproperty{
+color:white;
+bottom: 10px;
+right: 50px;
+padding: 10px;
+position: absolute;
+background: black;
+opacity: 0.6;
+}
+div.search1{
+color:black;
+bottom: 40px;
+right: 120px;
+padding 25px;
+position: absolute;
+background: white;
+opacity: 0.6;
+}
+</style>
+
+
+<!--  <link rel="stylesheet" type="text/css" href="firstcss.css">-->
+</head>
+
+<body >
+<div class="dandi" id="dandi">
+<img src="dandifinal.png" />
+</div>
+
+<div class="icon" id="icon">
+<b>100acres.com</b><br>
+</div>
+<div class="icon2" id="icon2">
+India's No 1 Property Portal
+</div>
+<div class="login" id="login">
+<img src="login.jpg" height="60px" width="60px" align="right"/>
+</div>
+<div class="text" id="text">
+<b>India's largest property<br>
+marketplace covering almost all<br>
+the major cities and a large number of<br>
+agents and developers.<br></b>
+</div>
+<div class="search" id="search" style="visibility: hidden">
+<form >
+<font color="white">FND A PROPERTY</font><br>
+<!--<select name="keyword" >
+<option value="keyWord" selected="selected">keyword1</option>
+<option>keyword2</option>
+</select>
+<select name="minprize" >
+<option>minprize1</option>
+</select>
+<select name="maxprize" >
+<option>maxprize</option>
+</select>   -->
+<div style="position:relative;width:200px;height:25px;border:0;padding:0;margin:0;">
+<select style="position:absolute;top:0px;left:0px;width:200px; height:25px;line-height:20px;margin:0;padding:0;" onchange="document.getElementById('displayValue').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+   <option></option>
+   <option value="one">one</option>
+   <option value="two">two</option>
+   <option value="three">three</option>
+</select>
+<input name="displayValue" placeholder="Keywords" id="displayValue" style="position:absolute;top:0px;left:0px;width:183px;width:180px\9;#width:180px;height:23px; height:21px\9;#height:18px;border:1px solid #556;" onfocus="this.select()" type="text">
+<input name="idValue" id="idValue" type="hidden">
+</div>
+<br>
+<div style="position:relative;width:200px;height:25px;border:0;padding:0;margin:0;">
+<select style="position:absolute;top:0px;left:0px;width:200px; height:25px;line-height:20px;margin:0;padding:0;" onchange="document.getElementById('displayValue2').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+   <option></option>
+   <option value="one">one</option>
+   <option value="two">two</option>
+   <option value="three">three</option>
+</select>
+<input name="displayValue" placeholder="MinPrize" id="displayValue2" style="position:absolute;top:0px;left:0px;width:183px;width:180px\9;#width:180px;height:23px; height:21px\9;#height:18px;border:1px solid #556;" onfocus="this.select()" type="text">
+<input name="idValue" id="idValue" type="hidden">
+</div>
+<br>
+<div style="position:relative;width:200px;height:25px;border:0;padding:0;margin:0;">
+<select style="position:absolute;top:0px;left:0px;width:200px; height:25px;line-height:20px;margin:0;padding:0;" onchange="document.getElementById('displayValue3').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+   <option></option>
+   <option value="one">one</option>
+   <option value="two">two</option>
+   <option value="three">three</option>
+</select>
+<input name="displayValue" placeholder="Maxprize" id="displayValue3" style="position:absolute;top:0px;left:0px;width:183px;width:180px\9;#width:180px;height:23px; height:21px\9;#height:18px;border:1px solid #556;" onfocus="this.select()" type="text">
+<input name="idValue" id="idValue" type="hidden">
+</div>
+<br>
+<div style="position:relative;width:200px;height:25px;border:0;padding:0;margin:0;">
+<select style="position:absolute;top:0px;left:0px;width:200px; height:25px;line-height:20px;margin:0;padding:0;" onchange="document.getElementById('displayValue4').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+   <option></option>
+   <option value="one">one</option>
+   <option value="two">two</option>
+   <option value="three">three</option>
+</select>
+<input name="displayValue" placeholder="Bedrooms" id="displayValue4" style="position:absolute;top:0px;left:0px;width:183px;width:180px\9;#width:180px;height:23px; height:21px\9;#height:18px;border:1px solid #556;" onfocus="this.select()" type="text">
+<input name="idValue" id="idValue" type="hidden">
+</div>
+</form>
+</div>
+</div>
+<div class="findproperty" id="findproperty" onclick="klikaj('search','findproperty','search1')">
+<font color="white">FND A PROPERTY</font><br>
+</div>
+</div>
+<div class="search1" id="search1" style="visibility: hidden">
+<font color="black">SEARCH</font><br>
+</div>
+</body>
+</html>
