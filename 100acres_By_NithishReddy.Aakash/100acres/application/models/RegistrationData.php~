@@ -1,0 +1,16 @@
+<?php
+
+class RegistrationData extends CI_Model
+{
+public function __construct()	{
+  $this->load->database(); 
+}
+public function storedata($array) {
+  
+   echo "<pre>";
+print_r($array);
+   echo "</pre>";	
+    $this->db->insert('UserTable', $array);
+return 1;
+ 
+}
