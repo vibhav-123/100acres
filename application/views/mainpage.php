@@ -6,6 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="http://100acres.com/css/mainpage2.css">
 </head>
 <body>
+	<div id="fb-root"></div>
+
+	<!--here i am adding the script file..-->
+	
+	<script type="text/javascript" src="/js/fbscript.js"></script>
 	<div id="header">
 		<div id="headerbackground"></div>
 		<?php
@@ -19,6 +24,9 @@
 		else {
 		// not llog in
 		?><a href="http://100acres.com/user"><div class="loginbtn">Login/Register</div></a>
+		<div class="fb-login-button">	
+		<fb:login-button scope="public_profile,email" data-size="large" data-show-faces="true" data-auto-logout-link="true" onlogin="checkLoginState();"></fb:login-button>
+		</div>
 		<?php
 	}
 ?>
