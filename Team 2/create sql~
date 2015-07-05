@@ -1,0 +1,117 @@
+CREATE TABLE `Users` (
+  `userID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `pwrd` varchar(100) NOT NULL,
+  `contact` varchar(12) DEFAULT NULL,
+  `type` enum('buyer','seller','owner','broker') DEFAULT 'seller',
+  `IS_ACTIVE` enum('ACTIVE','INACTIVE') NOT NULL DEFAULT 'ACTIVE',
+  `CREATED_ON` timestamp NULL DEFAULT NULL,
+  `MODIFIED_ON` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `hash` varchar(100) DEFAULT NULL,
+  `IS_VERIFIED` enum('UNVERIFIED','VERIFIED') NOT NULL DEFAULT 'UNVERIFIED',
+  `source` enum('fb','g+','site') DEFAULT 'site',
+  `isHashValid` enum('valid','invalid') DEFAULT 'valid',
+  `can_login` enum('yes','no') NOT NULL DEFAULT 'yes',
+  PRIMARY KEY (`userID`),
+  UNIQUE KEY `userID` (`userID`),
+  UNIQUE KEY `email` (`email`),
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=latin1 |
+
+
+
+------------------------------------------------------------------------------
+
+
+CREATE TABLE `PostPG` (
+  `userID` int(11) NOT NULL,
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `contact` varchar(12) NOT NULL,
+  `price` int(11) NOT NULL,
+  `year` int(4) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `CREATED_ON` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `gender` enum('boys','girls') NOT NULL,
+  `sharing` enum('single','double','triple','quadra','other') DEFAULT NULL,
+  `imageURL` varchar(100) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `area` int(11) NOT NULL,
+  `ownership` enum('owner','broker') DEFAULT NULL,
+  PRIMARY KEY (`postID`),
+  KEY `userIdIndexPG` (`userID`),
+  KEY `cityIndexPG` (`city`),
+  KEY `pricePG` (`price`),
+  KEY `generPG` (`gender`),
+  KEY `ownerPG` (`ownership`),
+  KEY `sharingPG` (`sharing`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1 
+
+--------------------------------------------------------------------------------
+
+CREATE TABLE `PostSell` (
+  `userID` int(11) NOT NULL,
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `contact` varchar(12) NOT NULL,
+  `propType` enum('bunglow','flat','apartment','floor') NOT NULL,
+  `builtType` enum('single','duplex','triplex','other') NOT NULL,
+  `consStatus` enum('underconstruction','readytomove') NOT NULL,
+  `bedrooms` enum('1','2','3','other') DEFAULT NULL,
+  `city` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `area` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `parking` enum('information unavailable','available','unavailable') DEFAULT 'information unavailable',
+  `ownership` enum('owner','broker') NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `imageURL` varchar(100) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `CREATED_ON` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `year` varchar(4) NOT NULL,
+  PRIMARY KEY (`postID`),
+  UNIQUE KEY `postID` (`postID`),
+  KEY `userIDIndexSell` (`postID`),
+  KEY `cityIndexSell` (`city`),
+  KEY `userIDSell` (`userID`),
+  KEY `propTypeSell` (`propType`),
+  KEY `builtTypeSell` (`builtType`),
+  KEY `addressSell` (`address`),
+  KEY `priceSell` (`price`),
+  KEY `ownerSell` (`ownership`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1 
+
+
+--------------------------------------------------------------------------
+
+CREATE TABLE `PostRent` (
+  `userID` int(11) NOT NULL,
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `contact` varchar(12) NOT NULL,
+  `propType` enum('bunglow','flat','apartment','floor') NOT NULL,
+  `builtType` enum('single','duplex','triplex','other') NOT NULL,
+  `consStatus` enum('underconstruction','readytomove') NOT NULL,
+  `bedrooms` enum('1','2','3','other') DEFAULT NULL,
+  `city` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `area` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `parking` enum('available','unavailable','information unavailable') DEFAULT NULL,
+  `ownership` enum('owner','broker') DEFAULT NULL,
+  `description` varchar(100) NOT NULL,
+  `CREATED_ON` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `furniture` enum('unfurnished','semifurnished','furnished') DEFAULT NULL,
+  `imageURL` varchar(100) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `year` int(4) NOT NULL,
+  PRIMARY KEY (`postID`),
+  UNIQUE KEY `postID` (`postID`),
+  KEY `cityIndexRent` (`city`),
+  KEY `userIdIndexRent` (`userID`),
+  KEY `userIDRent` (`userID`),
+  KEY `ownerRent` (`ownership`),
+  KEY `propTypeRent` (`propType`),
+  KEY `builtTypeRent` (`builtType`),
+  KEY `priceRent` (`price`),
+  KEY `addressRent` (`address`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1 
