@@ -1,0 +1,26 @@
+<?php
+
+	if(isset($_POST["email"]))
+	{
+		$ch=curl_init();			
+		$email=$_POST["email"];
+		$pwrd=$_POST["pwrd"];
+		$name="Default user";
+		$type=$_POST["type1"];
+		$contact=$_POST["contact"];
+		$userID=$_POST["userID"];
+		$pwrdHash= md5($pwrd);
+
+		$data=array('email'=>$email,'password'=>$pwrdHash,'type'=>$type,'contact'=>$contact,'name'=>$name);
+		$json_encoded= json_encode($data);
+		$url = 'http://localhost:8080/projectWebService/webapi/site/register';
+		curl_setopt($ch, CURLOPT_URL,$url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    	curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_POST, true);
+       	        curl_setopt($ch,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	        curl_setopt($ch,CURLOPT_POSTFIELDS, $json_encoded);
+                $result = curl_exec($ch);
+		echo $result;
+	}
+?>
