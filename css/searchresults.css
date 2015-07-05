@@ -73,6 +73,7 @@ filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endCol
 	color: black;
 	opacity: .85;
 	background-color: rgb(253, 253, 253);
+	overflow:hidden;
 	
 }
 
@@ -182,7 +183,4 @@ font-weight: bold;
 height: 49px;
 
 opacity: .8;
-bottom: 0;
-right: 0;
-left: 0;
 }

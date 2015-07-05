@@ -3,7 +3,8 @@
 	<title>100acres - Search results</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="jquery-2.1.4"></script>
 	<link rel="stylesheet" type="text/css" href="/css/searchresults.css">
 	<script type="text/javascript" src="/js/getnext.js"></script>
 </head>
@@ -91,8 +92,6 @@
 
 	</div>
 	
-	<div id="footer" style="clear:both">
-  &copy; 2011 100acres.com</a> All Rights Reserved.
- </div><!-- <div class="footer">-->
+	
 </body>
 </html>

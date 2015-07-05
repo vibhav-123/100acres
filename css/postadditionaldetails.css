@@ -33,7 +33,7 @@ form input,form select,form textarea{
 	margin:8px;
 }
 #header{
-	padding: 20px;
+	padding: 0px 20px 10px 5px;
 	position: relative;
     z-index: 1;
 	overflow: hidden;
@@ -54,16 +54,22 @@ figure{
 	margin: 0px;
 }
 figure img{
-	max-width: 140px;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 200px;
+	height: 100px;
 }
 figcaption{
-	font-size: 10px;
+	margin-left: 10px;
+	font-size: 17px;
+	color: #FF4500;
 }
+
 .loginbtn{
 	float: right;
 	padding: 10px;	
 	background-color: rgb(255, 153, 0);
-	margin-left: 20px;	
+	margin: 20px;	
 }
 
 .clear{

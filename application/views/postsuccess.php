@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-2.1.4"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
     <script type="text/javascript" src="/js/additionaldetails.js"></script>
 </head>
@@ -20,7 +21,7 @@
 	?>
 	<div id="logo">
 		<figure>
-		<img src="/images/logo.jpg" alt="99acres logo">
+		<img src="/images/newlogo.png" alt="99acres logo">
 		<figcaption>India's No:1 Property Portal</figcaption>
 		</figure>
 	</div>
