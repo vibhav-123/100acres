@@ -1,0 +1,318 @@
+/**
+ * 
+ */
+/*
+
+$(document).ready(function(){
+	window.unload = logout;
+});
+*/
+
+/*
+$(document).ready(function()
+		{
+		    $(window).bind("beforeunload", function() { 
+		    	$.post("http://www.100acres.com/index.php/welcome/destroySession",{},function(data, status){
+		    		 alert("tunk tunka "+  data);
+		    		//location.reload();
+		    		}); 
+		    });
+		});
+*/
+
+function forgot(){
+	$('#forgotdiv1').slideDown("slow");
+	$('#forgotdiv2').slideDown("slow");
+	$("#loginreg2").slideUp("slow");
+	$("#loginreg1").slideUp("slow");
+	
+	
+}
+function changeSearchBox(){
+	var id=$("#searchType").val();
+	var id2="#"+id+"div";
+	//alert(id2);
+	$("#buydiv").hide("1");
+	$("#rflatdiv").hide("1");
+	$("#rpgdiv").hide("1");
+	$(id2).show(1);
+}
+
+function showLogin(){
+	alert("yoyo");
+	$("#fader").slideDown("slow");
+	$("#loginreg2").slideDown("slow");
+	$("#loginreg1").slideDown("slow");
+}
+
+function hideLogin1(){
+	//alert("oh yeah");
+	$("#loginreg1").slideUp("slow");
+	$("#fader").slideUp("slow");
+	$("#loginreg2").slideUp("slow");
+	$('#rname').val("");
+	$('#remail').val("");
+	$('#ruser').val("");
+	$('#rpass').val("");
+	$('#rcpass').val("");
+	$('#luser').val("");
+	$('#lpass').val("");
+	$('#s1').html("");
+	$('#s2').html("");
+	$('#s3').html("");
+	$('#s4').html("");
+	$('#s5').html("");
+	$('#l1').html("");
+	$('#l2').html("");
+}
+
+function hideLogin2(){
+	$('#forgotdiv1').slideUp("slow");
+	$('#forgotdiv2').slideUp("slow");
+	$("#loginreg1").slideDown("slow");
+	$("#fader").slideDown("slow");
+	$("#loginreg2").slideDown("slow");
+	$('#rname').val("");
+	$('#remail').val("");
+	$('#ruser').val("");
+	$('#rpass').val("");
+	$('#rcpass').val("");
+	$('#luser').val("");
+	$('#lpass').val("");
+	$('#s1').html("");
+	$('#s2').html("");
+	$('#s3').html("");
+	$('#s4').html("");
+	$('#s5').html("");
+	$('#l1').html("");
+	$('#l2').html("");
+}
+
+
+function validatereg(){
+	
+	var nam=$('#rname').val();
+	var mail=$('#remail').val();
+	var usr=$('#ruser').val();
+	var pass=$('#rpass').val();
+	var cpass=$('#rcpass').val();
+	//var nameRegex=/^[a-zA-Z]+$/; 
+	var nameRegex=/^[a-zA-Z ]*$/;
+	//var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+	var emailRegex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	    
+	
+	
+	var usernameRegex = /^[a-z0-9_-]{3,16}$/;
+	var okay=1;
+	
+	if(nam.match(nameRegex)){
+		$('#s1').html("");
+	}
+	else{
+		$('#s1').html("Invalid Name");
+		$('#rname').val("");
+		okay=0;
+	}
+	if(mail.match(emailRegex)){
+		$('#s2').html("");
+	}
+	else{
+		$('#s2').html("Invalid Email");
+		$('#remail').val("");
+		okay=0;
+	}
+	if(usr.match(usernameRegex)){
+		$('#s3').html("");
+	}
+	else{
+		$('#s3').html("3-16 Characters");
+		okay=0;
+	}
+	if(pass==cpass){
+		$('#s5').html("");
+	}
+	else{
+		$('#s5').html("Not matched");
+		$('#rcpass').val("");
+		$('#rpass').val("");
+		okay=0;
+	}
+	if(okay==1){
+			$.post("http://www.100acres.com/index.php/welcome/callRegAPI",{
+				name:nam,
+				uname:usr,
+				email:mail,
+				password:pass
+			},function(data, status){
+				alert(data);
+				
+				    if(data == 1)
+				 		alert("Verification Mail sent successfully please check your inbox");
+				 		
+				    else if(data == 0)
+				 		alert("oops web service error..... Register Again");
+				 		
+				    else if(data == -2)
+				 		alert("Mail sending failed ,oops some error... check your email id and register again");
+				 		
+				 	else
+				 		alert(data);
+				 		
+				
+	    	
+		});
+	}
+}
+
+function validateLog(){
+	var usr=$('#luser').val();
+	var pass=$('#lpass').val();
+	var okay=1;
+	if(usr==''){
+		$('#l1').html("Required");
+		okay=0;
+	}
+	else{
+		$('#l1').html("");
+	}
+	if(pass==''){
+		$('#l2').html("Required");
+		okay=0;
+	}
+	else{
+		$('#l2').html("");
+	}
+
+	if(okay==1){
+			$.post("http://www.100acres.com/index.php/welcome/callLogAPI",{
+				uname:usr,
+				password:pass
+			},function(data, status){
+	    	// alert("tunk tunka "+  data);
+	    	 if(data == 1){
+	    		 alert("Verification Mail sent successfully please check your inbox");
+	    		 
+	    	 }else if(data == -2){
+	    		 alert("Mail sending failed ,oops some error... check your email id and register again");
+	    	 }else{
+	    		 alert(data);
+	    		 if(data = "login success")
+	    		 location.reload();
+	    	 }
+	    	 
+			
+		});
+	}
+	
+}
+function goToSell(){
+	//alert("chakte fatte");
+	window.location.assign("http://www.100acres.com/index.php/welcome/gotoSell");
+	
+}
+
+function showDetailDiv(){
+	$("#userdetail").show("1");
+}
+
+function logout(){
+	alert("aa gya");
+	
+	$.post("http://www.100acres.com/index.php/welcome/destroySession",{},function(data, status){
+	 alert("tunk tunka "+  data);
+	 location.reload();
+	});
+	
+}
+
+
+
+// This is called with the results from from FB.getLoginStatus().
+function statusChangeCallback(response) {
+  console.log('statusChangeCallback');
+  console.log(response);
+  // The response object is returned with a status field that lets the
+  // app know the current login status of the person.
+  // Full docs on the response object can be found in the documentation
+  // for FB.getLoginStatus().
+  if (response.status === 'connected') {
+    // Logged into your app and Facebook.
+    testAPI();
+  } else if (response.status === 'not_authorized') {
+    // The person is logged into Facebook, but not your app.
+    document.getElementById('status').innerHTML = 'Please log ' +
+      'into this app.';
+  } else {
+    // The person is not logged into Facebook, so we're not sure if
+    // they are logged into this app or not.
+    document.getElementById('status').innerHTML = 'Please log ' +
+      'into Facebook.';
+  }
+}
+
+// This function is called when someone finishes with the Login
+// Button.  See the onlogin handler attached to it in the sample
+// code below.
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+window.fbAsyncInit = function() {
+FB.init({
+  appId      : '869669249787827',
+  cookie     : true,  // enable cookies to allow the server to access 
+                      // the session
+  xfbml      : true,  // parse social plugins on this page
+  version    : 'v2.2' // use version 2.2
+});
+
+// Now that we've initialized the JavaScript SDK, we call 
+// FB.getLoginStatus().  This function gets the state of the
+// person visiting this page and can return one of three states to
+// the callback you provide.  They can be:
+//
+// 1. Logged into your app ('connected')
+// 2. Logged into Facebook, but not your app ('not_authorized')
+// 3. Not logged into Facebook and can't tell if they are logged into
+//    your app or not.
+//
+// These three cases are handled in the callback function.
+
+FB.getLoginStatus(function(response) {
+  statusChangeCallback(response);
+});
+
+};
+
+// Load the SDK asynchronously
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+// Here we run a very simple test of the Graph API after login is
+// successful.  See statusChangeCallback() for when this call is made.
+function testAPI() {
+  console.log('Welcome!  Fetching your information.... ');
+  FB.api('/me', function(response) {
+	  $.post("http://www.100acres.com/index.php/welcome/callFBLog",{
+			uname:response.id,
+			name:response.name,
+			email:response.email
+		},function(data, status){
+			alert(data);
+
+	});
+  });
+}
+
+function validateFB(){
+FB.login(function(response){
+  statusChangeCallback(response);
+});

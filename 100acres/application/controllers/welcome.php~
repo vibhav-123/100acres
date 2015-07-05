@@ -1,0 +1,195 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+include_once 'path.php';
+include_once'application/controllers/webService/webservice_call.php';
+
+class Welcome extends CI_Controller {
+	
+	///////////////////////////////////////////////////////////////////////////
+	public function index()
+	{ 
+		$this->load->view('Main_v1.php');
+		
+
+	}
+	///////////////////////////////////////////////////////////////////////////
+
+	public function test($param) {
+	  	echo $param;
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	
+	public function callRegAPI(){
+		
+                
+		$rs=register();
+	//	echo $_POST["email"];	
+		if($rs=="1")
+			$this->sendLink($_POST['email']);  // sending verification mail
+		else if($rs==""){
+			echo "0";  // web service not working
+		}else{
+			echo $rs;  // registration failed
+		}
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+
+
+	public function callLogAPI(){
+		    $result1=json_decode(login(),true);
+			$error=$result1['error'];
+			if($error==""){
+				echo "webservice error login again";
+			}else{
+				switch ($error){
+					
+					case "verified":    /////////
+						$this->session->set_userdata('uid', $result1['username']);
+						$this->session->set_userdata('email', $result1['email']);
+						$this->session->set_userdata('name', $result1['name']);
+						echo "login success";
+						break;
+					case "not verified":   ///////////
+						$this->sendLink($result1['email']); // send verification link again
+						break;
+					case "nothing":
+						echo $error;
+						break;
+					case "status error":
+						echo $error;
+						break;
+					case "exception":
+						echo $error;
+						break;
+					case "not found":    /////////////////
+						echo "invalid username and password";
+						break;
+					default:
+						echo "default error";
+						break;
+				}
+			}
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	public function handlePostings(){
+		$this->load->model('main_model');
+		//$this->main_model->insertProperty($_POST['owner'])
+		
+		switch($_POST['purpose']){
+			case("pg"):
+				//echo "aa gya insert==> ".$_POST['owner'];
+				echo ($this->main_model->insertPropertyPg());
+				break;	
+			case("rent"):
+				//echo "aa gya insert==> ".$_POST['owner'];
+				echo ($this->main_model->insertPropertyRent());
+				break;
+			case("sell"):
+					//echo "aa gya insert==> ".$_POST['owner'];
+				echo ($this->main_model->insertPropertySell());
+				break;
+		}
+		
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	public function gotoSell(){
+		$this->load->view('PostProperty.php');
+	}
+///////////////////////////////////////////////////////////////////////////
+	public function gotoHire(){
+		$this->load->view('Hire.php');
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	public function destroySession() {
+		
+		if (!isset($_SESSION))
+		{
+			session_start();
+		}
+		$this->session->unset_userdata('uid');
+		$this->session->unset_userdata('email');
+		$this->session->unset_userdata('name');
+		//session_destroy();
+		echo "destroyed";
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	public function sendLink($em){
+		$secret = "35onoi2=-7#%g03kl";
+		//echo $em;
+		//$email = urlencode($em);
+		$hash = MD5($em.$secret);
+		$link ="http://www.100acres.com/index.php/welcome/verifyLink?email=$em&hash=$hash";
+		//$link=$welcome."verifyLink?email=$email&hash=$hash";
+		$to =$em;
+		if ( mail( $to, 'mail verification', $link) ) {
+			//echo "--".$to;
+			echo "1";   // mail sent seccesfully
+		} else {
+			echo "-2";   // mail sending error
+		}
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	public function verifyLink(){
+		$secret = "35onoi2=-7#%g03kl";
+		$hash = MD5($_GET['email'].$secret);
+		if($hash==$_GET['hash']){
+			
+			echo verifyUser($_GET['email']);
+			
+		}else{
+			echo "your verification link is corrupted....";
+		}
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+
+	public function callFBLog(){
+						$fbresult=fbregister();
+						$this->session->set_userdata('uid', $_POST['uname']);
+						$this->session->set_userdata('email', $_POST['email']);
+						$this->session->set_userdata('name', $_POST['name']);
+						$details="Username:".$_POST['email'];
+						if($fbresult == "Account created!!")
+						{
+							 mail( $_POST['email'], '100acres.com Registration Details', $details);
+							echo "You have been Registered to 100acres.com.Kindly check your mail for login details";
+						}
+						else
+						{
+							echo "Login success";
+						}
+						
+	}
+	public function forgotMail(){
+		$forgotData=forgotPass();
+		$forgotDataDecoded=json_decode($forgotData,true);
+		$forgotEmail=$forgotDataDecoded['email'];
+		$forgotPassword=decryptIt($forgotDataDecoded['password']);
+		if($forgotDataDecoded['error']==""){
+			echo "webservice Error";
+		}else if($forgotDataDecoded['error']=="not found"){
+			echo "invalid username";
+		}else if($forgotDataDecoded['error']=="found"){
+			if ( mail( $forgotEmail, 'your 100acres password', $forgotPassword) ) {
+				//echo "--".$to;
+				echo "your has been sent to the registered email";   // mail sent seccesfully
+			} else {
+				echo "mail sending error... try again later";   // mail sending error
+			}
+		}else{
+			echo "invalid output fatal Error";
+		}
+		
+	}
+}
+
+
+/* End of file welcome.php */
+/* Location: ./application/controllers/welcome.php */
+?>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?php include "path.php"; ?>
+<script type="text/javascript" src="<?php echo $js; ?>jquery-1.11.3.min.js"></script>
+<script  src="<?php echo $js; ?>click.js"></script>
+<script  src="<?php echo $js; ?>search.js"></script>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_search.css">
+</head>
+<body style="background-image: url('<?php echo $image; ?>t1.jpg'); background-size:cover; " onbeforeunload="unload();">
+
+
+
+<!-- FADER -->
+<!-- FADER -->
+<!-- FADER -->
+<div style="background-color: black;z-index:2; top:0px; opacity:0.8; width: 100%; height: 100%;position: absolute; display: none;" id="fader">
+</div>
+
+		
+<!-- LOGIN/REGISTER DIV -->
+<!-- LOGIN/REGISTER DIV -->
+<!-- LOGIN/REGISTER DIV -->
+
+
+      <div id="loginreg1" style="opacity:0.8; background-color:#007dc1;z-index:3; display: none;margin-top:20%; position: absolute;width:69%;height: 33% ;margin-left: 17%">
+    </div>
+      <div id="loginreg2"  style="display: none;z-index: 4 ; box-shadow:0px 0px 10px 5px white;margin-top:20%; position: absolute;width:69%;height: 33% ;margin-left: 17%">
+      <div>
+                <button  id="closee" onclick="hideLogin1();" style="size:15px;box-shadow:0px 0px 10px 5px white;border-radius:100px ;background-color:#007dc1 ; color: white;left:98%;top:-10px; position:absolute; border:1px solid; font-size: large;" ><b>
+                    X</b>
+                </button>
+            </div>
+      <div id="Sign-Up" style="width: 50%;height: 100%;float: left;color: white;text-shadow: white;" >
+            <fieldset style="width:95%;">
+                <legend style="font-size: x-large;text-shadow: 1px 1px black;color: #FFBF00"><b>Register</b></legend>
+                <form>
+                <table border="0">
+                    <tr>
+<td><b>Name</b></td>
+                        <td> <input type="text" name="name" id="rname"></td>
+                        <td id="s1" style="color: red;font-size:small;"></td>
+                    </tr>
+                    <tr>
+<td><b>Email</b></td>
+                        <td> <input type="text" name="email" id="remail"></td>
+                        <td id="s2" style="color: red;font-size:small;"></td>
+                    </tr>
+                    <tr>
+<td><b>Username</b></td>
+                        <td> <input type="text" name="user" id="ruser"></td>
+                        <td id="s3" style="color: red;font-size:small;"></td>
+                    </tr>
+                    <tr> <td><b>Password</b></td>
+                        <td> <input type="password" name="pass" id="rpass"></td>
+                        <td id="s4" style="color: red;font-size:small;"></td>
+                    </tr>
+                    <tr> <td><b>Confirm Password </b></td>
+                        <td><input type="password" name="cpass" id="rcpass"></td>
+                        <td id="s5" style="color: red;font-size:small;"></td>
+                    </tr>
+<tr>
+                        <td></td>
+                        <td align="center"><input id="button1" class="myButton" type="button" onclick="validatereg()" value="Sign-Up"></td>
+                        <td></td>
+                    </tr>
+                </table>
+                </form>
+            </fieldset>
+        </div>
+        <div id="Login" style="width: 50%;height: 100%;float: right;color: white;">
+            <fieldset style="width: 88%;margin-left: 5%">
+                <legend style="font-size:x-large;text-shadow: 1px 1px black;color: #FFBF00 ;"><b>Login</b></legend>
+                <form style="width: 10%">
+                <table border="0">
+                    <tr>
+<td><b>Username/Email</b></td>
+                        <td> <input type="text" name="username" id="luser" ></td>
+                        <td id="l1" style="color: red;font-size:small;"></td>
+                    </tr>
+                    <tr>
+<td><b>Password</b></td>
+                        <td> <input type="password" name="password" id="lpass"></td>
+                        <td id="l2" style="color: red;font-size:small;"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="center"><input id="button2"  class="myButton" type="button" onclick="validateLog()" value="Login"></td>
+                        <td align="center" style="font-size: small;"><p onclick="forgot()" id="forgot">Forgot Password?</p></td>
+                    </tr>
+			<tr>
+<td align="center"><input id="button2"  class="myButton" type="button" onclick="validateLog()" value="Login"></td>
+<td align="center"><input id="button4"  class="myButton" type="button" onclick="validateFB()" value="FB Login"></td>
+
+</tr>
+
+<!--
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>-->
+
+                </table>
+                </form>
+            </fieldset>
+        </div>
+        </div>
+        <div id="forgotdiv1" style="opacity:0.8;position: absolute;z-index:5;display: none;margin-top:20%; position: absolute;width:35%;height: 25% ;margin-left: 34% ;background-repeat:no-repeat; ;background-image:url(<?php echo $image;?>`fgt2`.jpg);background-size:contain;opacity:.8 ">
+        </div>
+        <div id="forgotdiv2" style="position: absolute;z-index:6;display:none;box-shadow:0px 0px 10px 5px white; none;margin-top:20%; position: absolute;width:35%;height: 22% ;margin-left: 34% ; border: thin;">
+        <h2 style="color: #FFBF00; margin-left: 45%;text-shadow: 1px 1px black;">FORGOT PASSWORD</h2>
+        <form style="text-align: right;">
+        <b style="color:white;text-shadow: 1px 1px black; ">Enter Email</b>
+        <input type="text" name="fname" id="f_name"> <br>
+        <label id="f_error" style="color: red; font-size: small;">  </label><br>
+        <input id="button3" class="myButton" type="button" onclick="validateforgot()" value="Forgot Password" ">
+        </form>
+        <div>
+                <button  id="closee2" onclick="hideLogin2();" style="border-radius:100px ;background-color:#007dc1; box-shadow:0px 0px 10px 5px white; color: white;left:98%;top:-10px; position:absolute; border:1px solid; font-size: large;" ><b>X</b></button>
+            </div>
+        </div>
+
+<!-- LOGIN/REGISTER DIV ENDS-->
+<!-- LOGIN/REGISTER DIV ENDS-->
+<!-- LOGIN/REGISTER DIV ENDS--> 
+
+
+<!-- Search div starts -->
+<!-- Search div starts -->
+<!-- Search div starts -->
+
+
+<div style="position: absolute;height: 24%;width: 60%;opacity:.95;left:20%;top:45%;">
+
+    <div style="height: 40px;border-top: solid black 2px;">
+        <div  style="width:33.3333%;height:100%;float: left;text-align: center;">
+            <font  class="myButton1" id="buy_button" style="width: 100%;height: 100%;background-color: #ededed;padding-left: 0;padding-right: 0;padding-bottom: 0;" onclick="showbuy();">
+                BUY
+            </font>
+        </div>
+        <div style="width:33.3333%;height:100%;float: left;text-align: center;">
+            <font class="myButton1" id="rent_button" style="width: 100%;height: 100%;background-color: #ededed;padding-left: 0;padding-right: 0;padding-bottom: 0;" onclick="showrent()">
+                RENT
+            </font>
+        </div>
+        <div style="width:33.3333%;height:100%;float: left;text-align: center;">
+            <font class="myButton1" id="pg_button" style="width: 100%;height: 100%;background-color: #ededed;padding-left: 0;padding-right: 0;padding-bottom: 0;" onclick="showpg()">
+                PG/HOSTEL
+            </font>
+        </div>
+    </div>
+
+    <div style="width:100%;height: 60px;z-index: 2;position: absolute;">
+        <div style="width:20%;height:100%;background-color: #007dc1;float: left;text-align: center;">
+             <form>
+                <div class="multiselect">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select class="myButton4">
+                            <option selected="selected" disabled="disabled">Property Type</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes">
+                        <label for="one"><input type="checkbox" id="one"/>First checkbox</label>
+                        <label for="two"><input type="checkbox" id="two"/>Second checkbox </label>
+                        <label for="three"><input type="checkbox" id="three"/>Third checkbox</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div style="width:60%;height:100%;background-color: #007dc1;float: left;text-align: center;">
+            <input type="text" style="width: 80%;height:60%; position: relative;top: 9px;" placeholder="Enter locality to search">
+        </div>
+        <div style="width:20%;height:100%;background-color: #007dc1;float: left;text-align: center;">
+            <button class="myButton2" style="height: 60%;width: 80%;position: relative;top: 9px ;">
+                Search
+            </button>
+        </div>
+    </div>
+
+    <div id="buy" style="width: 100%;height: 60px;z-index: 1;position: absolute;top: 100px;display: none;">
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center ;padding-top: 6px">
+            Price<br>
+            <select  class="myButton3" style="width: 40%;" >
+                <option selected="selected" value="0">Min</option>
+                <option value="below">Below 5 Lakhs</option>
+                <option value="1000000">10 Lakhs</option>
+                <option value="1500000">15 Lakhs</option>
+                <option value="2000000">20 Lakhs</option>
+                <option value="2500000">25 Lakhs</option>
+                <option value="3000000">30 Lakhs</option>
+                <option value="4000000">40 Lakhs</option>
+                <option value="5000000">50 Lakhs</option>
+                <option value="6000000">60 Lakhs</option>
+                <option value="7500000">75 Lakhs</option>
+                <option value="9000000">90 Lakhs</option>
+                <option value="10000000">1 Crores</option>
+                <option value="15000000">1.5 Crores</option>
+                <option value="20000000">2 Crores</option>
+                <option value="30000000">3 Crores</option>
+                <option value="50000000">5 Crores</option>
+                <option value="200000000">20 Crores</option>
+                <option value="300000000">30 Crores</option>
+                <option value="400000000">40 Crores</option>
+                <option value="above">50+ Crores</option>
+            </select>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <select class="myButton3" style="width: 40%">
+            <option selected="selected" value="0">Max</option>
+                <option value="below">Below 5 Lakhs</option>
+                <option value="1000000">10 Lakhs</option>
+                <option value="1500000">15 Lakhs</option>
+                <option value="2000000">20 Lakhs</option>
+                <option value="2500000">25 Lakhs</option>
+                <option value="3000000">30 Lakhs</option>
+                <option value="4000000">40 Lakhs</option>
+                <option value="5000000">50 Lakhs</option>
+                <option value="6000000">60 Lakhs</option>
+                <option value="7500000">75 Lakhs</option>
+                <option value="9000000">90 Lakhs</option>
+                <option value="10000000">1 Crores</option>
+                <option value="15000000">1.5 Crores</option>
+                <option value="20000000">2 Crores</option>
+                <option value="30000000">3 Crores</option>
+                <option value="50000000">5 Crores</option>
+                <option value="200000000">20 Crores</option>
+                <option value="300000000">30 Crores</option>
+                <option value="400000000">40 Crores</option>
+                <option value="above">50+ Crores</option>
+            </select>
+        </div>
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center;padding-top: 6px">
+ BHK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Posted By<br>
+            <select class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="1" >1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select  class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="owner" >Owner</option>
+                <option value="builder">Builder</option>
+                <option value="broker">Broker</option>
+            </select>
+        </div>
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center;padding-top: 6px">
+            Built-up Area<br>
+            <select class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="below">be1ow 500</option>
+                <option value="5">500-1000</option>
+                <option value="10">1000-1500</option>
+                <option value="15">1500-2000</option>
+                <option value="20">2000-2500</option>
+                <option value="25">2500-3000</option>
+                <option value="30">3000-3500</option>
+                <option value="35">3500-4000</option>
+                <option value="40">4000-4500</option>
+                <option value="45">4500-5000</option>
+                <option value="50">5000-5500</option>
+                <option value="55">5500-6000</option>
+                <option value="60">6000-6500</option>
+                <option value="65">6500-7000</option>
+                <option value="70">7000-7500</option>
+                <option value="75">7500-8000</option>
+                <option value="80">8000-8500</option>
+                <option value="85">8500-9999</option>
+            </select>
+            In sq. ft.
+        </div>
+    </div>
+
+    <div id="rent" style="width: 100%;height: 60px;z-index: 1;position: absolute;top: 100px;display: none;">
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center ;padding-top: 6px">
+            Rent<br>
+            <select class="myButton3" style="width: 40%">
+                <option selected="selected" value="0">Min</option>
+                <option value="below"> Below 5000</option>
+                <option value="5000">5000</option>
+                <option value="10000">10000</option>
+                <option value="15000">15000</option>
+                <option value="20000">20000</option>
+                <option value="25000">25000</option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+                <option value="50000">50000</option>
+                <option value="60000">60000</option>
+                <option value="70000">75000</option>
+                <option value="90000">90000</option>
+                <option value="100000">1 Lakhs</option>
+                <option value="150000">1.5 Lakhs</option>
+                <option value="200000">2 Lakhs</option>
+                <option value="500000">5 Lakhs</option>
+                <option value="1000000">10 Lakhs</option>
+                <option value="above">10 Lakhs+</option>
+            </select>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <select class="myButton3" style="width: 40%">
+                <option selected="selected" value="0">Max</option>
+                <option value="below"> Below 5000</option>
+                <option value="5000">5000</option>
+                <option value="10000">10000</option>
+                <option value="15000">15000</option>
+                <option value="20000">20000</option>
+                <option value="25000">25000</option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+                <option value="50000">50000</option>
+                <option value="60000">60000</option>
+                <option value="70000">75000</option>
+                <option value="90000">90000</option>
+                <option value="100000">1 Lakhs</option>
+                <option value="150000">1.5 Lakhs</option>
+                <option value="200000">2 Lakhs</option>
+                <option value="500000">5 Lakhs</option>
+                <option value="1000000">10 Lakhs</option>
+                <option value="above">10 Lakhs+</option>
+            </select>
+        </div>
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center;padding-top: 6px">
+ BHK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Posted By<br>
+            <select class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="1" >1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select  class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="owner" >Owner</option>
+                <option value="builder">Builder</option>
+                <option value="broker">Broker</option>
+            </select>
+        </div>
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center;padding-top: 6px">
+        Built-up Area<br>
+            <select class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="below">be1ow 500</option>
+                <option value="5">500-1000</option>
+                <option value="10">1000-1500</option>
+                <option value="15">1500-2000</option>
+                <option value="20">2000-2500</option>
+                <option value="25">2500-3000</option>
+                <option value="30">3000-3500</option>
+                <option value="35">3500-4000</option>
+                <option value="40">4000-4500</option>
+                <option value="45">4500-5000</option>
+                <option value="50">5000-5500</option>
+                <option value="55">5500-6000</option>
+                <option value="60">6000-6500</option>
+                <option value="65">6500-7000</option>
+                <option value="70">7000-7500</option>
+                <option value="75">7500-8000</option>
+                <option value="80">8000-8500</option>
+                <option value="85">8500-9999</option>
+            </select>
+            In sq. ft.
+        </div>
+    </div>
+
+    <div id="pg" style="width: 100%;height: 60px;z-index: 1;position: absolute;top: 100px;display: none;">
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center ;;padding-top: 6px">
+            Rent<br>
+            <select class="myButton3" style="width: 40%">
+                <option selected="selected" value="0">Min</option>
+                <option value="below"> Below 5000</option>
+                <option value="5000">5000</option>
+                <option value="10000">10000</option>
+                <option value="15000">15000</option>
+                <option value="20000">20000</option>
+                <option value="25000">25000</option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+                <option value="50000">50000</option>
+                <option value="60000">60000</option>
+                <option value="70000">75000</option>
+                <option value="90000">90000</option>
+                <option value="100000">1 Lakhs</option>
+                <option value="150000">1.5 Lakhs</option>
+                <option value="200000">2 Lakhs</option>
+                <option value="500000">5 Lakhs</option>
+                <option value="1000000">10 Lakhs</option>
+                <option value="above">10 Lakhs+</option>
+            </select>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <select class="myButton3" style="width: 40%">
+                <option selected="selected" value="0">Max</option>
+                <option value="below"> Below 5000</option>
+                <option value="5000">5000</option>
+                <option value="10000">10000</option>
+                <option value="15000">15000</option>
+                <option value="20000">20000</option>
+                <option value="25000">25000</option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+                <option value="50000">50000</option>
+                <option value="60000">60000</option>
+                <option value="70000">75000</option>
+                <option value="90000">90000</option>
+                <option value="100000">1 Lakhs</option>
+                <option value="150000">1.5 Lakhs</option>
+                <option value="200000">2 Lakhs</option>
+                <option value="500000">5 Lakhs</option>
+                <option value="1000000">10 Lakhs</option>
+                <option value="above">10 Lakhs+</option>
+            </select>
+        </div>
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center;padding-top: 6px">
+ Sharing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Posted By<br>
+            <select class="myButton3" style="width: 35%">
+                <option>
+                <option selected="selected" value="0">Any</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select  class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="owner" >Owner</option>
+                <option value="builder">Builder</option>
+                <option value="broker">Broker</option>
+            </select>
+        </div>
+        <div style="width:33.3333%;height:100%;background-color: #ededed;float: left;text-align: center;padding-top: 6px">
+            Built-up Area<br>
+            <select class="myButton3" style="width: 35%">
+                <option selected="selected" value="0">Any</option>
+                <option value="below">be1ow 500</option>
+                <option value="5">500-1000</option>
+                <option value="10">1000-1500</option>
+                <option value="15">1500-2000</option>
+                <option value="20">2000-2500</option>
+                <option value="25">2500-3000</option>
+                <option value="30">3000-3500</option>
+                <option value="35">3500-4000</option>
+                <option value="40">4000-4500</option>
+                <option value="45">4500-5000</option>
+                <option value="50">5000-5500</option>
+                <option value="55">5500-6000</option>
+                <option value="60">6000-6500</option>
+                <option value="65">6500-7000</option>
+                <option value="70">7000-7500</option>
+                <option value="75">7500-8000</option>
+                <option value="80">8000-8500</option>
+                <option value="85">8500-9999</option>
+            </select>
+            In sq. ft.
+        </div>
+    </div>
+
+</div>
+
+<!-- Search div ends -->
+<!-- Search div ends -->
+<!-- Search div ends -->
+
+
+<!-- Header div start-->
+<!-- Header div start-->
+<!-- Header div start-->
+
+<div style="position: absolute;left: 20px">
+        <img alt="Contact" src="<?php echo $image;?>100acres.png" style="height: 70px;width: 130px;">
+</div>
+<div class="nav1" >
+    <ul>
+        <li><a href="javascript:goToSell()">Sell/Rent Property</a></li>
+        <li><a href="#">&nbsp;&nbsp;We are Hiring</a></li>
+        <li><a href="#">Contact</a> <img alt="Contact" src="<?php echo $image;?>phone.png" style="height: 15px;width: 15px;"></li>
+        
+        <?php 
+ 
+if(isset($this->session->userdata['email'])){
+	//echo "<button style='float: right' name='login' onclick='logout();'>hi1 ".$this->session->userdata['name']." logout </button>";
+	 echo "<li ><a href='javascript:showDetailDiv()' id='logge_user' >Welcome ".$this->session->userdata['name']."</a></li>";
+}else{
+	 echo "<li><a href='javascript:showLogin()'>Login</a> <img alt='Login' src='".$image."logwhite.png' style='height: 15px;width: 15px'></li>";
+      
+}
+
+
+?>
+        
+        
+         
+      </ul>
+</div>
+<!-- Header div ends-->
+<!-- Header div ends-->
+<!-- Header div ends-->
+
+
+<!-- USer div starts-->
+<!-- User div starts-->
+<!-- User div starts-->
+
+<div id="userdetail" class="nav2" style="display: none;">
+    <ul style=" list-style: none;">
+        <li><a href="#"><?php echo $this->session->userdata['name'];?></a></li>
+        <li><a href="#"><?php echo $this->session->userdata['email'];?></a></li>
+        <li><a href='javascript:logout()'>Logout</a></li>
+    </ul>
+</div>
+
+<!-- User div ends-->
+<!-- User div ends-->
+<!-- User div ends-->
+
+.
+
+        
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+<!-- 
+<div style="background-color: yellow">
+<?php 
+/* 
+if(isset($this->session->userdata['email'])){
+	echo "<button style='float: right' name='login' onclick='logout();'>hi1 ".$this->session->userdata['name']." logout </button>";
+}else{
+	echo "<button style='float: right' name='login' onclick='showLogin();'>login/registers</button>";
+}
+*/
+
+?>
+</div>
+-->
+
+
+</body>
+</html>

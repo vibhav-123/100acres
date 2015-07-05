@@ -1,0 +1,133 @@
+#headd{
+	width: 750px;
+	text-align: center;
+	color: #FACC2E;
+	text-shadow: 1px 1px black;
+	margin-left: 500px;
+}
+
+
+.ProfilePage
+{
+    /* Move it off the top of the page, then centre it horizontally */
+    width: 750px;
+    height:350px;
+    z-index: 100;
+    margin-left: 500px;
+    box-shadow:0px 0px 10px 5px white;
+    color: white;
+
+/* For visibility. Delete me */
+border: 1px solid red;
+}
+
+.LeftCol
+{
+    /* Move it to the left */
+    float: left;
+	margin-top:20px;
+    width: 300px;
+    text-align: center;
+
+    /* Move it away from the content */
+    margin-right: 0px;
+	margin-left: 0px;
+}
+
+.Photo
+{
+    /* Width and height of photo container */
+    width: 300px;
+    height: 300px;
+}
+
+.photo_img
+{
+	width: 300px;
+	height:300px;
+}
+
+
+
+.Info
+{
+    width: 400px;
+   	height:200px;
+    /* Move it to the right */
+    float: right;
+	margin-left: 0%;
+}
+
+.Info strong
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 150px;
+    color: wblack;
+
+/* For visibility. Delete me */
+/*border: 1px solid orange;*/
+}
+
+.Info span
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 180px;
+    text-shadow: 0.5px 0.5px black;
+/* For visibility. Delete me */
+/*border: 1px solid purple;*/
+}
+.heading{
+	margin-top:-20px;
+	width:750px;
+	height: 25px;
+	color: black;
+}
+.back_cover{
+	width:750px;
+	height: 350px;
+	margin-left:500px;
+	opacity:0.9;
+	position: absolute;
+	z-index: -1;
+	background-color: #007dc1;
+}
+
+
+
+
+
+.contact{
+	position: absolute;
+	margin-left: 851px;
+	margin-top: 210px;
+	display: none;
+	background-color:white;
+}
+
+
+
+
+
+.cont {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+ 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+    border-radius:1px;
+
+}
+
+.cont:active {
+    position:relative;
+    top:1px;}
