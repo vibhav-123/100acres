@@ -1,0 +1,150 @@
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+body{
+	background-image: url("/images/bg.jpg");
+	background-repeat: repeat;
+	font-family: Helvetica,sans-serif;
+	color: rgb(255, 255, 255);
+	padding: 0px;
+	margin: 0px;
+}
+#next{
+	padding:10px;
+	font-size: 18px;
+	
+	margin:15px auto;
+	
+	
+	color: black;
+	cursor:pointer;
+	background-color: #d3d3d3;
+	text-shadow:0 1px 0 #13506D;
+	box-shadow: 2px 2px 2px #888888;
+}
+.loginbtn{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: right;
+	padding: 10px;
+	width: auto;
+	text-align: center;
+	color: black;
+	cursor:pointer;
+	background-color: #d3d3d3;
+	text-shadow:0 1px 0 #13506D;
+	box-shadow: 4px 4px 4px #888888;
+	
+}
+#searchresultslist{
+	color: black;
+	opacity: .85;
+	background-color: rgb(253, 253, 253);
+	overflow:hidden;
+	padding:15px;
+	
+}
+#searchresultslist #sort{
+	float:right;
+}
+.searchresult{
+	border:1px solid black;
+	width:48%;
+	text-align: center;
+	margin: 20px 1%;
+	float:left;
+	position:relative;
+
+}
+.searchresult img{
+	display:block;
+	max-width: 100%;
+	text-align: center;
+}
+.searchresult span{
+	display:block;
+	padding:5px;
+	background-color: rgb(102, 194, 194) ;
+}
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  padding:10px;
+  display: table;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+  opacity: 0;
+}
+#searchresultslist a:visited,#searchresultslist a:active,#searchresultslist a:link{
+	color:white;
+	text-decoration: none;
+}
+#header{
+	padding: 20px;
+	position: relative;
+    z-index: 1;
+	overflow: hidden;
+}
+#content{
+	overflow:hidden;
+	
+}
+#filterform{
+	background-color: rgb(73,73,73);
+	overflow:hidden;
+}
+#filterform #submit{
+	clear:both;
+	margin:8px auto;
+	padding:8px;
+	width:10%;
+}
+#submit input{
+	padding:8px;
+	font-size: 16px;
+	font-style: bold;
+}
+#filterform form span{
+	width:16%;
+	padding:5px;
+	
+	float:left;
+}
+#filterform form span div{
+	padding:8px;
+}
+
+#headerbackground{
+	position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(113, 113, 113);
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+figure{
+	margin: 0px;
+}
+figure img{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 200px;
+	height: 100px;
+}
+figcaption{
+	margin-left: 10px;
+	font-size: 17px;
+	color: #FF4500;
+}
