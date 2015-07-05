@@ -1,0 +1,26 @@
+<?php
+class POSTING extends TABLE
+{
+        public function __construct($dbname="")
+        {
+                parent::__construct($dbname);
+        }
+
+        /**
+         * This function is used to find out the no of holidays falling between any 2 dates .
+        **/
+        public function fetchPosting()
+        {
+                $sql="SELECT * FROM POSTING";
+                $res=$this->db->prepare($sql);
+//                $res->bindValue(":TIME1", $time1, PDO::PARAM_STR);
+   //             $res->bindValue(":TIME2", $time2, PDO::PARAM_STR);
+                $res->execute();
+                if($row = $res->fetch(PDO::FETCH_ASSOC))
+                {
+			$data[]=$row;
+            	}
+		return $data;
+        }
+
+}

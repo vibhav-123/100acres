@@ -1,0 +1,35 @@
+  #header{
+   background:#074266;
+   opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+#center_header{
+   background:#053350;
+   height:100px;
+   margin:auto;
+   width:980px;
+   }
+#left_header{
+   float:left;
+   font-size:40px;
+   line-height: 100px;
+   text-align: center;
+   width:370px;
+}
+#menu{
+   float:right;
+   height: 30px;
+   margin: 42px 0 0;
+   width: 530px;
+   position:absolute;
+   color:red;
+   }
+#menu a{
+   color: #EEEEEE;
+   font-size: 15px;
+   font-weight: bold;
+   padding: 8px 12px;
+   }  
+#menu a:hover{
+   background: #1E90FF url(hover-menu-items.png) repeat-x;
+}
