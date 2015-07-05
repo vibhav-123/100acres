@@ -1,0 +1,43 @@
+<?php
+class SEARCH extends TABLE
+{
+        public function __construct($dbname="")
+        {
+                parent::__construct($dbname);
+        }
+
+        /**
+         * This function is used to find out the no of holidays falling between any 2 dates .
+        **/
+       
+                  public function searchTable($city, $minprice, $maxprice, $bedrooms)
+        {
+                $sql="SELECT * FROM 100acres.POSTING where city=:CITY OR expected_price=:MAXPRICE OR bedrooms=:BEDROOMS";
+                $res=$this->db->prepare($sql);
+		$res->bindValue(":CITY", $city, PDO::PARAM_STR);
+                $res->bindValue(":BEDROOMS", $bedrooms, PDO::PARAM_STR);
+		$res->bindValue(":MAXPRICE", $maxprice, PDO::PARAM_INT);
+                $res->execute();
+                while($row = $res->fetch(PDO::FETCH_ASSOC))
+                {
+            		$data[] = array('city'=>$row['city'],'i_am'=>$row['i_am']);
+                }
+		return array(count($data),$data);
+        }
+
+	public function count($city, $minprice, $maxprice, $bedrooms){
+	$sql="SELECT COUNT(*) as COUNT FROM 100acres.POSTING where city=:CITY OR expected_price=:MAXPRICE OR bedrooms=:BEDROOMS";
+                $res=$this->db->prepare($sql);
+		$res->bindValue(":CITY", $city, PDO::PARAM_STR);
+                $res->bindValue(":BEDROOMS", $bedrooms, PDO::PARAM_STR);
+		$res->bindValue(":MAXPRICE", $maxprice, PDO::PARAM_INT);
+                $res->execute();
+                if($row = $res->fetch(PDO::FETCH_ASSOC)){
+			return $row['COUNT'];
+		}
+		
+}
+        
+
+}
+?>

@@ -1,0 +1,112 @@
+#body
+{
+	margin: 0 auto; 
+}
+#main
+{
+	 width: 70%;
+	 margin-left: auto;
+	 margin-right: auto;
+
+}
+#header
+{
+	background-color:#b0c4de; height:50px; width:100%;position:relative;
+}
+
+#searchnew
+{
+	background-color: #00008B;
+	height: 90px;
+
+	
+}
+
+#searchnew1
+{
+
+	height: 40px;
+
+}
+#place 
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 90px;
+	padding-right: 50px;
+	
+}
+#price
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+#mprice
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#bedroom
+{
+	margin-top: 10px;
+	display: inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+
+
+#first_img
+{
+	background-color: #D3D3D3; 
+float:left;
+  color:  black;
+  font-size: 14px;
+  position:absolute;
+  top:250px;
+  left:200px;
+}
+#second_img
+{
+	background-color: #D3D3D3; 
+float:right;
+  color:  black;
+  font-size: 14px;
+  position:absolute;
+  top:250px;
+  right:200px;
+}
+#third_img
+{
+	background-color: #D3D3D3; 
+float:left;
+  color:  black;
+  font-size: 14px;
+  position:absolute;
+  top:600px;
+  left:200px;
+  margin-bottom: 15px;
+
+
+}
+#forth_img
+{
+	background-color: #D3D3D3; 
+float:right;
+  color:  black;
+  font-size: 14px;
+  position:absolute;
+  top:600px;
+  right:200px;
+  margin-bottom: 15px;
+}
