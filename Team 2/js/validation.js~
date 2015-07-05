@@ -1,0 +1,126 @@
+function LogSubmit()
+{
+	$("#email_error_log").text("");
+	$("#pwrd_error_log").text("");
+	var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+	var email1 = $("#email_login").val();
+	var pwrd1 = $("#pwrd_login").val();
+    	
+	if($("#email_login").val() == "" )
+    	{
+    		$("#email_login").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#email_login").focus();
+    		$("#email_error_log").html("Enter the email");
+    		return false;
+        }else  
+    	if(!emailRegex.test(email1))
+    	{
+		$("#email_login").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+		$("#email_login").focus();
+		$("#email_error_log").html("Enter a valid email");
+		return false;
+    	}
+    	else 
+    	if($('#pwrd_login').val() == "")
+    	{
+		$("#pwrd_login").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#pwrd_login").focus();
+		$("#pwrd_error_log").html("Enter the password");
+		return false;
+  	}
+    	else 
+    	{
+		$.post('http://www.100acres.com/welcome/validateLogin',
+		{
+			email : email1,
+			pwrd :	pwrd1
+				
+		},
+		function(data,status){
+			if(data=="Success")
+			{
+				window.location = "www.100acres.com";			
+			} 
+			else
+			{
+				$("#error_login").text(status);
+			}
+		});
+    	}		   
+   }
+   function RegSubmit() 
+   {
+	$("#email_error_reg").text("");
+	$("#pwrd_error_reg").text("");
+	$("#repwrd_error_reg").text("");
+	$("#contact_error_reg").text("");
+	var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+	var email1 = $("#email_reg").val();
+	var pwrd1 = $("#pwrd_reg").val();
+	var repwrd = $("#repwrd_reg").val();
+	var userID1 = $("#userID_reg").val();
+	var type1 = $("#select_type").val();
+	var contact1=$("#contact_reg").val();
+	if($("#email_reg").val() == "" )
+    	{
+		$("#email_reg").focus();
+		$("#email_reg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#email_error_reg").html("Enter the email");
+		return false;
+        }else  
+    	if(!emailRegex.test(email1))
+    	{
+		$("#email_reg").focus();
+		$("#email_reg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#email_error_reg").html("Enter a valid email");
+		return false;
+    	}
+    	else 
+    	if($('#pwrd_reg').val() == "")
+    	{
+		$("#pwrd_reg").focus();
+		$("#pwrd_reg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#pwrd_error_reg").html("Enter the password");
+		return false;
+	}
+    	else 
+	if($('#repwrd_reg').val() == "")
+	{
+		$("#repwrd_reg").focus();
+		$("#repwrd_reg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#repwrd_error_reg").html("Enter the password");
+		return false;
+	}
+    	else 
+    	if($('#pwrd_reg').val() != $('#repwrd_reg').val())
+    	{
+		$("#pwrd_reg").focus();
+    		$("#pwrd_reg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#repwrd_error_reg").html("Passwords do not match!");
+		return false;
+    		
+	}
+    	else 
+	if($('#contact_reg').val() == "")
+	{
+		$("#contact_reg").focus();
+		$("#contact_reg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#contact_error_reg").html("Enter the contact number");
+		return false;
+	}
+    	else 
+    	{
+    		$("#contact_error_reg").html("form submitted successfully");
+		$.post('http://www.100acres.com/welcome/registerUser',
+		{
+			email : email1,
+			pwrd :	pwrd1,	
+			contact:contact1,
+			type:type1,
+			userID:userID1
+		},
+		function(data,status){
+			alert(data + "\nStatus : " +status); 
+		});
+    	}
+   }

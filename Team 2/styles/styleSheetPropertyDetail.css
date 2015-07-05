@@ -1,0 +1,376 @@
+.inputText,.inputPwrd
+{
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    width: 200px; 
+    background: #FFFFFF;
+    height: 30px;
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;    
+}
+
+.inputText:hover,.inputPwrd:focus,.inputText:focus,input[type=password]:hover
+{
+    border-color: #C9C9C9; 
+}
+
+.results
+{
+	border:1;
+	width:75%;
+	height:75%;
+	margin:0 auto;
+	background-color:#D8F6CE;
+	padding:10px
+	
+}
+
+.imageContainer
+{
+	margin:8px;
+	//border:2;
+	//border-style:solid;
+	float:left;
+	width:30%;
+	position:relative;
+}
+
+.resultImage
+{
+	width:300px;
+	height:300px;
+}
+
+.resultHeader
+{
+	height:20px;
+	background-color:rgba(0,0,0,0.1);
+	position:relative;
+	width:100%;
+}
+
+.headerText
+{
+	padding-left:100px
+}
+
+.resultFooter
+{
+	position:relative;
+	
+	
+}
+.resultDescription
+{
+	position:relative;
+	width:66%;
+	border-color:orange;
+	float:right;
+	padding-top: 25px
+}
+
+.resultDescription2
+{
+	position:relative;
+	width:100%;
+	border-color:orange;
+	float:left;
+	padding-top: 15px
+}
+
+
+
+.button 
+{ 
+    width: 100px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+.button 
+{ 
+    width: 150px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+
+
+a {
+    color: #000000;
+	text-decoration:none;
+}
+
+#a1
+{
+	font-size:30px;
+	color:white;
+}
+
+#a1:link {
+    color:white;
+}
+
+/* visited link */
+#a1:visited {
+    color:white;
+}
+
+/* mouse over link */
+#a1:hover {
+    color: white;
+}
+
+/* selected link */
+#a1:active {
+    color: white;
+}
+.LoginButton:hover
+{
+	background-color: rgba(0,0,0,0.6);
+}
+.fbLoginButton
+{
+	width: 250px;
+    height: 40px;
+    background-image: url(http://www.100acres.com/images/fbLogin.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+ 
+}
+
+.ResetPasswordButton  
+{ 
+    width: 120px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+#main,#login,#register,#forgotPassword
+{
+	position: absolute;
+	top: 0;
+  	left: 0;
+  	height:100%;
+  	width:100%;
+}
+
+.fpwrd
+{
+   text-align:left;
+   color:blue;
+   font-size: 12px;
+   text-decoration: none
+}
+
+
+#main,#fin,#register,#forgotPassword
+{
+	position: absolute;
+	top: 0;
+  	left: 0;
+  	height:100%;
+  	width:100%;
+  	table-layout: fixed;
+}
+
+
+.cross
+{
+	width: auto;  
+	border: 0; 
+	font-size: 20px; 
+	color:black;
+	position: absolute;
+	top:0px;
+	right:0px;
+	background-color: white
+	
+}
+
+.LoginButton 
+{ 
+    width: 125px; 
+    padding: 9px 15px;
+    background-color:inherit;  
+    border: 0; 
+    font-size: 14px; 
+    color: white;
+    text-align:center; 
+    
+}
+
+.nameButton
+{
+    border: 0;  
+    background-color:inherit;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+
+#login,#register,#forgotPassword
+{
+	display:none
+}
+ 
+#welcomeDiv
+{
+	bottom:0;
+}
+
+#welcomeDiv li 
+{
+	text-align:center;
+	color:white; 
+}
+
+#welcomeDiv li button
+{
+	text-decoration: none;
+	padding: .2em 1em;
+	color: #fff;
+	background-color: #036;
+}
+
+#welcomeDiv li a:hover
+{
+	color: white;
+	background-color: plum;
+}
+ 
+ul
+{
+    list-style-type: none;
+}  	
+#loginReg
+{
+	display:none;
+  	position:absolute;
+	width:350px;
+	height:310px;
+	z-index:15;
+	top:50%;
+	left:50%;
+	margin:-100px 0 0 -150px;
+	background-color: white;
+	box-shadow: rgba(0,0,0, 0.9) 0px 0px 50px;
+}
+  
+.errorBox
+{
+	text-align:center;
+	font-size: x-small;
+	font-style: oblique;
+	color:red
+}
+#cover,#cover2
+{
+	width:100%;
+  	height:100%;
+  	background-color: black;
+  	opacity:0.5;
+  	position:"absolute";
+  	display:none;
+  	padding:0;
+  	margin:0;
+  	
+}
+
+#body
+{
+	background: url('http://www.100acres.com/images/bg14.jpg');
+	background-repeat: no-repeat;
+}
+
+
+.middleDiv
+{
+	//border:2;
+	//border-style:solid;
+	border-color:green;
+	width:95%;
+	
+}
+
+#dropdown
+{
+	display:none;
+}
+
+*
+{
+	margin:0;
+	padding:0
+}
+
+#tempRegisterTable
+{
+	position: absolute;
+	top: 0;
+  	left: 0;
+  	height:100%;
+  	width:100%;	
+}
+
+#tempRegister
+{
+  	position:absolute;
+	width:350px;
+	height:310px;
+	z-index:15;
+	top:50%;
+	left:50%;
+	margin:-100px 0 0 -150px;
+	background-color: white;
+	box-shadow: rgba(0,0,0, 0.9) 0px 0px 50px;
+	display:none
+	
+}
+
+.cross
+{
+	width: auto;  
+	border: 0; 
+	font-size: 20px; 
+	color:black;
+	position: absolute;
+	top:0px;
+	right:0px;
+	background-color: white
+	
+}
+#cover
+{
+	width:100%;
+  	height:100%;
+  	background-color: black;
+  	opacity:0.5;
+  	position:"absolute";
+  	display:none;
+  	padding:0;
+  	margin:0;	
+}
+
+
+

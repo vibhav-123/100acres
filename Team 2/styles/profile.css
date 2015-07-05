@@ -1,0 +1,12 @@
+.editPersonal 
+{ 
+    width: 150px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}

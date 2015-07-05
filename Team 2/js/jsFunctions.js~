@@ -1,0 +1,145 @@
+
+function showSearch()
+{
+	$("#loginReg").hide(150);
+	$("#cover").slideUp(149);
+	$("#regLog").show(1);
+	$("#login").hide(1);
+	$("#register").hide(1);
+	$("#formSearch_BuyRent").slideDown();
+	    
+}
+
+
+function addBuy()
+{
+    $("#loginReg").hide(150);
+    $("#cover").slideUp(149);
+    $("#regLog").show(1);
+    $("#login").hide(1);
+    $("#register").hide(1);
+    $("#formSearch_BuyRent").show(150);
+    $("#property_type").val("buy");
+}
+
+
+
+
+function property_type_post()
+{
+    $("formPost_SellRent").hide(1);
+}
+
+function addRent()
+{
+	$("#loginReg").hide(150);
+	$("#cover").slideUp(149);
+	$("#regLog").show(1);
+	$("#login").hide(1);
+	$("#register").hide(1);
+	$("#formSearch_BuyRent").show(150);
+	$("#property_type").val("rent");
+}
+function addPG()
+{
+	$("#loginReg").hide(150);
+	$("#cover").slideUp(149);
+	$("#regLog").show(1);
+	$("#login").hide(1);
+	$("#register").hide(1);
+	$("#formSearch_BuyRent").show(149);
+	$("#property_type").val("PG");
+}
+    	
+function hideSearch()
+{
+	$("#loginReg").hide(150);
+	
+	$("#cover").hide(1);
+	$("#formSearch_BuyRent").slideUp();
+
+	
+}
+
+
+function showLogin()
+{
+	$("#login").show(1);
+	$("#register").hide(1);
+	$("#main").hide(1);
+}
+function showRegister()
+{
+    $("#login").hide(1);
+    $("#main").hide(1);
+    $("#register").show(1);
+    
+}
+
+
+function showMain()
+{
+	$("#login").hide(1);
+	$("#register").hide(1);
+	$("#main").show(1); 
+	blankLoginErrors();
+	blankRegisterErrors();
+}
+
+function showAll()
+{
+	$("#loginReg").show(150);
+	$("#cover").slideDown(149);
+	$("#regLog").hide(1);
+	$("#main").show(1);
+}
+
+function hideAll()
+{
+	$("#loginReg").hide(150);
+	$("#cover").slideUp(149);
+	blankLoginErrors();
+	blankRegisterErrors();
+	resetRegisterStyles();
+	resetLoginStyles();
+	$("#regLog").show(1);
+	$("#login").hide(1);
+	$("#register").hide(1);
+	$("#login_form").trigger("reset");
+	$("#register_form").trigger("reset");
+}
+
+function blankLoginErrors()
+{
+	$("#email_error_log").text("");
+	$("#pwrd_error_log").text("");
+}
+function blankRegisterErrors()
+{
+	$("#email_error_reg").text("");
+	$("#name_error_reg").text("");
+	$("#contact_error_reg").text("");
+	$("#pwrd_error_reg").text("");
+	$("#repwrd_error_reg").text("");
+	$("#name_error_reg").text("");
+}
+
+function resetRegisterStyles()
+{
+	$("#pwrd_reg").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+	$("#name_reg").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+	$("#repwrd_reg").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+	$("#email_reg").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+	$("#name_reg").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+	$("#contact_reg").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+}
+function resetLoginStyles()
+{
+	$("#email_login").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+	$("#pwrd_login").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+}
+
+$(document).keyup(function(e) {
+    if ( e.keyCode === 27 ) // esc
+        hideAll();
+});

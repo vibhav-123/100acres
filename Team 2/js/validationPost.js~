@@ -1,0 +1,256 @@
+function postPg()
+{
+	var contact1 = $("#contact_post_pg").val();
+	var price1 = $("#price_post_pg").val();
+	var denomination1 = $("#denomination_post_pg").val();
+	var year1 = $("#year_post_pg").val();
+
+	var address1=$("address_post_pg").val();
+	var priceRegex = /^[0-9]+$/;
+	var userID=$("userID_post_pg").val();
+	//alert("contact : "+ contact1+ "price : "+price1+" denomination : "+denomination1+", year:"+year1);	
+
+	if($("#contact_post_pg").val()=="")
+	{
+			
+		$("#contact_post_pg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_pg").focus();
+		$("#errorDivPG").html("Contact Required");
+		return false;
+	}
+	else if($("#price_post_pg").val()=="")
+	{
+		$("#contact_post_pg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_pg").focus();
+		$("#errorDivPG").html("Price Required");
+		return false;
+	}
+	else if(!priceRegex.test(price1))
+	{
+		$("#contact_post_pg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_pg").focus();
+		$("#errorDivPG").html("Enter digits only in Price");
+		return false;
+	}	
+	else if($("#location_post_pg").val()=="")
+	{
+		$("#location_post_pg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#location_post_pg").focus();
+		$("#errorDivPG").html("City required");
+		return false;
+	}
+	else if($("#address_post_pg").val()=="")
+	{
+		$("#address_post_pg").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#address_post_pg").focus();
+		$("#errorDivPG").html("Address Required");
+		return false;
+	}
+	else
+	{
+		$.post('http://www.100acres.com/index.php/property/postadpg',
+		    {
+			userID : $("userID_post_pg").val(),
+			contact : $("#contact_post_pg").val(),
+			price : $("#price_post_pg").val(),
+			denomination : $("#denomination_post_pg").val(),
+			year : $("#year_post_pg").val(),
+			location : $("#location_post_pg").val(),
+			address:$("address_post_pg").val()
+			
+		    }       
+		,function(response, status){alert(response);} );
+	}
+}
+
+
+
+
+
+function postadsell()
+{
+	var userID = $("#userID_post_sell");
+	var propType= $("#property_type_post_sell").val();
+	var builtType= $("#built_type_post_sell").val();	
+	var consStatus = $("#cons_status_post_sell").val();	
+	var yearCons= $("#year_post_sell").val();	
+	var bedRooms= $("#bedrooms_post_sell").val();	
+	var contact = $("#contact_post_sell").val();
+	var price = $("#price_post_sell").val();
+	var denomination = $("#denomination_post_sell").val();
+	var year = $("#year_post_sell").val();
+	var city = $("#city_post_sell").val();
+	var address=$("#address_post_sell").val();
+	var parking=$("#parking_post_sell").val();
+	var ownership=$("#owner_post_sell").val();
+	var description=$("#description_post_sell").val();
+	var area=$("#area_post_sell").val();
+
+
+
+	var priceRegex = /^[0-9]+$/;
+	var userID=$("userID_post_pg").val();
+	//alert("contact : "+ contact1+ "price : "+price1+" denomination : "+denomination1+", year:"+year1);	
+
+	if($("#contact_post_sell").val()=="")
+	{
+			
+		$("#contact_post_sell").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_sell").focus();
+		$("#errorDivSell").html("Contact Required");
+		return false;
+	}
+	else if(!phoneRegex.test(contact))
+	{
+		$("#contact_post_sell").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_sell").focus();
+		$("#errorDivSell").html("Phone number should contain only 10 digits");
+		return false;
+	}
+	else if($("#price_post_sell").val()=="")
+	{
+		$("#contact_post_sell").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_sell").focus();
+		$("#errorDivSell").html("Price Required");
+		return false;
+	}
+	else if(!priceRegex.test(price))
+	{
+		$("#contact_post_sell").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_sell").focus();
+		$("#errorDivSell").html("Enter digits only in Price");
+		return false;
+	}	
+	else if($("#city_post_sell").val()=="")
+	{
+		$("#city_post_sell").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#city_post_sell").focus();
+		$("#errorDivSell").html("City required");
+		return false;
+	}
+	else if($("#address_post_sell").val()=="")
+	{
+		$("#address_post_sell").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#address_post_sell").focus();
+		$("#errorDivSell").html("Address Required");
+		return false;
+	}
+	else
+	{
+		$.post('http://www.100acres.com/index.php/property/postadsell',
+		    {
+			userID 		: $("#userID_post_sell").val(),
+			contact 	: $("#contact_post_sell").val(),
+			propType	:$("#property_type_post_sell").val(),
+			builtType	:$("#built_type_post_sell").val(),
+			consStatus	:$("#cons_status_post_sell").val(),
+			bedRooms	:$("#bedrooms_post_sell").val(),
+			price 		: $("#price_post_sell").val(),
+			denomination 	: $("#denomination_post_sell").val(),
+			year 		: $("#year_post_sell").val(),
+			city 		: $("#city_post_sell").val(),
+			address		:$("#address_post_sell").val(),
+			parking 	: $("#parking_post_Sell").val(),
+			ownership	:$("#owner_post_sell").val(),
+			area		:$("#area_post_sell").val(),
+			description	:$("#description_post_sell").val()
+		    }       
+		,function(response, status){alert(response);} );
+	}
+}
+
+
+
+function postadrent()
+{
+	var userID = $("#userID_post_rent");
+	var propType= $("#property_type_post_rent").val();
+	var builtType= $("#built_type_post_rent").val();	
+	var consStatus = $("#cons_status_post_rent").val();	
+	var yearCons= $("#year_post_rent").val();	
+	var bedRooms= $("#bedrooms_post_rent").val();	
+	var contact = $("#contact_post_rent").val();
+	var price = $("#price_post_rent").val();
+	var denomination = $("#denomination_post_rent").val();
+	var year = $("#year_post_rent").val();
+	var city = $("#city_post_rent").val();
+	var address=$("#address_post_rent").val();
+	var parking=$("#parking_post_rent").val();
+	var ownership=$("#owner_post_rent").val();
+	var description=$("#description_post_rent").val();
+	var area=$("#area_post_rent").val();
+
+
+
+	var priceRegex = /^[0-9]+$/;
+	var phoneRegex = /^\d{10}$/;
+	var userID=$("userID_post_rent").val();
+	//alert("contact : "+ contact1+ "price : "+price1+" denomination : "+denomination1+", year:"+year1);	
+
+	if($("#contact_post_rent").val()=="")
+	{
+			
+		$("#contact_post_rent").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_rent").focus();
+		$("#errorDivRent").html("Contact Required");
+		return false;
+	}
+	else if(!phoneRegex.test(contact))
+	{
+		$("#contact_post_rent").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_rent").focus();
+		$("#errorDivRent").html("Phone number should contain only 10 digits");
+		return false;
+	}
+		
+	else if($("#price_post_rent").val()=="")
+	{
+		$("#contact_post_rent").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_rent").focus();
+		$("#errorDivRent").html("Price Required");
+		return false;
+	}
+	else if(!priceRegex.test(price))
+	{
+		$("#contact_post_rent").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#contact_post_rent").focus();
+		$("#errorDivRent").html("Enter digits only in Price");
+		return false;
+	}	
+	else if($("#city_post_rent").val()=="")
+	{
+		$("#city_post_rent").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#city_post_rent").focus();
+		$("#errorDivRent").html("City required");
+		return false;
+	}
+	else if($("#address_post_rent").val()=="")
+	{
+		$("#address_post_rent").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#address_post_rent").focus();
+		$("#errorDivRent").html("Address Required");
+		return false;
+	}
+	else
+	{
+		$.post('http://www.100acres.com/index.php/property/postadrent',
+		    {
+			userID 		: $("#userID_post_rent").val(),
+			contact 	: $("#contact_post_rent").val(),
+			propType	:$("#property_type_post_rent").val(),
+			builtType	:$("#built_type_post_rent").val(),
+			consStatus	:$("#cons_status_post_rent").val(),
+			bedRooms	:$("#bedrooms_post_rent").val(),
+			price 		: $("#price_post_rent").val(),
+			denomination 	: $("#denomination_post_rent").val(),
+			year 		: $("#year_post_rent").val(),
+			city 		: $("#city_post_rent").val(),
+			address		:$("#address_post_rent").val(),
+			parking 	: $("#parking_post_rent").val(),
+			ownership	:$("#owner_post_rent").val(),
+			area		:$("#area_post_rent").val(),
+			description	:$("#description_post_rent").val()
+		    }       
+		,function(response, status){alert(response);} );
+	}
+}

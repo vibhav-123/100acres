@@ -1,0 +1,775 @@
+.inputText,.inputPwrd
+{
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    width: 200px; 
+    background: #FFFFFF;
+    height: 30px;
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;    
+}
+
+td
+{
+	width:120px;
+}
+select
+{
+	width:80px;
+}
+
+
+.inputText:hover,.inputPwrd:focus,.inputText:focus,input[type=password]:hover
+{
+    border-color: #C9C9C9; 
+}
+.fbLoginButton
+{
+	width: 250px;
+    height: 40px;
+    background-image: url(http://www.100acres.com/images/fbLogin.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+ 
+}
+.hid
+{
+    visibility: hidden;
+}
+
+.errInput
+{
+    box-shadow:0 0 10px red;
+    border-color:red;
+    outline: none;
+}
+
+select
+{
+	width: 125px; 
+    background: #BDBDBD; 
+    border: 0; 
+	font-size:15px;
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+	
+}
+
+.button 
+{ 
+    width: 125px; 
+    padding: 9px 15px; 
+    background: #BDBDBD; 
+    border: 0; 
+    font-size: 16px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+.nameButton
+{
+    border: 0;  
+    background-color:inherit;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+.ResetPasswordButton  
+{ 
+    width: 120px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+#div_Rent
+{
+    display:none;
+}
+
+#div_Sell
+{
+    display:none;
+}
+
+
+#div_PG
+{
+    display:none;
+}
+
+.LoginButton 
+{ 
+    width: 125px; 
+    padding: 9px 15px;
+    background-color:inherit;  
+    border: 0; 
+    font-size: 14px; 
+    color: white;
+    text-align:center; 
+}
+
+
+.footerLink
+{
+	font-size:15px;
+	color:white;
+}
+a {
+    color: #000000;
+	text-decoration:none;
+}
+
+#a1
+{
+	font-size:30px;
+	color:white;
+}
+
+#a1:link {
+    color:white;
+}
+
+/* visited link */
+#a1:visited {
+    color:white;
+}
+
+/* mouse over link */
+#a1:hover {
+    color: white;
+}
+
+/* selected link */
+#a1:active {
+    color: white;
+}
+.LoginButton:hover
+{
+	background-color: rgba(0,0,0,0.6);
+}
+
+
+#main,#login,#register,#forgotPassword
+{
+	position: absolute;
+	top: 0;
+  	left: 0;
+  	height:100%;
+  	width:100%;
+}
+
+
+.button2 
+{ 
+    width: 100px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+.fpwrd
+{
+   text-align:left;
+   color:blue;
+   font-size: 12px;
+   text-decoration: none
+}
+
+
+#main,#fin,#register,#forgotPassword
+{
+	position: absolute;
+	top: 0;
+  	left: 0;
+  	height:100%;
+  	width:100%;
+  	table-layout: fixed;
+}
+
+
+.cross
+{
+	width: auto;  
+	border: 0; 
+	font-size: 20px; 
+	color:black;
+	position: absolute;
+	top:0px;
+	right:0px;
+	background-color: white
+	
+}
+
+
+    
+#login,#register,#forgotPassword
+{
+	display:none
+}
+  	
+#loginReg
+{
+	display:none;
+  	position:absolute;
+	width:350px;
+	height:310px;
+	z-index:15;
+	top:50%;
+	left:50%;
+	margin:-100px 0 0 -150px;
+	background-color: white;
+	box-shadow: rgba(0,0,0, 0.9) 0px 0px 50px;
+}
+  
+.errorBox
+{
+	text-align:center;
+	font-size: x-small;
+	font-style: oblique;
+	color:red
+}
+#cover,#cover2
+{
+	width:100%;
+  	height:100%;
+  	background-color: black;
+  	opacity:0.5;
+  	position:"absolute";
+  	display:none;
+  	padding:0;
+  	margin:0;
+  	
+}
+
+  
+.mainPageChoice
+{
+	text-align:center; 
+	padding: 9px 15px; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px;
+	width : 150px;
+	background: #D0F5A9;
+	position:"absolute";
+	float:center;
+}
+
+.mainPageChoiceNew
+{
+	background-color:#3498DB;
+	padding:12px;
+  	width:150px;
+  font-family:arial,tahoma;
+  font-size:16px;
+  font-weight:bold;
+  color:#black;
+  text-align:center;
+  text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-appearance: none;
+  border:0;
+  outline:0;
+  -webkit-transition:0.3s ease all;
+	   -moz-transition:0.3s ease all;
+	    -ms-transition:0.3s ease all;
+	     -o-transition:0.3s ease all;
+	        transition:0.3s ease all;
+	
+}
+.mainPageChoiceNew:HOVER
+{
+background-color:#2980B9;	
+}
+
+
+#buttonRentMain,#buttonPGMain
+{
+	background-color:white;
+}
+
+.mainpagesearch
+{
+	width:150px;
+	height:40px;
+}
+
+
+#searchX
+{
+	width: auto;  
+	
+	border: 0; 
+	font-size: 10px; 
+	color:black;
+	position: absolute;
+	top:0px;
+	right:0px;
+	background-color: white
+	
+}
+
+
+table
+{
+    padding:5px;
+    spacing:5px;
+    border-spacing:5px;
+   
+}
+
+.searchForm
+{
+	width : 70%;
+	
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+	box-sizing: border-box;
+	padding: 9px 15px; 
+	background: rgba(240,255,255,0.5); 
+	font-size: 16px; 
+	color: #FFFFFF;
+	display:none;
+	text-align:center; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px;
+	margin:0 auto;
+	
+}
+#centralTab
+{
+	width:500px;	
+	top:50%;
+	left:50%;
+	background-color: white;
+	box-shadow: rgba(0,0,0, 0.9) 0px 0px 50px;
+	
+}
+
+
+
+.mainPageChoice:hover
+{
+	border-color: blue;
+}
+
+#body
+{
+	background: url('http://www.100acres.com/images/background.jpg');
+	background-repeat: no-repeat;
+}
+
+
+#body1
+{
+	background: url('http://www.100acres.com/images/bg14.jpg');
+	background-repeat: no-repeat;
+}
+
+#ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: right;
+	float:right;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+#welcomeDiv
+{
+	bottom:0;
+}
+
+#welcomeDiv li 
+{
+	text-align:center;
+	color:white; 
+}
+
+#welcomeDiv li button
+{
+	text-decoration: none;
+	padding: .2em 1em;
+	color: #fff;
+	background-color: #036;
+}
+
+#welcomeDiv li a:hover
+{
+	color: white;
+	background-color: plum;
+}
+  	
+*
+{
+	padding:0;
+  	margin:0
+}
+
+
+
+
+#dropdown
+{
+	display:none;
+}
+
+
+.fbLoginButton
+{
+	width: 250px;
+    height: 40px;
+    background-image: url(http://www.100acres.com/images/fbLogin.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+ 
+}
+
+
+.ResetPasswordButton  
+{ 
+    width: 120px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+#div_Rent
+{
+    display:none;
+}
+
+#div_Sell
+{
+    display:none;
+}
+
+
+#div_PG
+{
+    display:none;
+}
+
+.LoginButton 
+{ 
+    width: 125px; 
+    padding: 9px 15px;
+    background-color:inherit;  
+    border: 0; 
+    font-size: 14px; 
+    color: white;
+    text-align:center; 
+}
+
+
+.footerLink
+{
+	font-size:15px;
+	color:white;
+}
+
+.LoginButton:hover
+{
+	background-color: rgba(0,0,0,0.6);
+}
+
+
+#main,#login,#register,#forgotPassword
+{
+	position: absolute;
+	top: 0;
+  	left: 0;
+  	height:100%;
+  	width:100%;
+}
+
+
+.button2 
+{ 
+    width: 100px; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+.fpwrd
+{
+   text-align:left;
+   color:blue;
+   font-size: 12px;
+   text-decoration: none
+}
+
+
+#main,#fin,#register,#forgotPassword
+{
+	position: absolute;
+	top: 0;
+  	left: 0;
+  	height:100%;
+  	width:100%;
+  	table-layout: fixed;
+}
+
+
+.cross
+{
+	width: auto;  
+	border: 0; 
+	font-size: 20px; 
+	color:black;
+	position: absolute;
+	top:0px;
+	right:0px;
+	background-color: white
+	
+}
+
+
+    
+#login,#register,#forgotPassword
+{
+	display:none
+}
+  	
+#loginReg
+{
+	display:none;
+  	position:absolute;
+	width:350px;
+	height:310px;
+	z-index:15;
+	top:50%;
+	left:50%;
+	margin:-100px 0 0 -150px;
+	background-color: white;
+	box-shadow: rgba(0,0,0, 0.9) 0px 0px 50px;
+}
+  
+.errorBox
+{
+	text-align:center;
+	font-size: x-small;
+	font-style: oblique;
+	color:red
+}
+#cover,#cover2
+{
+	width:100%;
+  	height:100%;
+  	background-color: black;
+  	opacity:0.5;
+  	position:"absolute";
+  	display:none;
+  	padding:0;
+  	margin:0;
+  	
+}
+
+  
+.mainPageChoice
+{
+	text-align:center; 
+	padding: 9px 15px; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px;
+	width : 150px;
+	background: #F5FFFA;
+	position:"absolute";
+	float:center;
+}
+
+
+.mainPageChoice:hover
+{
+	
+	background: #00BFFF;
+	
+}
+
+.mainpagesearch
+{
+	width:150px;
+	height:40px;
+}
+
+
+#searchX
+{
+	width: auto;  
+	
+	border: 0; 
+	font-size: 10px; 
+	color:black;
+	position: absolute;
+	top:0px;
+	right:0px;
+	background-color: white
+	
+}
+
+
+table
+{
+    padding:5px;
+    spacing:5px;
+    border-spacing:5px;
+   
+}
+
+#centralTab
+{
+	width:500px;	
+	top:50%;
+	left:50%;
+	background-color: white;
+	box-shadow: rgba(0,0,0, 0.9) 0px 0px 50px;
+	
+}
+
+/* #mainSearch
+{
+	width:200px;
+	font-size:150%;
+	background-color:#E0E6F8;
+	color:black;
+	height:40px;
+} */
+  	
+
+.mainSearch
+{
+  	margin: 0;
+  	height:40px;
+  	width: 250px;
+  	font-family:arial,tahoma;
+  	font-size:16px;
+  	font-weight:bold;
+  	box-shadow: none;
+  	border-radius: none;
+	
+}
+
+
+.mainPageChoice:hover
+{
+	border-color: blue;
+}
+
+.profileButton
+{
+	width:
+}
+
+#body
+{
+	background: url('http://www.100acres.com/images/background.jpg');
+	background-repeat: no-repeat;
+}
+
+#navcontainer ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	float:right;
+}
+
+#navcontainer ul li 
+{
+	display: inline; 
+}
+
+#navcontainer ul li a
+{
+	text-decoration: none;
+	padding: .2em 1em;
+	color: #fff;
+	background-color: #036;
+}
+
+/* #navcontainer ul li a:hover
+{
+	color: #fff;
+	background-color: #369;
+} */
+  	
+.a_profile
+{
+	color:black;
+}
+
+.profileButton
+{
+	
+    width: 140px; 
+    padding: 9px 15px; 
+    background: gray; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF;
+    text-align:center; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+}
+
+.selectCity {
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-color:#E74C3C;
+  background-repeat:no-repeat;
+  background-position: right 10px top 15px;
+  background-size: 16px 16px;
+  color:white;
+  padding:12px;
+  width:150px;
+  font-family:arial,tahoma;
+  font-size:16px;
+  font-weight:bold;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-appearance: none;
+  border:0;
+  outline:0;
+  -webkit-transition:0.3s ease all;
+	   -moz-transition:0.3s ease all;
+	    -ms-transition:0.3s ease all;
+	     -o-transition:0.3s ease all;
+	        transition:0.3s ease all;
+}

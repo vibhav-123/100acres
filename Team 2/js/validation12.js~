@@ -1,0 +1,122 @@
+function LogSubmit()
+{
+	var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+	var email1 = $("#email_login").val();
+	var pwrd1 = $("#pwrd_login").val();
+	var allOK=1;
+//	alert("reached LOGsUMIT");	
+    	if($("#email_login").val() == "" )
+    	{
+    		$("#email_login").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+    		$("#email_login").focus();
+    		$("#email_error_log").html("Enter the email");
+		allOK=0;
+    		return false;
+        } 
+    	if(!emailRegex.test(email))
+	{
+		$("#email_login").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});    
+		$("#email_login").focus();
+		$("#email_error_log").html("Enter a valid email");
+		allOK=0;
+    		return false;
+    	}
+     
+    	if($('#pwrd_login').val() == "")
+    	{
+		$("#pwrd_login").css({"box-shadow":"0 0 10px red","border-color":"red","outline": "none"});
+		$("#pwrd_login").focus();
+		$("#pwrd_error_log").html("Enter the password");
+		allOK=0;
+    		return false;	
+	}		   
+	
+	alert("reached All OK");		
+	/*$.post("http://www.100acres.com/process_login.php",
+	{
+		email : email1,
+		pwrd  : pwrd1
+	}, function(response,status){alert("Response : " + response);});*/
+	
+}
+ 
+   
+   
+   
+   
+   function RegSubmit() 
+   {
+	   $("#email_error_reg").text("");
+	   $("#name_error_reg").text("");
+	   $("#pwrd_error_reg").text("");
+	   $("#repwrd_error_reg").text("");
+	   $("#contact_error_reg").text("");
+	   
+	 var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+	 var contactRegex =/^(?:\+?\d{2}[ -]?\d{3}[ -]?\d{5}|\d{4})$/; 
+	 var email = $("#email_reg").val();
+	 var contact=$("#contact_reg").val();
+	 var pwrd = $("#pwrd_reg").val();
+	 var repwrd = $("#repwrd_reg").val();
+	
+	 if($("#name_reg").val() == "" )
+		{
+		 $("#name_reg").focus();
+		 $("#name_error_reg").html("Enter your name");
+		    return false;
+		}
+	
+	 if($("#email_reg").val() == "" )
+    	{
+    		    $("#email_reg").focus();
+    		    $("#email_error_reg").html("Enter the email");
+    		    return false;
+        }
+	 
+	 if(!emailRegex.test(email))
+    		{
+    		    $("#email_reg").focus();
+    		    $("#email_error_reg").html("Enter a valid email");
+    		    return false;
+    		}
+     
+    if($('#pwrd_reg').val() == "")
+    	{
+    		    $("#pwrd_reg").focus();
+    		    $("#pwrd_error_reg").html("Enter the password");
+    		    return false;
+  		}
+     
+    if($('#repwrd_reg').val() == "")
+        	{
+        		    $("#repwrd_reg").focus();
+        		    $("#repwrd_error_reg").html("Enter the password");
+        		    return false;
+      		}
+    if($('#pwrd_reg').val() != $('#repwrd_reg').val())
+    		{
+    		$("#pwrd_reg").focus();
+		    $("#repwrd_error_reg").html("Passwords do not match!");
+		    return false;
+     		}
+    if($('#contact_reg').val() == "")
+        	{
+        		    $("#contact_reg").focus();
+        		    $("#contact_error_reg").html("Enter the contact number");
+        		    return false;
+      		}
+    if(!contactRegex.test(contact))
+		{
+		    $("#contact_reg").focus();
+		    $("#contact_error_reg").html("Enter a valid contact number");
+		    return false;
+		}
+    		
+    	else 
+    	{
+    		   $("#contact_error_reg").html("form submitted successfully")
+    	}
+ 	 
+	 
+	   
+   }
