@@ -1,8 +1,0 @@
-<html>
-<head>
-<title>Welcome</title>
-</head>
-<body>
-<?php  echo "Welcome $data['0']";?>
-</body>
-</html>

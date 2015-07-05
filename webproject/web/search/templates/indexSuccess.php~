@@ -1,9 +1,0 @@
-<?php
-print_r($dataarr);
-
-foreach($dataarr as $key=>$val)
-{
-   //echo $key." -- ".$val." :: ";
-echo $val['i_am'];
-}
-?>

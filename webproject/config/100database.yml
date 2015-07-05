@@ -1,6 +1,0 @@
-newjs_master:
-  factory:        jsPdoDatabase
-  param:
-    dsn:          "mysql:host=devjs.infoedge.com"
-    username:     "localuser"
-    password:     "Km7Iv80l"
