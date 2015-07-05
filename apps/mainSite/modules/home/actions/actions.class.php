@@ -15,12 +15,19 @@ class homeActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
+//home page
   public function executeIndex(sfWebRequest $request)
   {
-   //$this->forward('default', 'module');
-	//$obj = new connectdb();
-	//print_r($request);	
-	//$result = $obj->getRecords(10);
+  }
+//contact us page
+  public function executeContact(sfWebRequest $request)
+  {
        
   }
+//about us page
+  public function executeAbout(sfWebRequest $request)
+  {
+       
+  }
+
 }

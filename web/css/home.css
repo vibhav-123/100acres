@@ -1,47 +1,50 @@
-<style> 
-.bgImage {
-    background-image: url("http://www.project.com/images/Investment111.jpg");
-    background-size: 1300px 700px;
-    background-repeat: no-repeat;
-    padding-top: 40px;
+
+li
+{
+width:200px;
+list-style-type:none;
 }
-div.title{
-position: absolute;
-top:0px;
-width:100%;
-color:#00ff00;
-text-align:left;
-text-indent:20 px;
-height:46;
-font-size:50px;
+a
+{
+  display: inline-block;
 }
-div.button{
+div.next{
 position: absolute;
-bottom: 50px;
-left: 30px;
-}
-div.button2{
-position: absolute;
-bottom: 50px;
-left: 100px;
-}
-div.button3{
-position: absolute;
-bottom: 50px;
-left: 170px;
+bottom: 19px;
+left: 630px;
 width:2000px;
+}
+
+
+div.postproperty{
+margin-top:10px;
+display:inline-block;
+font-size:24px;
+}
+
+
+.b50{bottom: 50px;}
+.l30{left:30px;}
+.posAbs{position: absolute;}
+.ml30{margin-left:30px;}
+
+
+div.next{
+position:absolute;
+bottom:19px;
+left:630px;
 }
 
 #flip{
 text-align: center;
-margin-top:10%;
+margin-top:.8%;
 }
 #panel, #flip {
 	
-	margin-left: 70%;
+	margin-left: 75%;
     width:300px;
     padding: 5px;
-    background-color: #e5eecc;
+    background-color: #F6F6F6;
     border: solid 1px #c3c3c3;
 }
 
@@ -49,10 +52,57 @@ margin-top:10%;
     display: none;
 }
 
-div.contact{
-color: #ffffff;
-position: absolute;
-bottom: 50px;
-right: 170px;
 
-</style>
+li a
+{
+width:50px;
+}
+
+
+div.contact1{
+color:#ffffff !important;
+position:absolute;
+top:30%;
+left:30%;
+}
+
+
+
+table,th,td{
+font-size:25px;
+border: 3px black;
+color:#ffffff;
+border-collapse: collapse;
+}
+
+td, th {
+    padding: 4px !important;
+        padding-top: 4px !important;
+        padding-right: 4px !important;
+        padding-bottom: 4px !important;
+        padding-left: 4px !important;
+}
+div.about{
+margin-top:10% !important;
+color:#ffffff;
+font-size:20px;
+width:70%;
+padding:25px;
+border:25px;
+margin:25px;
+}
+
+div.search { width:50%; height:250px;float:left;}
+
+div.inner {width:80%; height:80%; margin-top:5%; margin-left:10%}
+#i1 {background: #ffffff; }
+#i2 {background: #ffffff; }
+#i3 {background: #ffffff; }
+#i4 {background: #ffffff; }
+div.searchbar {margin-top:55px;}
+
+div.inner_desc {width:70%; height:30%; margin-top:4%; margin-left:10%}
+#i1 {background: #ffffff; }
+#i2 {background: #ffffff; }
+#i3 {background: #ffffff; }
+#i4 {background: #ffffff; }

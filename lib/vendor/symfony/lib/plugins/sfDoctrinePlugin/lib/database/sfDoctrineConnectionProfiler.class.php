@@ -138,7 +138,7 @@ class sfDoctrineConnectionProfiler extends Doctrine_Connection_Profiler
   {
     if ($this->options['logging'])
     {
-      $this->dispatcher->notify(new sfEvent($event->getInvoker(), 'application.log', array(sprintf('execute : %s - (%s)', $event->getQuery(), join(', ', self::fixParams($event->getParams()))))));
+      @$this->dispatcher->notify(new sfEvent($event->getInvoker(), 'application.log', array(sprintf('execute : %s - (%s)', $event->getQuery(), join(', ', self::fixParams($event->getParams()))))));
     }
 
     sfTimerManager::getTimer('Database (Doctrine)');
@@ -193,6 +193,7 @@ class sfDoctrineConnectionProfiler extends Doctrine_Connection_Profiler
    */
   static public function fixParams($params)
   {
+if(is_array($params))
     foreach ($params as $key => $param)
     {
       if (strlen($param) >= 255)

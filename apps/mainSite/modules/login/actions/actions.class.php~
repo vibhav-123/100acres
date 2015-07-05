@@ -2,10 +2,10 @@
 /**
  * login actions.
  *
- * @package    mysite
+ * @package	mysite
  * @subpackage login
- * @author     Your name here
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * @author 	Your name here
+ * @version	SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 class loginActions extends sfActions
 {
@@ -16,61 +16,85 @@ class loginActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    //$this->forward('default', 'module');
+	//gets the uri from AuthFilter to know if the request has come from property posting page	
+	$uri = $request->getAttribute('Uri');
+	$this->act=$uri;
   }
 
+//Login Function
 public function executeLog(sfWebRequest $request)
   {
-   // $this->forward('default', 'module');
-	if(($request->getMethod())=="POST")
-	{
-		$postParameters=$request->getPostParameters();
-		$usr=new users();
-		if($usr->checkUser($postParameters))
-		{
-			header("Location: http://www.100acres.com/mainSite_dev.php/home"); /* Redirect browser */
-			$result="You have successfully logged in";
-			exit();
-		}
-		else
-		{
-			$result="Invalid username or password";
-		}
-		
-	}
-	else $result="Error, invalid method in form";
+   	 $postParameters=$request->getPostParameters();
+   	 $usr=new users();
+   	 if($usr->checkUser($postParameters))
+   	 {
+		$user = $request->getParameter('name');
+		$act = $request->getParameter('act');
+		$pass = $request->getParameter('p');
 	
-	$response = json_encode($result);
- 	//print_r($response);
-	echo "<script type='text/javascript'>alert('$response');</script>";
+		$uid=$usr->returnId($user);
+		$encrypted_uid= crypt($uid,'$1$str$');
 
+		if( $uid && $encrypted_uid ) {
+
+			setcookie("authorization",$uid, time()+3600,"/");
+			setcookie("e_authorization",$encrypted_uid,time() + (86400 * 30), "/");
+			/*if($act=="http://www.100acres.com/mainSite_dev.php/form")
+			header("Location: http://www.100acres.com/mainSite_dev.php/form"); 
+			else
+			header("Location: http://www.100acres.com/mainSite_dev.php/home"); */
+		}
+   		 $result=1;
+		print_r($result);
+   	 }
+   	 else
+   	 {
+   		 $result=0;print_r($result);
+   	 }
   }
 
-
-
+//Registration function
   public function executeRegister(sfWebRequest $request)
   {
-   	 $postParameters=$request->getPostParameters();
-   	 $validate=new validate();
-   	 if($postParameters)
-   	 {
-		$err=$validate->validateRegister($postParameters);
- 		 if($err=="true")
-			{
-			$prop=new users();	
-			$prop->postUsers($postParameters);
-			$result="You have been successfully registered.";
-			echo "registration successful\n";
-			header("Location: http://www.100acres.com/mainSite_dev.php/home");
-			exit("bye");
-			}
-		else{
-		$result= "Server side validation failed. $err";
-		$response = json_encode($result);
-	         echo "<script type='text/javascript'>alert('$response');</script>";}
 
-   	 }
-	 
+	
+  	  $postParameters=$request->getPostParameters();
+  	  $validate=new validate();
+  	  if($postParameters)
+  	  {
+   	 $err=$validate->validateRegister($postParameters);
+		  if($err=="true")
+   		 {
+   		 $prop=new users();    
+   		 if($prop->postUsers($postParameters)){
+   			 $result="You have been successfully registered.";
+   			 //echo "registration successful\n";
+   			 header("Location: http://www.100acres.com/mainSite_dev.php/home");
+   			 echo "<script type='text/javascript'>alert('$result');</script>";
+			 exit();
+   		 }
+   		 else {
+   			 
+   			 echo "<script type='text/javascript'>alert('This username already exists. Please choose a different one.');</script>";
+   		 }
+   		 }
+   	 else{
+   	 $result= "Server side validation failed. $err";
+   	 $response = json_encode($result);
+         	echo "<script type='text/javascript'>alert('$response');</script>";}
+
+  	  }
+    
  }
+
+//Logout and unset the cookie
+public function executeLogout(sfWebRequest $request)
+  {
+	unset($_COOKIE['authorization']);
+	setcookie('authorization','',time()-3600,'/');
+	unset($_COOKIE['e_authorization']);
+	setcookie('e_authorization','',time()-3600,'/');
+  }
 }
 ?>
+

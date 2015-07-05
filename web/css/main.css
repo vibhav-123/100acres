@@ -1,0 +1,105 @@
+body{background-image:url('http://www.100acres.com/images/background.png');background-size: 100% 700px; background-repeat: no-repeat; padding-top: 40px}
+h4{
+margin-top:-30px !important;
+margin-bottom:10px;
+}
+
+#hello{
+text-align:right;
+margin-right:0.8%;
+margin-top:0.1%;
+font-size:35px;
+color: #ffffff;
+}
+
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #191970;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+
+div.title{
+position: absolute;
+top:0px;
+width:250px;
+color:#00ff00;
+text-align:left;
+text-indent:20 px;
+height:46;
+font-size:20px;
+}
+div.subtitle{
+margin-top:5px;
+width:250px;
+}
+
+
+
+div.logout{
+position: absolute;
+top:0px;
+right:25px;
+}
+
+
+
+
+div.contact{
+color: #ffffff;
+position: absolute;
+bottom: 5%;
+right: 170px;
+}
+
+#login{
+width:500px;
+height:250px;
+margin-top:100px;
+background:#F6F6F6;
+}
+#reg{
+width:500px;
+background:#F6F6F6;
+height:400px;
+}
+#pp{
+width:700px;
+background:#F6F6F6;
+height:480px;
+margin-left:300px;
+}
+
+#email{
+width:480px;
+background:#F6F6F6;
+height:300px;
+margin-left:300px;
+}
+
+
+.b15{bottom: 15px;}
+.l600{left:600px;}
+.ml500{margin-left:500px;}
+.ml5{margin-left:5px;}
+
+img.top {
+vertical-align: text-top;
+}

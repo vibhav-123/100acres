@@ -17,19 +17,28 @@ class formActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-//    $this->forward('default', 'module');
-//	$postParameters=$request->getPostParameters();
-//	$prop=new property();	
-//	if($postParameters)
-//	$prop->postRecords($postParameters);
   }
 
-  public function executeSubmit(sfWebRequest $request)
+//Submits property
+ public function executeSubmit(sfWebRequest $request)
   {
-//    $this->forward('default', 'module');
 	$postParameters=$request->getPostParameters();
+	$file=@$request->getFiles('file_upload');
+	if($file['name'])
+	{
+		$img=new imagecheck();
+		$img->check($file);
+	}
 	$prop=new property();	
 	if($postParameters)
-	$prop->postRecords($postParameters);
+	$prop->postRecords($postParameters,$file);
+	header("Location: http://www.100acres.com/mainSite_dev.php/form/posted");
+	die;
+  }
+ 
+//post success
+public function executePosted(sfWebRequest $request)
+  {
+	
   }
 }

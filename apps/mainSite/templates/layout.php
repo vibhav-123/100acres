@@ -6,13 +6,13 @@
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <script type='text/javascript' src=/js/jquery_min.js></script>
+   
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   </head>
-  <body style="background-image:url('http://www.100acres.com/images/bg.jpg');background-size: 1300px 700px;
-    background-repeat: no-repeat;
-    padding-top: 40px">
+  <body >
 	
     <?php echo $sf_content ?>
 

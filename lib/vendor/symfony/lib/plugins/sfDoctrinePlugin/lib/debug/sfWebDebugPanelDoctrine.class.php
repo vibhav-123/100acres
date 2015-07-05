@@ -114,6 +114,7 @@ class sfWebDebugPanelDoctrine extends sfWebDebugPanel
       $query = $this->formatSql(htmlspecialchars($event->getQuery(), ENT_QUOTES, sfConfig::get('sf_charset')));
 
       // interpolate parameters
+if(is_array($params))
       foreach ($params as $param)
       {
         $param = htmlspecialchars($param, ENT_QUOTES, sfConfig::get('sf_charset'));

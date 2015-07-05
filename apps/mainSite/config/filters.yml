@@ -5,6 +5,9 @@ rendering: ~
 security:  ~
 
 # insert your own filters here
+remember:                 # Filters need a unique name
+  class: AuthFilter
+  param:
 
 cache:     ~
 execution: ~

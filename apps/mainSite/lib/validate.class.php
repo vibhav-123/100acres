@@ -1,7 +1,15 @@
 <?php 
-
+/**
+* validate
+*
+* Server side validation of the user registration
+*/
 class validate{
-
+/**
+*
+* @param: User details while registration
+* returns true if valid user data
+*/
 public function validateRegister($parameters)
 {
 $username=$parameters['username'];
@@ -9,7 +17,6 @@ $emp_password=$parameters['p'];
 $emp_cpassword=$parameters['pwd2'];
 $email=$parameters['email'];
 $contact=$parameters['contact'];
-//$methodCheck=$parameters['Register'];
 
 $emp_name=trim($username);
 $emp_email=trim($email);
@@ -40,12 +47,11 @@ $code = "2.1";
   return $errorMsg;
 }
 
-//check if email field is empty
 elseif($emp_email == ""){
   $errorMsg=  "error : You did not enter a email.";
   $code= "3";
   return $errorMsg;
-} //check for valid email 
+} 
   elseif(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $emp_email)){
   $errorMsg= 'error : You did not enter a valid email.';
   $code= "3";
@@ -61,7 +67,6 @@ elseif(strlen($emp_contact)<10){
 else{
   $errorMsg= "true";
   return $errorMsg;
-  //final code will execute here
 }
  
 }

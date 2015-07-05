@@ -5,6 +5,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      pdo_mysql:host=localhost;dbname=acres100
-      username: root
+      dsn:      mysql:host=localhost;dbname=acres100
+      username: ankit
       password: dynamite

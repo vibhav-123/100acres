@@ -1,18 +1,20 @@
+<?php include_partial('global/header');?>
+<?php include_partial('global/logout');?>
+<form method = "POST" enctype='multipart/form-data' action="/mainSite_dev.php/form/submit" onsubmit="return checkFormPost(this);">
+<div class="pp" id="pp">
 
-<font color="white">
 <h1 align="center" >Basic Property Details</h1>
-<p align="center">Start posting your property and add property features	</p>
-<hr>
-<div style="margin-left:200px">
+<h2 align="center">Start posting your property and add property features</h2>
 
-<form method = "POST" action="/mainSite_dev.php/form/submit">
+
+
 <ol>
-*I am: <input type="radio" name="iam" value="1">Owner
+*I am: <input type="radio" name="iam" value="1" checked>Owner
 <input type="radio" name="iam" value="2">Broker
 <input type="radio" name="iam" value="3">Builder
 <br>
 <br>
-*I want to: <input type="radio" name="iwantto" value="1">Sell
+*I want to: <input type="radio" name="iwantto" value="1" checked>Sell
 <input type="radio" name="iwantto" value="2">Rent/Lease Out
 <br><br>
 
@@ -29,10 +31,27 @@
 <br>
 *City:<font color="black"> <select name="city"> 
 	
-  <option value="Delhi"selected>Delhi</option>
-  <option value="Mumbai">Mumbai</option>
+  <option value="Agra">Agra</option>
+  <option value="Banglore">Banglore</option>
+  <option value="Chandigarh">Chandigarh</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Faridabad">Faridabad</option>
+  <option value="Ghaziabad">Ghaziabad</option>
+  <option value="Gurgaon">Gurgaon</option>
+  <option value="Greater Noida">Greater Noida</option>
+  <option value="Hyderabad">Hyderabad</option>
+  <option value="Karnal">Karnal</option>
   <option value="Kolkata">Kolkata</option>
-  <option value="Chennai"selected>Chennai</option>
+  <option value="Kurukshetra">Kurukshetra</option>
+  <option value="Lucknow">Lucknow</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Delhi"selected>Delhi</option>
+  <option value="Noida">Noida</option>
+  <option value="Panipat">Panipat</option>
+  <option value="Pune">Pune</option>
+  <option value="Rohtak">Rohtak</option>
+  <option value="Shimla">Shimla</option>
+  <option value="Sonipat">Sonipat</option>
 </select></font>
 <br><br>
 
@@ -49,39 +68,54 @@
 <br>
 <br>
 *Expected Price(Rs.) : Crores: <font color="black"><select name="crores"> 
-		
-  <option value="1"selected>1</option>
+  <option value="0"selected>--Select--</option>		
+  <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
-  <option value="4"selected>4</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
 </select></font>
 Lakhs:<font color="black"> <select name="lakhs"> 
-		
-  <option value="10"selected>10</option>
+  <option value="0"selected>--Select--</option>		
+  <option value="10">10</option>
   <option value="20">20</option>
   <option value="30">30</option>
-  <option value="40"selected>40</option>
+  <option value="40">40</option>
+  <option value="50">50</option>
+  <option value="60">60</option>
+  <option value="70">70</option>
+  <option value="80">80</option>
+  <option value="90">90</option>
 </select></font>
 
 Thousands: <font color="black"><select name="thousands"> 
-		
-  <option value="10"selected>10</option>
+  <option value="0"selected>--Select--</option>		
+  <option value="10">10</option>
   <option value="20">20</option>
   <option value="30">30</option>
-  <option value="40"selected>40</option>
+  <option value="40">40</option>
+  <option value="50">50</option>
+  <option value="60">60</option>
+  <option value="70">70</option>
+  <option value="80">80</option>
+  <option value="90">90</option>
 </select>
 </font>
+<br><br>
+Describe your property: <textarea name="description" rows="1" cols="50"></textarea>
 <br>
 <br>
-                             Or Enter the price below
-
-                            <font color="black"><input type="number" name = "price"></font>
-<br>
-
+Upload your image: <input type='file' name='file_upload'>
 </ol>
-</div>
-</font>
-<p align="center" >
-<input type="submit" value="Register Now"></p>
-</form>
 
+
+
+
+<p align="center" >
+<input type="submit" value="Submit"></p></div>
+</form>

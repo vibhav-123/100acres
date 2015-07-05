@@ -1,0 +1,90 @@
+body{background-image:url('http://www.100acres.com/images/bg.jpg');background-size: 100% 700px; background-repeat: no-repeat; padding-top: 40px}
+h4{
+margin-top:-30px !important;
+margin-bottom:10px;
+}
+
+#hello{
+text-align:right;
+margin-right:0.8%;
+margin-top:0.1%;
+font-size:35px;
+color: #ffffff;
+}
+
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+
+div.title{
+position: absolute;
+top:0px;
+width:100%;
+color:#00ff00;
+text-align:left;
+text-indent:20 px;
+height:46;
+font-size:20px;
+}
+div.subtitle{
+margin-top:5px;
+width:30%;
+}
+
+
+
+div.logout{
+position: absolute;
+top:0px;
+right:25px;
+width:200;
+height:80;
+}
+
+
+
+
+div.contact{
+color: #ffffff;
+position: absolute;
+bottom: 50px;
+right: 170px;
+}
+
+#login{
+width:500px;
+height:250px;
+margin-top:100px;
+background:#F6F6F6;
+}
+#reg{
+width:500px;
+background:#F6F6F6;
+height:400px;
+}
+#pp{
+width:700px;
+background:#F6F6F6;
+height:450px;
+margin-left:300px;
+}

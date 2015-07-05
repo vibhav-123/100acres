@@ -1,7 +1,14 @@
 <?php include_partial('global/header');?>
-<font color="white">
-<h1 align="center">Your property has been posted.</h1>
-<a href="http://www.100acres.com/mainSite_dev.php/home"><button type="button" font-size="100px" >Home</button> </center>
-</a>
-</font>
-
+<?php include_partial('global/logout');?>
+<?php if($file['error']==0)
+	{
+	$img=new imagecheck;
+	$img->check($file);
+	header("Location: http://www.100acres.com/mainSite_dev.php/form/posted");
+	die;
+	}
+else {
+	header("Location: http://www.100acres.com/mainSite_dev.php/form/posted");
+		die;
+	}
+?>

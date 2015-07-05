@@ -52,7 +52,7 @@ elseif($emp_email == ""){
   return $errorMsg;
 }
 
-elseif(strlen($emp_contact)<12){
+elseif(strlen($emp_contact)<10){
   $errorMsg=  "error : Contact should be ten digits.";
   $code= "4";
   return $errorMsg;
