@@ -1,0 +1,18 @@
+<?php
+	$name=$_POST['Name'];
+	$email=$_POST['email'];
+	$pwd=$_POST['Password'];
+	$no=$_POST['no'];
+	$data=array("name" => $name, "email" => $email, "password" => $pwd, "no" => $no);
+	$data_string=json_encode($data);
+	$ch=curl_init('http://localhost:8080/HundredAcres/webapi/resource/reg');
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+    	'Content-Type: application/json',                                                                                
+    	'Content-Length: ' . strlen($data_string))
+	);
+	$result = curl_exec($ch);
+	echo $result;
+?>

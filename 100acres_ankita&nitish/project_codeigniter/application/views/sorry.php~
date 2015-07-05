@@ -1,0 +1,26 @@
+<html>
+<head>
+<style>
+#msg {
+    background-color:pink;
+    color:white;
+    text-align:center;
+    
+    position:absolute;
+    left:300px;
+    top:170px;
+    height:250px;
+    font-size: 2em;
+    width:400px;
+}
+</style>
+<body>
+<div id='msg'>
+<p>Login failed!!!</p>
+<br>
+<p>First<a href='http://www.100acres.com/index.php/welcome/register'> click here </a> to register for a free 100acres account
+</p>
+</div>
+<img src="http://www.100acres.com/images/oops.jpg" height="220" width="220">
+</body>
+</html>

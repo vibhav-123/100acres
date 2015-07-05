@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>ALREADY REGISTERED USER</title>
+<link rel="stylesheet" href="styleregister.css">
+<style>
+   body {
+        background-image: url("http://www.100acres.com/images/regb.jpg");
+        background-size:cover;
+
+}
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    position:absolute;
+    top:200px;
+    left:100px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 3px solid #CCC;
+    border-radius: 1em;
+    background-color:lightgrey;
+}
+</style>
+</head>
+<body>
+<H1 align="center">LOGIN</H1>
+
+<form name="login form" action="http://www.100acres.com/application/views/logAPI.php" method="POST">
+<fieldset>
+<legend>Your Details</legend>
+
+<table>
+
+<tr><td>Email:</td><td><input type="email" name="Email" required></td></tr>
+<tr><td>Password: </td><td> <input type="text" name="Password" required></td></tr>
+
+<tr><td><input type="Submit" value="Submit"></td></tr>
+<tr><td><input type="reset" name="reset" value="Reset"></td></tr>
+</table>
+</fieldset>
+</form>
+
+</body>
+</html>

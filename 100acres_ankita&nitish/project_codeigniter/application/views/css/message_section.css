@@ -1,0 +1,17 @@
+#section {
+background-color:pink;
+margin: 100px;
+color:black;
+position:absolute;
+left:250px;
+top:150px; 
+width:500px; 
+padding-left:100px; 
+padding-top: 10px;
+}
+#oops
+{
+position: absolute;
+top:50px;
+left:50px;
+}

@@ -1,0 +1,39 @@
+function disable_enable_bedrooms()
+{
+	if(document.getElementById('res_or_comm').value == "commercial")
+		document.getElementById('bedrooms').style.visibility="hidden";
+	else
+		document.getElementById('bedrooms').style.visibility="visible";
+}
+
+function validate()
+{
+	var city = document.getElementById("city"),minprice = document.getElementById("minprice"),
+	maxprice = document.getElementById("maxprice"),locality = document.getElementById("locality"),
+    error_msg = document.getElementById("error_msg"),no_ex=/^[0-9]/,string_ex=/^[a-zA-Z]/;
+    flag=true;
+    error_msg.innerHTML="";
+	if(city.value=='')
+    {
+        error_msg.innerHTML="Please enter the city";
+        flag=false;
+    }
+    else if(!string_ex.test(city.value)||(locality.value!=''&&!string_ex.test(locality.value)))
+    {
+
+        error_msg.innerHTML="Please enter valid name";
+        flag=false;
+    }
+    if((minprice.value!=''&&!no_ex.test(minprice.value))||(maxprice.value!=''&&!no_ex.test(maxprice.value)))
+    {
+
+        error_msg.innerHTML="Please enter valid price";
+        flag=false;
+    }
+    if((minprice.value!=''&&minprice.value<20000)&&(maxprice.value!=''&&maxprice.value<20000))
+    {
+        error_msg.innerHTML="Price should be greater than Rs 20,000";
+        flag=false;
+    }
+    return flag;
+}
