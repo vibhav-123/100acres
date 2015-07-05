@@ -1,0 +1,16 @@
+<?php include_partial('global/header');?>
+<?php include_partial('global/logout');?>
+<? die("image"); ?>
+<?php
+ if(!$file['name'])
+	{
+		header("Location: http://www.100acres.com/mainSite_dev.php/form/posted");
+		die;
+	}
+else {
+	$img=new imagecheck();
+	$img->check();
+	header("Location: http://www.100acres.com/mainSite_dev.php/form/posted");
+	die;
+	}
+?>

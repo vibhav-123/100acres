@@ -1,0 +1,17 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+indexSuccess:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        100 acres (RAN)
+    description:  Search Delhi/NCR real estate, Delhi/NCR property, property in Delhi/NCR, real estate in Delhi/NCR. Buy / Rent residential apartments, flats, house, bungalow, villa in Delhi/NCR. Search property for sale, rent and PG Delhi/NCR Now! Get best property deals from Delhi/NCR real estate agents, brokers, dealers and real property owners
+    keywords:     100 acres, team9
+    language:     en
+    robots:       index, follow
+
+  stylesheets:    [home.css]
+
+  javascripts:    [home.js,jquery_min.js,ajax.js]

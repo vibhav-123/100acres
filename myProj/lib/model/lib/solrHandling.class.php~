@@ -1,0 +1,19 @@
+<?php
+class solrHandling
+{
+	public function query($keyword,$min_price,$max_price,$bedrooms)
+	{
+	$u = "localhost:8983/solr/select";
+        $p = "q=*:*&wt=phps&fq=city:($keyword)";
+        $p.= "&start=0&rows=10";
+	$sendRequest_obj=new SendRequest();
+        $o = $sendRequest_obj->sendCurlPostRequest($u,$p);
+        $o = unserialize($o);
+	return $o;
+        //print_r($o);
+        //die;
+		
+	}
+}
+
+?>

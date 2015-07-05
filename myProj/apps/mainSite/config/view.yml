@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        100 acres (NJ)
+    description:   Search All India real estate, India property, property in metro cities, real estate in Metro cities. Buy / Rent residential 			  apartments, flats, house, bungalow, villa in Delhi/NCR/Mumbai/Chennai/Kolkata and many more places. Search property for 			sale, rent and PG Delhi/NCR Now! Get best property deals from  real estate agents, brokers, dealers and real property owners. 			Properties verified.
+    keywords:   100acres, team10,real estate properties
+    language:     en
+    robots:       index, follow
+
+  stylesheets:    [main.css,home.css]
+
+  javascripts:    [jquery_min.js,home.js,register.js]
+
+  has_layout:     true
+  layout:         layout

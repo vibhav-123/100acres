@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * home actions.
+ *
+ * @package    mysite
+ * @subpackage home
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class homeActions extends sfActions
+{
+ /**
+  * Executes index action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeIndex(sfWebRequest $request)
+  {
+    //$cokk = new cookie1();
+   //$this->forward('default', 'module');
+	//$obj = new connectdb();
+	//print_r($request);	
+	//$result = $obj->getRecords(10);
+       
+  }
+public function executeContact(sfWebRequest $request)
+  {
+    //$cokk = new cookie1();
+   //$this->forward('default', 'module');
+	//$obj = new connectdb();
+	//print_r($request);	
+	//$result = $obj->getRecords(10);
+       
+  }
+
+public function executeAbout(sfWebRequest $request)
+  {
+    //$cokk = new cookie1();
+   //$this->forward('default', 'module');
+	//$obj = new connectdb();
+	//print_r($request);	
+	//$result = $obj->getRecords(10);
+     
+  }
+
+}

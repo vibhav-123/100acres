@@ -1,0 +1,22 @@
+<?php
+$cook_obj=new cookie1;
+$id=$cook_obj->retId();
+?>
+<?php if(!$id) { ?>
+<div class="title" id="title1">
+<a href="http://www.100acres.com/mainSite_dev.php/login"><img src="http://www.100acres.com/images/login.jpeg" align="right"
+     width="72" height="46" border="0"></a></div>
+
+<?php } 
+else{ ?>
+<div class="logout" id="logout">
+<a href="http://www.100acres.com/mainSite_dev.php/login/logout"><img src="http://www.100acres.com/images/logout.png" align="right"
+     width="72" height="46" border="0"></a></div>
+<?php } ?>
+<?php include_partial('global/header');?>
+<font color="white">
+<h1 align="center">Your property has been posted.</h1>
+</font>
+
+
+

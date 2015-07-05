@@ -1,0 +1,18 @@
+<?php
+public class retrieve
+{
+	public function getParam($param)
+	{
+		$keyword=$param['keyword'];
+		$min_price=$param['min_price'];
+		$max_price=$param['max_price'];
+		$bedrooms=$param['bedrooms'];
+		$solr_obj= new solrHandling(); 
+		$res=$solr_obj->query($keyword,$min_price,$max_price,$bedrooms);
+		
+
+		
+	}
+}
+
+?>
