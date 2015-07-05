@@ -1,0 +1,106 @@
+#body
+{
+	margin: 0 auto; 
+}
+#main
+{
+	 width: 70%;
+	 margin-left: auto;
+	 margin-right: auto;
+
+}
+#header
+{
+	background-color:#b0c4de; height:50px; width:100%;position:relative;
+}
+
+#search
+{
+	background-color: lightblue;
+	height: 90px;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+#search_1
+{
+background-color: lightgrey;
+padding: 2px;
+border: 2px solid;
+margin: auto;
+width: 65%;	
+
+}
+#search_2
+{
+	display:inline;
+	width:150px;
+	height: 450px;
+	
+}
+#search1
+{
+
+	height: 40px;
+}
+
+
+.margin{
+	margin-right: 100px; margin-top: 50px;
+}
+#place 
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 20px;
+	padding-right: 50px;
+	
+}
+#price
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+#mprice
+{
+	margin-top: 10px;
+	display:inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#bedroom
+{
+	margin-top: 10px;
+	display: inline;
+	float:left;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+#sort
+{
+	float: right;
+	padding-bottom: 10px;
+	
+	height: 40px;
+}
+
+	
+.fmr
+{
+	margin-left: 230px;
+}
+.m{
+	
+	margin-top: 70px;
+	margin-right: 70;
+}
