@@ -41,6 +41,7 @@
 				the major cities and a large number of 
 				agents and developers
 			</div>
+			<div><p>To try out our advanced search <a href="/searchbysolr">Click here!!</a></p></div>
 		</div>
 		<div id="formdiv">
 			
