@@ -1,5 +1,5 @@
 CREATE TABLE `USER` (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'User ID',
   `username` varchar(50) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE `USER` (
   `mob` int(10) DEFAULT NULL,
   `address` varchar(300) DEFAULT NULL,
   `password` varchar(100) NOT NULL,
-  `status` enum('v','nv') DEFAULT NULL,
+  `status` enum('v','nv') DEFAULT NULL COMMENT 'v-email veified\nnv-email not verified',
   `created_on` timestamp NULL DEFAULT NULL,
   `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`),
@@ -15,71 +15,69 @@ CREATE TABLE `USER` (
   UNIQUE KEY `email` (`email`),
   KEY `user_email` (`email`),
   KEY `user_username` (`username`)
-)
+) ;
+
+
+CREATE TABLE `PROPERTY_COMMERCIAL` (
+  `pid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Commercial Property ID',
+  `uid` int(11) NOT NULL COMMENT 'User ID',
+  `person` enum('owner','broker','builder') NOT NULL,
+  `property_type` enum('s','r') NOT NULL COMMENT 's->sell\nr->rent',
+  `city` varchar(50) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `washroom` int(2) DEFAULT NULL,
+  `area` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `ppua` double DEFAULT NULL COMMENT 'Price Per Unit Area',
+  `on_floor` int(11) NOT NULL,
+  `total_floor` int(11) NOT NULL,
+  `furnish` enum('f','s','u') NOT NULL COMMENT 'f->furnished\ns->semi-furnished\nu->unfurnished',
+  `availability` date NOT NULL,
+  `transaction_type` enum('r','n','nil') DEFAULT NULL COMMENT 'r->resale\nn->new booking',
+  `photo_url` varchar(300) DEFAULT NULL,
+  `property_ownership` enum('f','l','c','p','nil') NOT NULL COMMENT 'f->freehold\nl->leasehold\nc->co-operative society\np->power of attorney',
+  `created_on` timestamp NULL DEFAULT NULL,
+  `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `isdeleted` int(11) DEFAULT '0' COMMENT 'row is deleted or not',
+  PRIMARY KEY (`pid`),
+  KEY `uid` (`uid`),
+  KEY `com_price` (`price`),
+  KEY `com_city` (`city`),
+  CONSTRAINT `PROPERTY_COMMERCIAL_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `USER` (`uid`)
+);
 
 
 CREATE TABLE `PROPERTY_PG` (
-  `pid` int(11) NOT NULL AUTO_INCREMENT,
-  `uid` int(11) NOT NULL,
+  `pid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PG ID',
+  `uid` int(11) NOT NULL COMMENT 'User ID',
   `person` enum('owner','broker','builder') NOT NULL,
   `city` varchar(50) NOT NULL,
   `address` varchar(300) NOT NULL,
   `sharing` int(1) NOT NULL,
-  `gender` enum('m','f') NOT NULL,
-  `furnish` enum('f','s','u') NOT NULL,
+  `gender` enum('m','f') NOT NULL COMMENT 'm->male\nf->female',
+  `furnish` enum('f','s','u') NOT NULL COMMENT 'f->furnished\ns->semi-furnished\nu->unfurnished',
   `area` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `ppua` double DEFAULT NULL,
+  `ppua` double DEFAULT NULL COMMENT 'Price Per Unit Area',
   `on_floor` int(11) NOT NULL,
   `total_floor` int(11) NOT NULL,
   `photo_url` varchar(300) DEFAULT NULL,
   `created_on` timestamp NULL DEFAULT NULL,
   `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `isdeleted` int(11) DEFAULT '0',
+  `isdeleted` int(11) DEFAULT '0' COMMENT 'row is deleted or not',
   `availability` date DEFAULT NULL,
   PRIMARY KEY (`pid`),
   KEY `uid` (`uid`),
   KEY `pg_price` (`price`),
   KEY `pg_city` (`city`),
   CONSTRAINT `PROPERTY_PG_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `USER` (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
-
-
-
-CREATE TABLE `PROPERTY_COMMERCIAL` (
-  `pid` int(11) NOT NULL AUTO_INCREMENT,
-  `uid` int(11) NOT NULL,
-  `person` enum('owner','broker','builder') NOT NULL,
-  `property_type` enum('s','r') NOT NULL,
-  `city` varchar(50) NOT NULL,
-  `address` varchar(300) NOT NULL,
-  `washroom` int(2) DEFAULT NULL,
-  `area` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
-  `ppua` double DEFAULT NULL,
-  `on_floor` int(11) NOT NULL,
-  `total_floor` int(11) NOT NULL,
-  `furnish` enum('f','s','u') NOT NULL,
-  `availability` date NOT NULL,
-  `transaction_type` enum('r','n','nil') DEFAULT NULL,
-  `photo_url` varchar(300) DEFAULT NULL,
-  `property_ownership` enum('f','l','c','p','nil') NOT NULL,
-  `created_on` timestamp NULL DEFAULT NULL,
-  `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `isdeleted` int(11) DEFAULT '0',
-  PRIMARY KEY (`pid`),
-  KEY `uid` (`uid`),
-  KEY `com_price` (`price`),
-  KEY `com_city` (`city`),
-  CONSTRAINT `PROPERTY_COMMERCIAL_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `USER` (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 
-
+) ;
 
 CREATE TABLE `PROPERTY_RESIDENTIAL` (
-  `pid` int(11) NOT NULL AUTO_INCREMENT,
-  `uid` int(11) NOT NULL,
+  `pid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Residential Property ID',
+  `uid` int(11) NOT NULL COMMENT 'User ID',
   `person` enum('owner','broker','builder') NOT NULL,
-  `property_type` enum('s','r') NOT NULL,
+  `property_type` enum('s','r') NOT NULL COMMENT 's->sell\nr->rent',
   `city` varchar(50) NOT NULL,
   `address` varchar(300) NOT NULL,
   `bhk` int(11) NOT NULL,
@@ -87,31 +85,36 @@ CREATE TABLE `PROPERTY_RESIDENTIAL` (
   `balcony` int(11) NOT NULL,
   `area` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `ppua` double DEFAULT NULL,
+  `ppua` double DEFAULT NULL COMMENT 'Price Per Unit Area',
   `on_floor` int(11) NOT NULL,
   `total_floor` int(11) NOT NULL,
-  `furnish` enum('f','s','u') NOT NULL,
+  `furnish` enum('f','s','u') NOT NULL COMMENT 'f->furnished\ns->semi-furnished\nu->unfurnished',
   `availability` date NOT NULL,
-  `transaction_type` enum('r','n','nil') DEFAULT NULL,
+  `transaction_type` enum('r','n','nil') DEFAULT NULL COMMENT 'r->resale\nn->new booking',
   `photo_url` varchar(300) DEFAULT NULL,
-  `property_ownership` enum('f','l','c','p','nil') NOT NULL,
+  `property_ownership` enum('f','l','c','p','nil') NOT NULL COMMENT 'f->freehold\nl->leasehold\nc->co-operative society\np->power of attorney',
   `created_on` timestamp NULL DEFAULT NULL,
   `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `isdeleted` int(11) DEFAULT '0',
+  `isdeleted` int(11) DEFAULT '0' COMMENT 'row is deleted or not',
   PRIMARY KEY (`pid`),
   KEY `uid` (`uid`),
   KEY `res_price` (`price`),
   KEY `res_city` (`city`),
   CONSTRAINT `PROPERTY_RESIDENTIAL_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `USER` (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1
-
-
-create table USER_SELLER_INTERACTION (interaction_id int primary key auto_increment,
-pid int(11) not null,
-property_table_type enum('PROPERTY_PG','PROPERTY_RESIDENTIAL','PROPERTY_COMMERCIAL'),
-name varchar(50),
-email varchar(100),
-mob varchar(11),
- `created_on` timestamp NULL DEFAULT NULL,
- `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+
+CREATE TABLE `USER_SELLER_INTERACTION` (
+  `interaction_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'user seller interaction ID',
+  `pid` int(11) NOT NULL COMMENT 'Property ID',
+  `property_table_type` enum('PROPERTY_PG','PROPERTY_RESIDENTIAL','PROPERTY_COMMERCIAL') DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `mob` varchar(11) DEFAULT NULL,
+  `created_on` timestamp NULL DEFAULT NULL,
+  `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`interaction_id`),
+  KEY `pid` (`pid`),
+  KEY `property_table_type` (`property_table_type`)
+) ;
+
