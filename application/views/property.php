@@ -8,7 +8,7 @@
 	<?php 
 	if (isset($row['latitude']) && isset($row['longitude'])) {
 		?>
-	
+	<!-- script for google maps-->
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script>
 	function initialize() {
