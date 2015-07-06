@@ -1,0 +1,93 @@
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+}
+body{
+	background-image: url("/images/bg.jpg");
+	background-repeat: repeat-y;
+	font-family: Helvetica,sans-serif;
+	color: rgb(255, 255, 255);
+	padding: 0px;
+	margin: 0px;
+}
+#header{
+	padding: 10px 20px 5px 10px;
+	position: relative;
+    z-index: 1;
+	overflow: hidden;
+}
+#headerbackground{
+	position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(173, 173, 173);
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+
+figure{
+	margin: 0px;
+}
+figure img{
+	
+	width: 200px;
+	height: 100px;
+}
+figcaption{
+	margin-left: 10px;
+	font-size: 17px;
+	color: #FF4500;
+}
+
+.loginbtn{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: right;
+	padding: 10px;
+	width: auto;
+	text-align: center;
+	color: black;
+	cursor:pointer;
+	background-color: #d3d3d3;
+	text-shadow:0 1px 0 #13506D;
+	box-shadow: 4px 4px 4px #888888;
+	
+}
+#content{
+	
+	width:100%;
+	padding:50px 10px;
+}
+#formdiv{
+	
+	width:65%;
+	margin:0px auto;
+	text-align: center;
+	overflow:hidden;
+}
+#formdiv input[type="text"]{
+	width:80%;
+	padding:10px;
+	font-size :18px;
+}
+#formdiv input[type="submit"]{
+	width:18%;
+	padding:10px;
+	font-size :18px;
+	background-color: #d3d3d3;
+	text-shadow:0 1px 0 #13506D;
+	box-shadow: 4px 4px 4px #888888;
+}
+#formdiv div{
+	float:left;
+	text-align: left;
+	font-size: 15px;
+	font-style: italic;
+}

@@ -1,0 +1,137 @@
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+body{
+	background-image: url("http://100acres.com/images/bg.jpg");
+	background-repeat: no-repeat;
+	font-family: Helvetica,sans-serif;
+	color: rgb(255, 255, 255);
+	margin:0px;
+	padding: 0px;
+
+}
+
+
+
+
+figure{
+	margin: 0px;
+}
+figure img{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 200px;
+	height: 100px;
+}
+figcaption{
+	margin-left: 10px;
+	font-size: 17px;
+	color: #FF4500;
+}
+
+.loginbtn{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: right;
+	padding: 10px;
+	width: auto;
+	text-align: center;
+	color: black;
+	cursor:pointer;
+	background-color: #d3d3d3;
+	text-shadow:0 1px 0 #13506D;
+	box-shadow: 4px 4px 4px #888888;
+	
+}
+.fb-login-button{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: right;
+	padding: 10px;
+	width: auto;
+	text-align: center;
+	cursor:pointer;
+
+}
+#content{
+	padding: 10px;
+	width: 100%;
+	
+	
+	overflow: hidden;
+}
+#banner{
+	width: 40%;
+	text-align: center;
+	font-size: 20px;
+	border: :5px solid white;
+	float: left;
+}
+#bannercontent{
+	margin-top: 30%;
+	width: 600px;
+	margin-left: 40px;
+	border: :1px solid white;
+}
+
+.forminput{
+	padding: 15px;
+	margin-top: 15px;
+	margin-left: 55px;
+}
+
+.forminput1{
+	padding: 15px;
+	width: 75%;
+	text-align: center;
+	font: bold;
+	margin-top: 15px;
+	margin-left: 55px;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul li{
+	display: block;
+}
+h2{
+	color: black;
+	text-align: center;
+}
+
+#formdiv{
+	float: right;
+	margin-right: 30px;
+	background-color: black;
+	width: 30%;	
+	height: 480px;
+	opacity: .85;
+	border:2px solid #000000;
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cbd4e5));
+background: -moz-linear-gradient(top,  #fff,  #cbd4e5);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#cbd4e5');
+
+
+}
+
+#footer{
+max-width:100%;
+color:black;
+background-color:grey; 
+padding-top: 20px;
+text-align:center;
+font-weight: bold; 
+height: 49px;
+
+opacity: .8;
+bottom: 0;
+right: 0;
+left: 0;
+}

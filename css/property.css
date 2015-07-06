@@ -1,123 +1,102 @@
-
-body {
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+body{
+	background-image: url("/images/bg12.jpg");
+	background-repeat: repeat;
+	font-family: Helvetica,sans-serif;
 	
-	background-color: #f4f4f4;
-	color: #5a5656;
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 1.5em;
- 	}
-a { text-decoration: none; }
-h1 { font-size: 1em; }
-h1, p {
-margin-bottom: 10px;
+	padding: 0px;
+	margin: 0px;
 }
-strong {
-font-weight: bold;
+#content,#basicdetails{
+	width:100%;
+	overflow:hidden;
+	display:table;
 }
-.uppercase { text-transform: uppercase; }
-
-/* ---------- LOGIN ---------- */
-#login {
-margin: 50px auto;
-width: 300px;
+#image{
+	width:70%;
+	margin-left: 2%;
+	float:left;
 }
-form fieldset input[type="text"], input[type="password"] {
-background-color: #e5e5e5;
-border: none;
-border-radius: 3px;
--moz-border-radius: 3px;
--webkit-border-radius: 3px;
-color: #5a5656;
-font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-font-size: 14px;
-height: 50px;
-outline: none;
-padding: 0px 10px;
-width: 280px;
--webkit-appearance:none;
+#image img{
+	max-width: 100%;
 }
-form fieldset input[type="submit"] {
-background-color: #008dde;
-border: none;
-border-radius: 3px;
--moz-border-radius: 3px;
--webkit-border-radius: 3px;
-color: #f4f4f4;
-cursor: pointer;
-font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-height: 50px;
-text-transform: uppercase;
-width: 300px;
--webkit-appearance:none;
+#details{
+	width:25%;
+	margin-left: 1%;
+	margin-right: 1%;
+	float:left;
+	display:table-cell;
+	vertical-align: middle;
 }
-form fieldset a {
-color: #5a5656;
-font-size: 10px;
+#description,#sellerdetails{
+	width:50%;
+	padding:20px;
+	float:left;
+	min-height: 200px;
 }
-form fieldset a:hover { text-decoration: underline; }
-.btn-round {
-background-color: #5a5656;
-border-radius: 50%;
--moz-border-radius: 50%;
--webkit-border-radius: 50%;
-color: #f4f4f4;
-display: block;
-font-size: 12px;
-height: 50px;
-line-height: 50px;
-margin: 30px 125px;
-text-align: center;
-text-transform: uppercase;
-width: 50px;
+#googleMap{
+	width:70%;
+	margin:0px auto;
+	height:500px;
+	border:1px solid black;
 }
-.facebook-before {
-background-color: #0064ab;
-border-radius: 3px 0px 0px 3px;
--moz-border-radius: 3px 0px 0px 3px;
--webkit-border-radius: 3px 0px 0px 3px;
-color: #f4f4f4;
-display: block;
-float: left;
-height: 50px;
-line-height: 50px;
-text-align: center;
-width: 50px;
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
 }
-.facebook {
-background-color: #0079ce;
-border: none;
-border-radius: 0px 3px 3px 0px;
--moz-border-radius: 0px 3px 3px 0px;
--webkit-border-radius: 0px 3px 3px 0px;
-color: #f4f4f4;
-cursor: pointer;
-height: 50px;
-text-transform: uppercase;
-width: 250px;
+ul li{
+	display: block;
+	margin: 10px;
 }
-.twitter-before {
-background-color: #189bcb;
-border-radius: 3px 0px 0px 3px;
--moz-border-radius: 3px 0px 0px 3px;
--webkit-border-radius: 3px 0px 0px 3px;
-color: #f4f4f4;
-display: block;
-float: left;
-height: 50px;
-line-height: 50px;
-text-align: center;
-width: 50px;
+#header{
+	padding: 0px 20px 10px 5px;
+	position: relative;
+    z-index: 1;
+	overflow: hidden;
 }
-.twitter {
-background-color: #1bb2e9;
-border: none;
-border-radius: 0px 3px 3px 0px;
--moz-border-radius: 0px 3px 3px 0px;
--webkit-border-radius: 0px 3px 3px 0px;
-color: #f4f4f4;
-cursor: pointer;
-height: 50px;
-text-transform: uppercase;
-width: 250px;
+#headerbackground{
+	position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(113, 113, 113);
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+figure{
+	margin: 0px;
+}
+figure img{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 200px;
+	height: 100px;
+}
+figcaption{
+	margin-left: 10px;
+	font-size: 17px;
+	color: #FF4500;
+}
+.loginbtn{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: right;
+	padding: 10px;
+	width: auto;
+	text-align: center;
+	color: black;
+	cursor:pointer;
+	background-color: #d3d3d3;
+	text-shadow:0 1px 0 #13506D;
+	box-shadow: 4px 4px 4px #888888;
+	
 }

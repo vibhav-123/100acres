@@ -1,0 +1,89 @@
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+body{
+	background-image: url("/images/bg5.jpg");
+	background-repeat: repeat;
+	font-family: Helvetica,sans-serif;
+	color: rgb(255, 255, 255);
+	padding: 0px;
+	margin: 0px;
+}
+#content{
+	padding:20px;
+	overflow: hidden;
+	
+	width:100%;
+}
+form{
+	padding:15px 5px 15px 15px;
+	margin:0px auto;
+	
+	width:45%;
+	background-color: rgb(46, 46, 46);
+}
+form label{
+	margin-bottom: 5px;
+}
+form input,form select,form textarea{
+	width:90%;
+	padding: 5px;
+	margin:8px;
+}
+#header{
+	padding: 0px 20px 10px 5px;
+	position: relative;
+    z-index: 1;
+	overflow: hidden;
+}
+#headerbackground{
+	position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(173, 173, 173);
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+figure{
+	margin: 0px;
+}
+figure img{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 200px;
+	height: 100px;
+}
+figcaption{
+	margin-left: 10px;
+	font-size: 17px;
+	color: #FF4500;
+}
+
+.loginbtn{
+	float: right;
+	padding: 10px;	
+	background-color: rgb(255, 153, 0);
+	margin: 20px;	
+}
+
+.clear{
+	clear:both;
+}
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+ul li{
+	display: block;
+}
+.error{
+	color:red;
+	font:bold;
+}

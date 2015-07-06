@@ -1,0 +1,134 @@
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+}
+body{
+	background-image: url("/images/bg.jpg");
+	background-repeat: repeat-y;
+	font-family: Helvetica,sans-serif;
+	color: rgb(255, 255, 255);
+	padding: 0px;
+	margin: 0px;
+}
+.error{
+	color:red;
+	margin-left: 250px;
+}
+figure{
+	margin: 0px;
+}
+figure img{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 200px;
+	height: 100px;
+}
+figcaption{
+	margin-left: 10px;
+	font-size: 17px;
+	color: #FF4500;
+}
+
+.loginbtn{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: right;
+	padding: 10px;
+	width: auto;
+	text-align: center;
+	color: black;
+	cursor:pointer;
+	background-color: #d3d3d3;
+	text-shadow:0 1px 0 #13506D;
+	box-shadow: 4px 4px 4px #888888;
+	
+}
+
+#formdiv{
+	background-color: black;
+	height: 480px;
+	margin-left: 400px;	
+	width:41%;
+	opacity: .85;
+	border:2px solid #000000;
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cbd4e5));
+background: -moz-linear-gradient(top,  #fff,  #cbd4e5);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#cbd4e5');
+
+}
+
+h2{
+	text-align: center;
+	color: black;
+}
+
+#formdiv label{
+	margin-left: 30px;
+	padding: 30px;
+	font-size: 20px;
+	color: black;
+	
+}
+
+#formdiv div{
+	
+	padding:8px ;
+}
+
+
+.inputfields1{
+	color: black;
+	margin-left: 100px;
+}
+
+.inputfields2{
+	
+	color: black;
+	margin-left: 63px;
+}
+
+.inputfields3{
+	
+	color: black;
+	margin-left: 0px;
+}
+
+
+.inputfields4{
+	
+	color: black;
+	margin-left: 114px;
+}
+
+.inputfields5{
+	
+	color: black;
+	margin-left: 75px;
+}
+
+.inputfields6{
+	
+	color: black;
+	margin-left: 3px;
+}
+
+
+.inputfields7{
+	
+	color: black;
+	margin-left: 13px;
+}
+
+.inputfields8{
+	
+	color: black;
+	margin-left: 22px;
+}
+
+.submit_button{
+	margin-top: 20px;
+	margin-left: 300px;																	
+}
