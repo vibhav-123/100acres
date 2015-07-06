@@ -3,6 +3,10 @@
     	<?php 
     	include("pathfile.php");
     	?>
+    	<script src="https://apis.google.com/js/platform.js"></script>
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content="359179193971-334ubhve9rc2d0vfocbp8el4ommlns4h.apps.googleusercontent.com">
+	    <script src="http://www.100acres.com/js/googlePlus.js"></script>
 	    <script src=<?=$jqueryPath?>></script>
 	    <script src=<?=$validationjsPath?>></script>
 	    <script src=<?=$jsFunctionsPath?>></script>
@@ -98,8 +102,8 @@
         			</td>
 			</tr>
 	    		<tr style="text-align: center;">
-				<td  colspan="2">
-		              		<input type="submit" value ="Continue with Google"  >
+				<td  colspan="2" style="text-align:center">
+		              		<div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" style="margin:0 auto;height: 33px;width:100px;text-align:center" onclick="g_plus_click();"></div>
 		        	</td>
 			</tr>
 	        	<tr style="text-align: center;table-layout: fixed">

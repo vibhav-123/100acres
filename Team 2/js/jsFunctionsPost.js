@@ -24,6 +24,10 @@ function post_rent()
     $("#div_Rent").slideDown(150);
     $("#div_Sell").hide(1);
     $("#div_PG").hide(1);
+	
+	$("#buttonPostSell").css({"color": "#FFFFFF"});
+	$("#buttonPostPG").css({"box-shadow": "none" ,"border-color":"none"});
+	$("#buttonPostRent").css({"background-color":"black", "opacity":"0.7"});
 	$("#buttonPostRent").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
 }
 
@@ -49,6 +53,8 @@ function post_PG()
     $("#div_Rent").hide();
     $("#div_Sell").hide();
     $("#div_PG").slideDown(149);
- 	$("#buttonPostPG").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
+ 	
+ 	$("#buttonPostPG").css({"background-color":"black", "opacity":"0.7"});
+	$("#buttonPostPG").css({"box-shadow": "rgba(0,0,0, 0.1) 0px 0px 8px","border-color":"#E5E5E5"});
 }
 

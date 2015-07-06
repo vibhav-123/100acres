@@ -377,7 +377,7 @@
 					echo "<tr><td>Contact Number</td><td><input type='text' readonly value='".$contact."' id='inputUserInfoContact' class='inputUserInfo'></input></td></tr>";
 					echo "<tr><td>Account Created On</td><td><input style='background-color:lightgray' type='text' readonly value='".$created_on."'></input></td></tr>";
 					//echo "<tr><td>Account Updated On</td><td><input style='background-color:lightgray' type='text' readonly value='".$modified_on."'></input></td></tr>";
-					echo "<tr id='oldPwrdTr'><td>Current password</td><td><input id='oldPassword' style='background-color:white' type='text' ></input></td></tr>";
+					echo "<tr id='oldPwrdTr'><td>Current password</td><td><input id='oldPassword' style='background-color:white' type='password' ></input></td></tr>";
 					echo "<tr id='newPwrdTr'><td>Enter new password</td><td><input id='newPassword' style='background-color:white' type='text' ></input></td></tr>";
 					echo "<tr id='reNewPwrdTr'><td>Re-enter new password</td><td><input id='reNewPassword' style='background-color:white' type='text' ></input></td></tr></div>";
 					echo "</div>";
@@ -425,7 +425,7 @@
 							echo "<td>".$row->address."</td>";
 							echo "<td>1100</td>";
 							echo "<td>".$row->CREATED_ON."</td>";
-							$str="http://www.100acres.com/index.php/property_c/viewPropertyDetails?postID=$row->postID&"."mode=sell";
+							$str="http://www.100acres.com/index.php/property_c/viewPropertyDetails?postID=$row->postID&"."mode=buy";
 							echo "<td><a href='$str' class='a_profile'>View Details</a></td>";
 							echo "<td><a href='http://www.100acres.com' class='a_profile'> Edit Details</a></td>";
 							echo "</tr>";
