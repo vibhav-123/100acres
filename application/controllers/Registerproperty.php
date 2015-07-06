@@ -6,6 +6,8 @@ class Registerproperty extends CI_Controller{
 		parent::__construct();
 		
 		$this->load->model('registerproperty_model');
+		//if directly accessing register page without login redirect him to login after which
+		//he has to come back to register page again instead of usual home page
 		if(!$this->session->has_userdata('useremail')){
 			redirect('/user/index?loginfirst=true&lasturl=registerproperty/register','refresh');
 		}
@@ -13,7 +15,7 @@ class Registerproperty extends CI_Controller{
 	}
 	
 	public function register(){
-		
+		//validate the form and if satisfied upload the data
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('<span class="error">','</span>');

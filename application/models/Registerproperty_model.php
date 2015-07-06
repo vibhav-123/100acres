@@ -13,7 +13,7 @@ class Registerproperty_model extends CI_Model{
 		parent::__construct();
 		$this->load->database();
 	}
-	
+	//insert property details in datavbase
 	public function insert_entry($imagepath) {
 		$data['typeofowner']=$this->input->post('typeofowner');
 		$data['intention']=$this->input->post('intention');

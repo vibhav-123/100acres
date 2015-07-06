@@ -17,7 +17,7 @@ class Searchproperty extends CI_Controller{
 		//print_r($post);
 		$this->search_property_model->search_property($post);
 	}
-
+	//this function is used by ajax
 	public function getitems($offset,$limit){
 		$post['keyword']=(empty($this->input->get('keyword')))? NULL : $this->input->get('keyword');
 		$post['minprice']=(empty($this->input->get('minprice')))? NULL : $this->input->get('minprice');

@@ -4,7 +4,7 @@ class Property_model extends CI_Model{
 	public function __construct(){
 		parent::__construct();
 	}
-
+	//make get request to get property details
 	public function property_details($propertyid){
 		$url="http://api.100acres.com/index.php/propertydetails/index?pid=".$propertyid;
 		//error_log($url);

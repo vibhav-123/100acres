@@ -9,7 +9,7 @@ class Searchbysolr extends CI_Controller{
 	public function index(){
 		$this->load->view('searchbysolrview');
 	}
-
+	//function to call when searching is done from the search page
 	public function solrsearch($start=0){
 		$searchstring=$_GET['searchstring'];
 		$strarr=str_word_count($searchstring,1);
@@ -42,7 +42,7 @@ class Searchbysolr extends CI_Controller{
 		$data['properties']=$solrresp['docs'];
 		$this->load->view('solrsearchresults',$data);
 	}
-
+	//filter results based on constraints in the result page
 	public function filterresults($start=0){
 		$url="http://localhost:8983/solr/99acres/select?start=".$start."&rows=4&wt=json&q=";
 		foreach($_GET as $key => $value){

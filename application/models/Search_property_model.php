@@ -31,6 +31,7 @@ class Search_property_model extends CI_Model{
 		}
 		$query=$this->db->get('propertylistings',$limit,$offset);
 		//print_r($query);
+		//if ajax request send html string else load view
 		$data['query']=$query;
 		$data['postparams']=$post;
 		if($offset!==0){

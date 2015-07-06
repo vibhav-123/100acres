@@ -1,7 +1,7 @@
 <?php 
 
 class Searchbysolrmodel extends CI_Model{
-	
+	//make get request to solr
 	public function searchsolr($url){
 		$handle=curl_init($url);
 		curl_setopt($handle, CURLOPT_HEADER, 0);

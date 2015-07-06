@@ -3,7 +3,7 @@
 class Additionaldetails_model extends CI_Model{
 	public function __construct(){
 		parent::__construct();
-		$this->load->helper('chromephp');
+		//$this->load->helper('chromephp');
 	}
 
 	public function postadditionaldetails($data){
@@ -11,6 +11,7 @@ class Additionaldetails_model extends CI_Model{
 		//ChromePhp::log($data);
 		$json=json_encode($data);
 		//print_r($json);
+		//make post request to web service to post property
 		$url="http://api.100acres.com/index.php/propertydetails/index";
 		$handle=curl_init($url);
 		curl_setopt($handle, CURLOPT_POST, 1);

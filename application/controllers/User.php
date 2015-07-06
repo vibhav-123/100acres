@@ -27,7 +27,7 @@ class User extends CI_Controller{
                $this->load->view('footer_view',$data);
           }
       }
- 
+  //sample page for welcome after login
       public function welcome()
       {
           $data['title']= 'Welcome';
@@ -35,7 +35,7 @@ class User extends CI_Controller{
           $this->load->view('welcome_view.php', $data);
           $this->load->view('footer_view',$data);
       }
-
+      //check with database for details
       public function login()
       {
           //print_r($_POST);
@@ -81,7 +81,7 @@ class User extends CI_Controller{
               $this->index();
           }
       }
-
+      //sample page for thank after registering
       public function thank()
       {
           $data['title']= 'Thank';
