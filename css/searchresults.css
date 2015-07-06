@@ -102,7 +102,7 @@ filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endCol
 	background-color: rgb(102, 194, 194) ;
 }
 span.text-content {
-  background: rgba(0,0,0,0.5);
+  
   color: white;
   cursor: pointer;
   padding:10px;
@@ -114,6 +114,7 @@ span.text-content {
   width: 100%;
   font-size: 20px;
   opacity: 0;
+  background-color: rgb(214, 214, 214);
 }
 .searchresult:hover span.text-content{
 	opacity:1;

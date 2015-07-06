@@ -49,7 +49,7 @@
 		<a href="/home"><div class="loginbtn">Home</div></a>
 		<div id="logo">
 			<figure>
-			<img src="/images/logo.jpg" alt="99acres logo">
+			<img src="/images/newlogo.png" alt="99acres logo">
 			<figcaption>India's No:1 Property Portal</figcaption>
 			</figure>
 		</div>

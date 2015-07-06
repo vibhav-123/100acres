@@ -37,13 +37,13 @@
 				echo '<form method="get" action="searchproperty">';
 				echo "<h2 style='text-align: center'>Search</h2>";
 
-				$attr=array('name'=>'keyword','size'=>'25','value'=>$postparams['keyword'],'class'=>'forminput');
+				$attr=array('name'=>'keyword','placeholder'=>'Enter keyword','size'=>'25','value'=>$postparams['keyword'],'class'=>'forminput');
 				echo "<ul><li>";echo form_input($attr),"<br>";echo "</li>";
 
-				$attr=array('name'=>'minprice','size'=>'25','value'=>$postparams['minprice'],'class'=>'forminput');
+				$attr=array('name'=>'minprice','placeholder'=>'Enter minprice','size'=>'25','value'=>$postparams['minprice'],'class'=>'forminput');
 				echo "<li>";echo form_input($attr),"<br>";echo "</li>";
 
-				$attr=array('name'=>'maxprice','size'=>'25','value'=>$postparams['maxprice'],'class'=>'forminput');
+				$attr=array('name'=>'maxprice','placeholder'=>'Enter maxprice','size'=>'25','value'=>$postparams['maxprice'],'class'=>'forminput');
 				echo "<li>";echo form_input($attr),"<br>";echo "</li>";
 
 				$attr= array('1' => '1 BHK','2'=>'2 BHK','3'=>'3 BHK','4'=>'4 BHK' );
@@ -74,7 +74,7 @@
 					echo "<span>Property Type: {$row->typeofproperty}</span>";
 					echo "<span>Provider: {$row->typeofowner}</span>";
 					echo "<span>City: {$row->city}</span>";
-					echo '<span class="text-content"><span>Click for More Details</span></span>';
+					
 					echo '</div></a>';
 				}
 			}
