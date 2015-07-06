@@ -13,6 +13,10 @@ function getnextitems(){
 }
 
 function handledata(result){
+	if(result==""){
+		document.getElementById('button').innerHTML="No more results to display";
+		return;
+	}
 	document.getElementById('searchresultslist').innerHTML=document.getElementById('searchresultslist').innerHTML+result;
 	var total=parseFloat(document.getElementById("offset").value)+parseFloat(document.getElementById("limit").value);
 	document.getElementById("offset").value=total;

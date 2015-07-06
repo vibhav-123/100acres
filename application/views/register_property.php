@@ -46,7 +46,7 @@
 	<?php echo form_error('intention'); ?>
 	<div class="radio"><label for="typeofintention">I want to:</label>
 		<span class="inputfields2">
-		<input type="radio" name="intention" value="sell" <?php echo  set_radio('intention', 'sell',TRUE);?>>Sell 
+		<input type="radio" name="intention" value="buy" <?php echo  set_radio('intention', 'sell',TRUE);?>>Sell 
 		<input type="radio" name="intention" value="rent" <?php echo  set_radio('typeofowner', 'rent');?>>Rent/Leaseout 
 		</span>
 	</div>

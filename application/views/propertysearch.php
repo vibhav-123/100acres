@@ -46,7 +46,7 @@
 				$attr=array('name'=>'maxprice','placeholder'=>'Enter maxprice','size'=>'25','value'=>$postparams['maxprice'],'class'=>'forminput');
 				echo "<li>";echo form_input($attr),"<br>";echo "</li>";
 
-				$attr= array('1' => '1 BHK','2'=>'2 BHK','3'=>'3 BHK','4'=>'4 BHK' );
+				$attr= array('1BHK' => '1 BHK','2BHK'=>'2 BHK','3BHK'=>'3 BHK','4BHK'=>'4 BHK' );
 				$js='class="forminput" placeholder="Number of BHK"';
 				echo "<li>";echo form_dropdown('bedroom', $attr,$postparams['bedroom'],$js),"<br>";echo "</li>";
 				
@@ -85,10 +85,10 @@
 			
 		</div>
 		<div style="clear:both"></div>
-		<input type="button" onclick="getnextitems()" id="next" value="Load More">
+		<div id="button"><input type="button" onclick="getnextitems()" id="next" value="Load More"></div>
 		<input type="hidden" id="offset" name="offset" value="1">
 		<input type="hidden" id="limit" name="limit" value="1">
-		<div id="rough"></div>
+		
 
 	</div>
 	
