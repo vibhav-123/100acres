@@ -113,4 +113,24 @@ CREATE TABLE `PostRent` (
   KEY `builtTypeRent` (`builtType`),
   KEY `priceRent` (`price`),
   KEY `addressRent` (`address`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1 
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1
+
+
+----------------------------------------------------------------------
+
+CREATE TABLE `Interactions` (
+  `interactionId` int(10) NOT NULL AUTO_INCREMENT,
+  `postID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `interacted_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `mode` varchar(10) NOT NULL,
+  PRIMARY KEY (`interactionId`)
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1 
+--------------------------------------------------------------------------
+CREATE TABLE `clientIPAddress` (
+  `sno` int(11) NOT NULL AUTO_INCREMENT,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `userID` int(11) NOT NULL,
+  `IPAddress` varchar(45) NOT NULL,
+  PRIMARY KEY (`sno`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1 
