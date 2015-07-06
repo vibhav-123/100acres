@@ -36,6 +36,7 @@ CREATE TABLE `PROPERTY_PG` (
   `created_on` timestamp NULL DEFAULT NULL,
   `updated_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `isdeleted` int(11) DEFAULT '0',
+  `availability` date DEFAULT NULL,
   PRIMARY KEY (`pid`),
   KEY `uid` (`uid`),
   KEY `pg_price` (`price`),

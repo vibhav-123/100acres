@@ -99,8 +99,10 @@ CREATE TABLE `PROPERTY_RESIDENTIAL` (
   `isdeleted` int(11) DEFAULT '0',
   PRIMARY KEY (`pid`),
   KEY `uid` (`uid`),
+  KEY `res_price` (`price`),
+  KEY `res_city` (`city`),
   CONSTRAINT `PROPERTY_RESIDENTIAL_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `USER` (`uid`)
-)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1
 
 
 create table USER_SELLER_INTERACTION (interaction_id int primary key auto_increment,
