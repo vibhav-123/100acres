@@ -41,6 +41,16 @@ class User extends CI_Controller{
           //print_r($_POST);
           $email=$this->input->post('email');
           $password=md5($this->input->post('pass'));
+
+          $fblogin=false;
+
+          if(isset($_GET['username'])){ 
+                $fblogin=true;
+                $result_name=$_GET['username'];
+                $result_email=$_GET['email'];
+
+          } 
+
           $lasturl='';
           if(isset($_POST['lasturl']))
             $lasturl=$_POST['lasturl'];
@@ -57,7 +67,14 @@ class User extends CI_Controller{
               }
             redirect('/home', 'refresh');
           }
+          elseif ($fblogin) {
+              $this->session->set_userdata('useremail',$result_email);
+              $this->session->set_userdata('logged_in',TRUE);
+              
+            redirect('http://100acres.com/home', 'refresh');
             
+          }
+          
           else
           {   
               echo '<div style="float:right;font-size:20px;color:red;font-weight:bold;margin-top:40px;margin-left:70%;position: absolute; z-index:3;">Invalid Username Or Password,Try again!!</div>';

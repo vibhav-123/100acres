@@ -56,7 +56,7 @@ function statusChangeCallback(response) {
 
   window.fbAsyncInit = function() {
     FB.init({
-    appId      : '956517241057339',  //you have to generate your own app id..
+    appId      : '496172473872656',  //you have to generate your own app id..
     xfbml      : true,
     version    : 'v2.3'
     });
@@ -78,7 +78,7 @@ function statusChangeCallback(response) {
       console.log('Successful login for: ' + response.name + response.email);
 
       //This is the link where you want to redirect after login....
-      window.location.assign("http://100acres.com/Registerproperty/register?username='"+response.name+"'&email='"+response.email+"'");
+      window.location.assign("http://100acres.com/user/login?username='"+response.name+"'&email='"+response.email+"'");
       });
     }
 
