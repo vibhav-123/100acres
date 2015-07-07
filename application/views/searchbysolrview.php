@@ -35,7 +35,7 @@
 			<div>
 				Some example query strings <br>
 				2BHK flat for rent Mumbai <br>
-				3BHK independent to buy in bangalore with parks temples malls <br>
+				3BHK independent to buy in bangalore <br>
 				2bhk by builder for rent
 			</div>
 		</div>

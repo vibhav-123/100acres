@@ -14,7 +14,7 @@ class User extends CI_Controller{
         
           if($this->session->userdata('useremail')!='')
           {
-              redirect('/home','refresh')
+              redirect('/home','refresh');
           }
           else{
               if(isset($_GET['loginfirst']))
@@ -102,7 +102,7 @@ class User extends CI_Controller{
               { 
                   $this->user_model->add_user();
                   $this->session->set_userdata('useremail',$email);
-                  redirect('/home','refresh')
+                  redirect('/home','refresh');
               }
               else
               {
