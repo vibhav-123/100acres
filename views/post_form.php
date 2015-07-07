@@ -14,7 +14,14 @@
 		<div>
 			<div id="success">
 				<!-- print message in success variable on the screen -->
-				<?php if(isset($success)){echo $success; }?>
+				<?php if(isset($success))
+				{
+					if($success=="First Login")
+						{	echo $success; 
+							header('Location: http://www.100acres.com/Login');
+							die();}
+				else{echo $success;} 
+				}?>
 			</div>
 			<!-- Form start -->
 			<form action="http://www.100acres.com/Postproperty_controller/register?<?php echo "User_id=".$_GET['User_id']; ?>" method="POST" enctype="multipart/form-data" name="posting_form" id="postform" onsubmit="return validate()">

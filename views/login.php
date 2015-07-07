@@ -25,7 +25,7 @@ if(isset($error))
 <fieldset>
 	<p><input type="text" name="Email" required value="Email" onBlur="if(this.value=='')this.value='Email'" onFocus="if(this.value=='Email')this.value='' "></p>
 	<p><input type="password" name="Password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></p>
-	<p><a href="#">Forgot Password?</a></p>
+	<!-- <p><a href="#">Forgot Password?</a></p> -->
 	<p><input type="submit" value="Login" name="submit"></p>
 </fieldset>
 </form>
@@ -35,7 +35,7 @@ if(isset($error))
 </p>
 <p>
 	<a class="twitter-before"></a>
-	<button class="twitter">Login Using Twitter</button>
+	<button class="twitter">Login Using Facebook</button>
 </p>
 </div> <!-- end login -->
 </body>

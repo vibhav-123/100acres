@@ -30,17 +30,18 @@
 				<li class="another_blue"><a href="http://www.100acres.com/Login">Login</a></li><?php } ?>
 			 </ul>	
 		</div>
-		<div id="flip"><h4>Find a property !!!!</h4></div>
-        <div id="panel">
-        <form action="property" method="get" id="search" name="searchform" onsubmit="return validate()">
-        City:<br>
-        <select name='select_city'>
-        	<option value="NULL">Please select an option</option>
+		<!-- <div id="flip"><h4>Find a property !!!!</h4></div> -->
+    <div id="panel">
+    <form action="property" method="get" id="search" name="searchform" onsubmit="return validate()">
+    <h4>Find a property !!!!</h4>
+    City:<br>
+    <select name='select_city'>
+        <option value="NULL">Please select an option</option>
   			<option value="Noida">Noida</option>
   			<option value="New Delhi">New Delhi</option>
   			<option value="Gurgaon">Gurgaon</option>
   			<option value="Ghaziabad">Ghaziabad</option>
-		</select>
+		</select><br>
 		<br>
 		Min price:<br>
 		<input type= "text" name="minprice" value="" id="min">
@@ -59,28 +60,28 @@
   			<option value="3 BHK">3 BHK</option>
   			<option value="4 BHK">4 BHK</option>
   		</select>
-  		<br>
+  		<br><br>
   		Intention:<br>
 		<select name='sellorrent'>
 			<option value="NULL">Please select an option</option>
   			<option value="Rent">Rent</option>
   			<option value="Sell">Sell</option>
   		</select>
-  		<br>
+  		<br><br>
   		Sort by:<br>
       	<select name='sort'>
         	<option value="NULL">Select an option</option>
         	<option value="expected_price">Price</option>
         </select>
       	<br><br>
-  		<input type="submit" name="submit" value="Submit">
+  		<input type="submit" name="submit" value="SEARCH">
   		</form>
         </div>
 		</div>
 		<div id="footer">
 			<ul>
-				<div id="buy" onclick="toggle_buy()"><li class="black" ><a href="#/buy.html">BUY</a></li></div>
-				<div id="rent" onclick="toggle_rent()"><li class="black" ><a href="#/rent.html">RENT</a></li></div>
+				<div id="buy" onclick="toggle_buy()"><li class="black" ><a href="#buy">BUY</a></li></div>
+				<div id="rent" onclick="toggle_rent()"><li class="black" ><a href="#rent">RENT</a></li></div>
 			</ul>	
 		</div>
 		<script type = "text/javascript" src="http://www.100acres.com/js/searchvalidation.js"></script>

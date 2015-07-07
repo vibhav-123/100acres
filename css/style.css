@@ -21,15 +21,15 @@ h3
     font-family:verdana;
     font-size:100%;
     line-height: 200%;
-    text-align: right;
+    /*text-align: right;*/
 
 }
 h4
 {
 	color:white;
     font-family:verdana;
-    font-size:200%;
-    line-height: 200%;
+    font-size:150%;
+    
 }
 a{
 	color: black;

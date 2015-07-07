@@ -1,8 +1,9 @@
 body 
 {
-	background-image: url("http://www.100acres.com/images/bg2.jpg");
+	background-image: url("http://www.100acres.com/images/bg6.jpg");
+	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 900px;
+	background-size: 1800px;
 	background-color: #f4f4f4;
 	color: #5a5656;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
