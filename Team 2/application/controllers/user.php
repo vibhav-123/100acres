@@ -117,7 +117,7 @@ class User extends CI_Controller
 		$personalInformation=$this->processinfo->getPersonalInfo();			//get personal info of the user using userID
 		$argumentToBePassed=array("postedAds"=>$postedAds,"personalInformation"=>$personalInformation);  //make associative array to pass to view
 			
-		$this->load->view("profile_user_resham",$argumentToBePassed);	//load the view
+		$this->load->view("profile_user",$argumentToBePassed);	//load the view
 	
 		
 	} 
@@ -233,6 +233,7 @@ class User extends CI_Controller
     		echo "Failure";
     }	
     
+    //
     public function forgetPassword($email)
     {
     	$this->load->model("processinfo");
@@ -250,6 +251,7 @@ class User extends CI_Controller
     	 
     }
     
+    //used for debugging
     public function test($param)
     {
         echo $param;
@@ -260,6 +262,7 @@ class User extends CI_Controller
     	return $_POST;
     }
     
+    //used for creating a session with a given input array
     private function createSession($result)
     {
     	$this->session->set_userdata("name",$result["name"]);

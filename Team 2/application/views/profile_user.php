@@ -2,10 +2,7 @@
 	<head>
 	<?php 
 		include("pathfile.php");
-		if(!isset($this->session->userdata["userID"]))
-		{
-			header('Location: http://www.100acres.com/');
-		}
+	
 	?>
 		<title>
 		Personal Homepage
@@ -15,6 +12,7 @@
 	    <script src=<?=$jsFunctionsPath?>></script>
 	    <script src=<?=$fbLoginPath?>></script>
 	    <link type="text/css" href=<?=$styleSheetsPath?> rel="stylesheet"></link>
+	    <script src="http://www.100acres.com/js/jsFunctionsProfile.js"></script>
 	</head>
 	
 	<body id="body1">
@@ -368,20 +366,28 @@
 				
 					<legend style="color: black;float:center;"> Personal Information </legend>
 				<?php
-					   
+				$name=$personalInformation[0]->name;
+				$email=$personalInformation[0]->email;
+				$contact=$personalInformation[0]->contact;
+				$created_on=$personalInformation[0]->CREATED_ON;
+				$modified_on=$personalInformation[0]->MODIFIED_ON;
 					echo "<table style='width: 500px;table-layout: fixed; left:50 ;margin: 0 auto;cell-spacing:5px; '>";
-					echo "<tr><td>Name</td><td>".$personalInformation[0]->name."</td></tr>";
-					echo "<tr><td>Email</td><td>".$personalInformation[0]->email."</td></tr>";
-					echo "<tr><td>Contact Number</td><td>".$personalInformation[0]->contact."</td></tr>";
-					echo "<tr><td>Account Created On</td><td>".$personalInformation[0]->CREATED_ON."</td></tr>";
-					echo "<tr><td>Account Updated On</td><td>".$personalInformation[0]->MODIFIED_ON."</td></tr>";
+					echo "<tr><td>Name</td><td><input type='text' readonly value='".$name."' id='inputUserInfoName' class='inputUserInfo'></input></td></tr>";
+					echo "<tr><td>Email</td><td><input type='text' readonly value='".$email."' id='inputUserInfoEmail' class='inputUserInfo'></input></tr>";
+					echo "<tr><td>Contact Number</td><td><input type='text' readonly value='".$contact."' id='inputUserInfoContact' class='inputUserInfo'></input></td></tr>";
+					echo "<tr><td>Account Created On</td><td><input style='background-color:lightgray' type='text' readonly value='".$created_on."'></input></td></tr>";
+					//echo "<tr><td>Account Updated On</td><td><input style='background-color:lightgray' type='text' readonly value='".$modified_on."'></input></td></tr>";
+					echo "<tr id='oldPwrdTr'><td>Current password</td><td><input id='oldPassword' style='background-color:white' type='password' ></input></td></tr>";
+					echo "<tr id='newPwrdTr'><td>Enter new password</td><td><input id='newPassword' style='background-color:white' type='text' ></input></td></tr>";
+					echo "<tr id='reNewPwrdTr'><td>Re-enter new password</td><td><input id='reNewPassword' style='background-color:white' type='text' ></input></td></tr></div>";
+					echo "</div>";
 					echo "<tr>
-						<td  >
-							<input type='button' id='editPersonal' value='Edit Information' class='profileButton'>
-						</td>
-						<td  style='text-align: left'>
-							<input type='button' id='editPersonal' value='Change Password' class='profileButton'>
-						</td>
+							<td >
+								<button id='editPersonal' class='profileButton' onclick='editPersonalInfo()'>Edit Information</button> 
+							</td>
+							<td  style='text-align: left'>
+								<button id='editPassword' class='profileButton' onclick='editPassword()'>Edit Password</button> 
+							</td>
 						</tr>";
 					echo "</table>";  
 				?> 
@@ -392,17 +398,18 @@
 				
 				<!----------------------- My Postings Div Starts---------------- -->
 				<div id="myAdvts" style="color:black;border-width:medium;width:90%;margin: 0 auto;">
-				<fieldset style="padding:10px ">
-					<legend style="text-align: center">  Posted Advertisements for properties </legend>
+				<fieldset >
+					<legend> Posted Advertisements for properties </legend>
 				<?php			
 						
 					if(!empty($postedAds["resultForSeller"]))
 					{
 						$sno=1;
-						echo"<div><b>Properties to Sell</b></div>";
 						echo "<table style='width: 100%;   color:darkgreen; cellspacing=5px'>";
+						
+						echo"<tr ><th style='color:darkgreen'><div>Properties to Sell</div></th></tr><tr></tr><tr></tr>";
 						echo "<tr>
-						<th width=20px >Serial No.</th>
+						<th width=50px>Serial No.</th>
 						<th> Posting Title </th>
 						<th> Address </th>
 						<th> Total Views </th>
@@ -413,82 +420,80 @@
 						foreach($postedAds["resultForSeller"] as $row)
 						{
 							echo "<tr>";
-							echo "<td width=20px style='text-align:center'>".$sno."</td>";
-							echo "<td style='text-align:center'>".$row->title."</td>";
-							echo "<td style='text-align:center'>".$row->address."</td>";
-							echo "<td style='text-align:center'>1100</td>";
-							echo "<td style='text-align:center'>".$row->CREATED_ON."</td>";
-							$str="http://www.100acres.com/index.php/property_c/viewPropertyDetails?postID=$row->postID&"."mode=sell";
+							echo "<td>".$sno."</td>";
+							echo "<td>".$row->title."</td>";
+							echo "<td>".$row->address."</td>";
+							echo "<td>1100</td>";
+							echo "<td>".$row->CREATED_ON."</td>";
+							$str="http://www.100acres.com/index.php/property_c/viewPropertyDetails?postID=$row->postID&"."mode=buy";
 							echo "<td><a href='$str' class='a_profile'>View Details</a></td>";
 							echo "<td><a href='http://www.100acres.com' class='a_profile'> Edit Details</a></td>";
 							echo "</tr>";
 							$sno=$sno+1;
 							
 						}					
-						echo "</table><br>";
+						echo "</table>";
 					}
 					
 					if(!empty($postedAds["resultForRental"]))
 					{
 						$sno=1;
-						echo"<div><b>Properties to Rent</b></div>";
 						echo "<table style='width: 100%;   color:darkgreen; cellspacing=5px'>";
 						echo "<tr>
-						<th width=20px >Serial No.</th>
+						<th width=50px>Serial No.</th>
 						<th> Posting Title </th>
 						<th width=10px> Address </th>
 						<th> Total Views </th>
 						<th > Created On </th>
 						</tr><tr></tr><tr></tr>";
-						
+						echo"<tr ><th style='color:darkgreen' ><div style='color:black	'>Properties to Rent</div></th></tr><tr></tr><tr></tr>";
 						
 						foreach($postedAds["resultForRental"] as $row)
 						{
 							echo "<tr>";
-							echo "<td width=20px style='text-align:center'>".$sno."</td>";
-							echo "<td style='text-align:center'>".$row->title."</td>";
-							echo "<td style='text-align:center'>".$row->address."</td>";
-							echo "<td style='text-align:center'>1100</td>";
-							echo "<td style='text-align:center'>".$row->CREATED_ON."</td>";
+							echo "<td>".$sno."</td>";
+							echo "<td>".$row->title."</td>";
+							echo "<td >".$row->address."</td>";
+							echo "<td>1100</td>";
+							echo "<td>".$row->CREATED_ON."</td>";
 							$str="http://www.100acres.com/index.php/property_c/viewPropertyDetails?postID=$row->postID&"."mode=rent";
 							echo "<td><a href='$str' class='a_profile'>View Details</a></td>";
 							echo "<td><a href='http://www.100acres.com' class='a_profile'> Edit Details</a></td>";
 							echo "</tr>";
 							$sno=$sno+1;
 						}					
-						echo "</table><br>";					
+						echo "</table>";					
 					}
 
 					if(!empty($postedAds["resultForPG"]))
 					 {
-						$sno=1;
-						echo"<div><b>Properties For PG</b></div>";
-						echo "<table style='width: 100%;   color:darkgreen; cellspacing=5px'>";
-						echo "<tr>
-						<th width=10px>Serial No.</th>
+					 	$sno=1;
+					 	echo "<table style='width: 100%;   color:darkgreen; cellspacing=5px'>";
+					 	echo "<tr>
+						<th width=50px>Serial No.</th>
 						<th> Posting Title </th>
-						<th width=10px> Address </th>
+						<th> Address </th>
 						<th> Total Views </th>
 						<th > Created On </th>
 						</tr><tr></tr><tr></tr>";
-						
+						echo"<tr ><th style='color:darkgreen' ><div style='color:black	'>Properties for PG</div></th></tr><tr></tr><tr></tr>";
 						
 						foreach($postedAds["resultForPG"] as $row)
 						{
 							echo "<tr>";
-							echo "<td width=20px style='text-align:center'>".$sno."</td>";
-							echo "<td style='text-align:center'>".$row->title."</td>";
-							echo "<td style='text-align:center'>".$row->address."</td>";
-							echo "<td style='text-align:center'>1100</td>";
-							echo "<td style='text-align:center'>".$row->CREATED_ON."</td>";
-							$str="http://www.100acres.com/index.php/property_c/viewPropertyDetails?postID=$row->postID&"."mode=rent";
+							echo "<td>".$sno."</td>";
+							echo "<td>".$row->title."</td>";
+							echo "<td>".$row->address."</td>";
+							echo "<td>1100</td>";
+							echo "<td>".$row->CREATED_ON."</td>";
+							$str= "http://www.100acres.com/index.php/property_c/viewPropertyDetails?postID=$row->postID&"."mode=pg";
 							echo "<td><a href='$str' class='a_profile'>View Details</a></td>";
 							echo "<td><a href='http://www.100acres.com' class='a_profile'> Edit Details</a></td>";
 							echo "</tr>";
 							$sno=$sno+1;
 						}					
-						echo "</table><br>";					
-}
+						echo "</table>";					 
+					}
 					     
 ?>
 
@@ -502,6 +507,83 @@
 	<!---------------------------- Main Div Ended ------------------------------>
 
 	
+    <div class="header" style="position: absolute;bottom: 0; padding:0;margin:0;background-color: rgba(0,0,0,0.3); width:100%; height:50px" >
+    
+	<table>
+	
+		<tr>
+			
+			<td> 
+				<a class="footerLink" href="aboutUs.php">
+					About Us
+				</a>
+			</td>
+		
+		
+			<td width="50px">
+			</td>
+		
+			
+			<td>
+				<a class="footerLink" href="tnc.html">
+					Terms and Conditions
+				</a>
+			</td>
+	
+			
+			<td width="50px">
+			</td>
+	
+		
+			<td>
+				<div class="fb-like" data-href="https://www.facebook.com/100acresdotcom?fref=ts" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
+				</div>
+			</td>
+	
+	
+			<td width="50px">
+			</td>
+			
+			
+			<td>
+				<a class="footerLink" href="Feedback.html">
+					Feedback
+				</a>
+			</td>
+			
+			
+			<td width="50px">
+			</td>
+			
+			
+			<td>
+				 <a class="footerLink" href="Report.html">
+				 	Report a problem
+				 </a>
+			</td>
+			
+			
+			<td width="50px">
+			</td>
+			
+			
+			<td>
+				<a class="footerLink" href="PrivacyPolicy.html">
+					Privacy Policy
+				</a>
+			</td>
+			
+			<td width="50px">
+			</td>
+			
+			
+			<td>
+				&#169;100acres.com 
+			</td>
+			
+		</tr>
+	</table>
+</div>
 	
 		
 		</body>

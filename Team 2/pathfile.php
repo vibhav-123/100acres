@@ -17,10 +17,10 @@ $userControllerValidateLoginPath="http://www.100acres.com/index.php/user/validat
 $userControllerRegisterUserPath= "http://www.100acres.com/index.php/user/registerUser";
 
 
-$APIregisterPath="http://localhost:8080/T2Login/webapi/site/register";
-$APIloginPath="http://localhost:8080/T2Login/webapi/site/login";
-$APIverifyPath="http://localhost:8080/T2Login/webapi/site/verify";
-$APIforgetPath="http://localhost:8080/T2Login/webapi/site/forget";
+$APIregisterPath="http://localhost:8080/projectWebService/webapi/site/register";
+$APIloginPath="http://localhost:8080/projectWebService/webapi/site/login";
+$APIverifyPath="http://localhost:8080/projectWebService/webapi/site/verify";
+$APIforgetPath="http://localhost:8080/projectWebService/webapi/site/forget";
 
 $viewProfilePath="http://www.100acres.com/index.php/user/viewUserProfile";
 $userLogoutPath="http://www.100acres.com/index.php/welcome/logout";

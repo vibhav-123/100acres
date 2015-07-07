@@ -9,7 +9,7 @@ $fbSDKPath="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
 $homePath="http://www.100acres.com";
 
 
-$propertyControllerPostadvertFuncPath="http://www.100acres.com/index.php/property_c/postadvert";
+$propertyControllerPostadvertFuncPath="http://www.100acres.com/index.php/property_c/postAd";
 
 
 $userControllerValidateLoginPath="http://www.100acres.com/index.php/user/validateLogin";
