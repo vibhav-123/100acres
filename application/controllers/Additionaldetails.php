@@ -30,7 +30,7 @@ class Additionaldetails extends CI_Controller{
 		$id=$data['id'];
 		//ChromePhp::log($data);
 		$result=$this->additionaldetails_model->postadditionaldetails($data);
-		ChromePhp::log($result);
+		//ChromePhp::log($result);
 		if($result=='ok'){
 			redirect('/property/details/'.$id,'refresh');
 		}

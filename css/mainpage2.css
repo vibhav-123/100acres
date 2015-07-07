@@ -75,13 +75,14 @@ figcaption{
 	margin-top: 30%;
 	width: 600px;
 	margin-left: 40px;
-	border: :1px solid white;
+	
 }
 
 .forminput{
 	padding: 15px;
 	margin-top: 15px;
 	margin-left: 55px;
+	width: 75%;
 }
 
 .forminput1{

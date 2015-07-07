@@ -14,7 +14,7 @@ class User extends CI_Controller{
         
           if($this->session->userdata('useremail')!='')
           {
-              $this->welcome();
+              redirect('/home','refresh')
           }
           else{
               if(isset($_GET['loginfirst']))
@@ -27,15 +27,8 @@ class User extends CI_Controller{
                $this->load->view('footer_view',$data);
           }
       }
-  //sample page for welcome after login
-      public function welcome()
-      {
-          $data['title']= 'Welcome';
-          $this->load->view('header_view',$data);
-          $this->load->view('welcome_view.php', $data);
-          $this->load->view('footer_view',$data);
-      }
-      //check with database for details
+ 
+
       public function login()
       {
           //print_r($_POST);
@@ -81,14 +74,8 @@ class User extends CI_Controller{
               $this->index();
           }
       }
-      //sample page for thank after registering
-      public function thank()
-      {
-          $data['title']= 'Thank';
-          $this->load->view('header_view',$data);
-          $this->load->view('thank_view.php', $data);
-          $this->load->view('footer_view',$data);
-         }
+
+      
  
       public function registration()
       {
@@ -114,7 +101,8 @@ class User extends CI_Controller{
               if($result)
               { 
                   $this->user_model->add_user();
-                  $this->thank();
+                  $this->session->set_userdata('useremail',$email);
+                  redirect('/home','refresh')
               }
               else
               {
