@@ -9,6 +9,6 @@ $welcome1="http://www.100acres.com/index.php/welcome";
 $property_image_path_pg="http://www.100acres.com/property_image/pg/";
 $property_image_path_residential="http://www.100acres.com/property_image/residential/";
 $property_image_path_commercial="http://www.100acres.com/property_image/commercial/";
-$relative_property_image_path="/var/www/html/codeigniter/property_image/";
-
+$relative_property_image_path="/var/www/html/CodeIgniter/property_image/";
+$web_service="http://localhost:8082/register/webapi/reg/";
 ?>
