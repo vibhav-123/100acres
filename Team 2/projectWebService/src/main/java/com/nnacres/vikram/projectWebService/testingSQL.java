@@ -180,11 +180,10 @@ public class testingSQL
 		String passHash=uHandler.getpassword();
 		String contact=uHandler.getcontact();
 		String name=uHandler.getname();
-		String type=uHandler.gettype();
 		Long randomLong = randomGenerator.nextLong();
 		String hash=md5Hash.getHash(randomLong+"");
 		UserWrapper uInformation=new UserWrapper();
-		String insertString = "insert into " + dbName + ".Users(name,email,pwrd,contact,type,CREATED_ON,hash) " + "values(?,?,?,?,?,?,?) ";
+		String insertString = "insert into " + dbName + ".Users(name,email,pwrd,contact,CREATED_ON,hash) " + "values(?,?,?,?,?,?) ";
 		PreparedStatement setDetails=null;
 		try {
 			  setDetails = conn.prepareStatement(insertString,Statement.RETURN_GENERATED_KEYS);
@@ -192,9 +191,8 @@ public class testingSQL
 			  setDetails.setString(2, email);
 			  setDetails.setString(3, passHash);
 			  setDetails.setString(4, contact);
-			  setDetails.setString(5, type);
-			  setDetails.setTimestamp(6, new Timestamp(date.getTime()));
-			  setDetails.setString(7, hash);
+			  setDetails.setTimestamp(5, new Timestamp(date.getTime()));
+			  setDetails.setString(6, hash);
 			  int res=setDetails.executeUpdate();
 			  if(res>0)
 			  {
