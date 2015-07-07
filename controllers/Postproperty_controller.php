@@ -13,8 +13,8 @@ function register()
 
  	if($this->session->userdata('logged_in'))
 	{
-		print_r($this->session->userdata('logged_in'));
-	//Get the property details via POST request.
+		//print_r($this->session->userdata('logged_in'));
+		//Get the property details via POST request.
 		if(isset($_POST['owner_type']) && isset($_POST['sellorrent']) && isset($_POST['select_city']) && isset($_POST['address']) && isset($_POST['select_value']) && isset($_POST['price']))
 		{
 			//Get the User_id of the user	
@@ -82,10 +82,12 @@ function register()
 }
 else
 {
-		// print_r($this->session->userdata('logged_in'));die;
+	// print_r($this->session->userdata('logged_in'));die;
 	// echo "session destroyed";
 	// print_r($this->session->userdata('logged_in'));
 	// die();
+	// $this->session->unset_userdata('logged_in');
+ //   	session_destroy();
 	$error=array('error' => "",'success'=>"First Login");
 	header("Location: http://www.100acres.com/Login");
    	die();

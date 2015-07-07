@@ -7,7 +7,7 @@
 <body>
 <!--If message is set then echo that to screen-->
 <?php if (isset($message) ) { ?>
-<CENTER><h3 style="color:green;"><?php echo $message; ?></h3></CENTER><br>
+<CENTER><h3 style="color:red;"><?php echo $message; ?></h3></CENTER><br>
 <?php } ?>
 <div id="nav">
       <ul>

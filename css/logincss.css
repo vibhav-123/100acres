@@ -173,3 +173,8 @@ form fieldset a:hover { text-decoration: underline; }
 	display: inline-block;
 	margin-right: 20px;
 }
+#fbbutton{
+	margin: auto;
+	width:40%;
+	padding:10px;
+}

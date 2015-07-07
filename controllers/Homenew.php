@@ -18,7 +18,7 @@ class Homenew extends CI_Controller {
    		else
    				{
             //if the user is not logged in then pass user's name as NULL or an empty string
-            $data['Name'] ='NULL';
+            $data['Name'] ='';
    					$this->load->view('homenew',$data);
    				}
     }	

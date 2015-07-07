@@ -30,13 +30,15 @@ function index()
 		{
 			//If data is inserted in the database then show this message to the user
 			$data['message'] = 'Account Created Successfully';
+			$this->load->view('login', $data);	
 		}
 		else
 		{
 			//If Email is already in use then shoe this message on the screen
 			$data['message']= 'Email already exists';
+			$this->load->view('form', $data);
 		}	
-		$this->load->view('form', $data);	
+			
 		
 	}
 	else

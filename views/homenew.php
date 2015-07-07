@@ -23,10 +23,10 @@
 				<li class="blue"><a href="http://www.100acres.com/Form">Register</a></li>
 		<!--If name is set then it implies that session is created and accordingly show the LOGIN and LOGOUT button-->
         <?php
-				if($Name!='NULL') 
+				if($Name!='') 
           { ?>
 				<li class="another_blue"><a href="home/logout">Logout</a></li><?php } ?>
-			<?php	 if(($Name)=='NULL') {?>
+			<?php	 if(($Name)=='') {?>
 				<li class="another_blue"><a href="http://www.100acres.com/Login">Login</a></li><?php } ?>
 			 </ul>	
 		</div>
@@ -80,8 +80,8 @@
 		</div>
 		<div id="footer">
 			<ul>
-				<div id="buy" onclick="toggle_buy()"><li class="black" ><a href="#buy">BUY</a></li></div>
-				<div id="rent" onclick="toggle_rent()"><li class="black" ><a href="#rent">RENT</a></li></div>
+				<div id="buy" onclick="toggle('Sell')"><li class="black" ><a href="#buy">BUY</a></li></div>
+				<div id="rent" onclick="toggle('Rent')"><li class="black" ><a href="#rent">RENT</a></li></div>
 			</ul>	
 		</div>
 		<script type = "text/javascript" src="http://www.100acres.com/js/searchvalidation.js"></script>

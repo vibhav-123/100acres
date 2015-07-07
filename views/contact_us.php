@@ -114,13 +114,13 @@
 		<li class="blue"><a href="http://www.100acres.com/Form">Register</a></li>
 		<!--If name is set then it implies that session is created.Accordingly show the LOGIN and LOGOUT button-->
         <?php
-				if($Name!='NULL') 
+				if($Name!='') 
         {?>
 				<li class="another_blue"><a href="home/logout">Logout</a></li>
 		<?php
 		 }?>
 		<?php	
-				 if(($Name)=='NULL') 
+				 if(($Name)=='') 
 		{?>
 				<li class="another_blue"><a href="http://www.100acres.com/Login">Login</a></li>
 		<?php

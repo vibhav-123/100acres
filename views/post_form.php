@@ -16,11 +16,14 @@
 				<!-- print message in success variable on the screen -->
 				<?php if(isset($success))
 				{
-					if($success=="First Login")
-						{	echo $success; 
-							header('Location: http://www.100acres.com/Login');
-							die();}
-				else{echo $success;} 
+					// if($success=="First Login")
+					// 	{	echo $success; 
+					// 		header('Location: http://www.100acres.com/Login');
+					// 		die();
+					// 	}
+				// else{
+					echo $success;
+				// } 
 				}?>
 			</div>
 			<!-- Form start -->
@@ -68,7 +71,7 @@
 				<div id="image"><?php echo $error; ?></div>
 			</p>
 			<p>
-				<input type="submit" name="submit" value="Register">
+				<input type="submit" name="submit" value="Post a Property">
 			</p>
 			</form>
 			<!-- end of form -->

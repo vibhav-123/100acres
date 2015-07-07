@@ -73,14 +73,15 @@
         <option value="Sell" <?php if($saved_values[4] == "Sell") echo "selected";?> >Sell</option>
        </select>
       <br><br>
-      <input type="submit" name="submit" value="Submit">
-      <br><br>
-      SORT BY:
+       SORT BY:
       <select name='sort'>
         <option value="NULL">Select an option</option>
         <option value="expected_price">Price</option>
        </select>
       <br>
+      <input type="submit" name="submit" value="Search">
+      <br><br>
+     
       </form>
 </div>
 <div id="section">

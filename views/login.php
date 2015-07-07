@@ -16,6 +16,9 @@
 <div id="login">
 <h1><strong>Welcome.</strong> Please login.</h1>
 <!-- If error message is set then print that to screen -->
+<?php if (isset($message) ) { ?>
+<CENTER><h3 style="color:black;"><?php echo $message; ?></h3></CENTER><br>
+<?php } ?>
 <?php 
 if(isset($error))
 	echo $error;
@@ -30,13 +33,9 @@ if(isset($error))
 </fieldset>
 </form>
 <p><span class="btn-round">or</span></p>
-<p>
-	<fb:login-button scope="public_profile,email" data-size="large" data-show-faces="true" data-auto-logout-link="true" onlogin="checkLoginState();"></fb:login-button>
-</p>
-<p>
-	<a class="twitter-before"></a>
-	<button class="twitter">Login Using Facebook</button>
-</p>
+<div id="fbbutton">
+	<fb:login-button scope="public_profile,email" data-size="xlarge" data-show-faces="true" data-auto-logout-link="true" onlogin="checkLoginState();"></fb:login-button>
+</div>
 </div> <!-- end login -->
 </body>
 </html>
