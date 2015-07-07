@@ -8,8 +8,10 @@
 
 <script type="text/javascript" src="<?php echo $js; ?>jquery-1.11.3.min.js"></script>
 <script  src="<?php echo $js; ?>login_register.js"></script>
+<script  src="<?php echo $js; ?>full_details_page.js"></script>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_details_page.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_posting.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_full_details.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_header.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_form_button.css">
 </head>
@@ -75,7 +77,61 @@ echo "<div id='headd' ><h1>Property Details</h1></div>";
 if($property_type=="pg")
 {
 		foreach ($res as $row) {
-		 echo "<div id='pg_cover'></div>
+		 echo "
+		
+		
+					<div id='".$row->pid."' class='contact'>
+		            <form>
+		                <table  border='0'>
+		                    <tr>
+								<td><b>Name</b></td>
+		                        <td> <input type='text' name='name' id='cname".$row->pid."' style='border-color:gray'></td>
+		                    </tr>
+		                    <tr>
+								<td><b>Email</b></td>
+		                        <td> <input type='text' name='email' id='cemail".$row->pid."' style='border-color:gray'></td>
+		                    </tr>
+		                    <tr>
+								<td><b>Contact</b></td>
+		                        <td> <input type='text' name='phone' id='cphone".$row->pid."' style='border-color:gray'></td>
+		                    </tr>
+						</table>
+						<table style='width:100%'>
+							<tr>
+								<td align='center'><input id='submit".$row->pid."'  style='height:25px;width:60px;background-color: #FFBF00' type='button' onclick=\"validatecontact(".$row->pid.",'".$property_type."')\" value='Submit'></td>
+		                        <td align='center'><input id='cancel".$row->pid."' style='height:25px;width:60px;background-color: #FFBF00' type='button' onclick='cancel(".$row->pid.")' value='Cancel'></td>
+		                    </tr>
+		            	</table>
+		           		</form>
+					      </div>
+						  <div id='info".$row->pid."' class='contact'>
+					            <form>
+					                <table  border='0'>
+					                    <tr>
+											<td><b>Name</b></td>
+					                        <td> <label id='infoname".$row->pid."'></label></td>
+					                    </tr>
+					                    <tr>
+											<td><b>Email</b></td>
+					                        <td> <label id='infoemail".$row->pid."'></label></td>
+					                    </tr>
+					                    <tr>
+											<td><b>Contact</b></td>
+					                        <td> <label id='infophone".$row->pid."' ></label></td>
+					                    </tr>
+									</table>
+									<table style='width:100%'>
+										<tr>
+											<td align='center'><input id='okay".$row->pid."'  style='height:25px;width:60px;background-color: #FFBF00' type='button' onclick='closeinfo(".$row->pid.")' value='Done'></td>
+					                    </tr>
+					                </table>
+					           </form>
+					      </div> 		
+	
+		
+		
+		
+				<div id='pg_cover'></div>
 			   <div id='pg_shadow'></div>
 				<div>
 			   <fieldset id='ProfilePage' >
@@ -138,6 +194,10 @@ if($property_type=="pg")
 		       	  	   <strong>Address</strong>
 		       	   	  <span id='addr'>: ";echo $row->address."</span>
 		       	   </p>	
+    		
+    		 <font  align='center' class='cont' id='b' onclick='get_contact(".$row->pid.")' style='background-color: #FFBF00;width: 30%;height: 12%;padding-left: 0;padding-right: 0;padding-bottom: 0;'>
+                Get Contact
+            </font>
 		       	  
 		       	 </div>
 		      <!-- Needed because other elements inside ProfilePage have floats -->
