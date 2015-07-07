@@ -407,7 +407,7 @@
 		<div class="_prop">
 			<font color="red">*</font> <font color="white"><b>Built-up Area:</b></font>
 		</div>
-		<input type="text" id="area" name="area" placeholder="Enter Area"> 
+		<input type="text" id="area" name="area" placeholder="Enter Area in Sq. Units"> 
 		<font id="area_error" style="color: red;text-shadow: 1px 1px black" size="2px"></font>
 	</div>
 	<hr>	
@@ -416,14 +416,13 @@
 		<div class="_prop">
 			 <font color="red">*</font> <font color="white"><b>Price:</b></font>
 		</div>
-		<input type="text" id="exp_price" name="price" placeholder="Enter price">
+		<input type="text" id="exp_price" name="price" placeholder="Enter price in Rs.">
 		<font id="exp_price_error" style="color: red;text-shadow: 1px 1px black" size="2px"></font>
 	</div>	
 	<br>
 	<div>	
 	</div>
-	<br>
-	<div>
+	<div style="display: none;">
 		<div class="_prop">
 			 <font color="white"><b>Price per Unit Area</b></font>
 		</div>
@@ -474,10 +473,10 @@
 	</div>
 	
 	<div class="_prop">
-			<font color="white">*</font> <font color="white"><b>Upload Picture:</b></font>
+			<font color="white"><b>Upload Picture:</b></font>
 	</div>
 	<input type="file" name="property_pic" id="ppic" size="350"/>
-	
+	<hr>
 	<div style="text-align: center;">
 	<input class="myButton" type="submit" id="b1" value="Submit"/>
 	</div>
