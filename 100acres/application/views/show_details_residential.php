@@ -83,7 +83,6 @@ if($property_type=="pg")
 		    	<div id='LeftCol'>
 		        	<div id='Photo'><img src=".$row->photo_url." /></div>
 		        	<div id='ProfileOptions'><br>
-		        	<button>Upload Picture</button>
 		  	      	</div>
 		  	  	</div>
 			
@@ -140,9 +139,7 @@ if($property_type=="pg")
 		       	   	  <span id='addr'>: ";echo $row->address."</span>
 		       	   </p>	
 		       	  
-		       	  <button id='edit' onclick='editProfile()' class='myButton' style='display:none'>Edit</button>
-		      	  <button id='pg' onclick='removeProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Remove Property</button>	
-		       	  </div>
+		       	 </div>
 		      <!-- Needed because other elements inside ProfilePage have floats -->
 		      <div style='clear:both'></div>		
 		   </fieldset>
@@ -166,7 +163,6 @@ if($property_type=="pg")
 		    	<div id='LeftCol'>
 		        	<div id='Photo'><img src=".$row->photo_url." /></div>
 		        	<div id='ProfileOptions'><br>
-		        	<button>Upload Picture</button>
 		  	      	</div>
 		  	  	</div>
 		 
@@ -244,8 +240,6 @@ if($property_type=="pg")
 		       	  			   <strong>Address</strong>
 		       	    		   <span id='addr'>: ";echo $row->address."</span>
 		       	  			 </p>
-		       	  <button id='edit' onclick='editProfile()' class='myButton' style='display:none' >Edit</button>
-		      	  <button id='residential' onclick='removeProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Remove Property</button>
 		       	  </div>
 		      <!-- Needed because other elements inside ProfilePage have floats -->
 		      <div style='clear:both'></div>
@@ -270,7 +264,6 @@ if($property_type=="pg")
 		    	<div id='LeftCol'>
 		        	<div id='Photo'><img src=".$row->photo_url." /></div>
 		        	<div id='ProfileOptions'><br>
-		        	<button>Upload Picture</button>
 		  	      	</div>
 		  	  	</div>
 		 
@@ -342,8 +335,6 @@ if($property_type=="pg")
 		       	  			   <strong>Address</strong>
 		       	    		   <span id='addr'>: ";echo $row->address."</span>
 		       	  			 </p>
-		       	  <button id='edit' onclick='editProfile()' class='myButton' style='display:none'>Edit</button>
-		      	  <button id='commercial' onclick='removeProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Remove Property</button>
 		       	  </div>
 		      <!-- Needed because other elements inside ProfilePage have floats -->
 		      <div style='clear:both'></div>

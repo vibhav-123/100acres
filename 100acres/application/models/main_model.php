@@ -12,10 +12,8 @@ class Main_model extends CI_Model{
 		global $relative_property_image_path;
 		$image_path=$relative_property_image_path."pg/";
 		$max_pid1;
-		if($_FILES["property_pic"]['name']!=""){
-			
+		if($_FILES["property_pic"]['name']!=""){			
 			$query_max_pid=$this->db->query("select max(pid) as pid from PROPERTY_PG");
-			//$max_pid=
 			foreach($query_max_pid->result() as $max_pid){
 			$max_pid1=$max_pid->pid + 1;
 			$image_path=$image_path.$max_pid1;
@@ -208,7 +206,7 @@ class Main_model extends CI_Model{
 		$query = $this->db->query($res_search_query);
 		$query_result=$query->result();
 		
-		$query_result_array=array('res'=>$query_result,'search_property_type1'=>$_POST['search_property_type'],'search_type'=>$_POST['search_type'],'selected_pg_min_price'=>$_POST['search_pg_min_price'],'selected_pg_max_price'=>$_POST['search_pg_max_price'],'selected_pg_person'=>$person,'selected_pg_gender'=>$gender,'selected_pg_sharing'=>$sharing,'city'=>$city);
+		$query_result_array=array('res'=>$query_result,'search_property_type1'=>$_POST['search_property_type'],'search_type'=>$_POST['search_type'],'selected_pg_min_price'=>$_POST['search_pg_min_price'],'selected_pg_max_price'=>$_POST['search_pg_max_price'],'selected_pg_person'=>$person,'selected_pg_gender'=>$gender,'selected_pg_sharing'=>$sharing,'city'=>$city,'address'=>$locality);
 		return  $query_result_array;
 	}
 	
@@ -274,7 +272,7 @@ class Main_model extends CI_Model{
 		$query = $this->db->query($res_search_query);
 		$query_result=$query->result();
 		
-		$query_result_array=array('res'=>$query_result,'search_property_type1'=>$_POST['search_property_type'],'search_type'=>$_POST['search_type'],'selected_max_price'=>$max_price,'selected_min_price'=>$min_price,'selected_area'=>$area,'selected_person'=>$person,'selected_bhk'=>$bhk,'selected_washroom'=>$washroom,'city'=>$city);
+		$query_result_array=array('res'=>$query_result,'search_property_type1'=>$_POST['search_property_type'],'search_type'=>$_POST['search_type'],'selected_max_price'=>$max_price,'selected_min_price'=>$min_price,'selected_area'=>$area,'selected_person'=>$person,'selected_bhk'=>$bhk,'selected_washroom'=>$washroom,'city'=>$city,'address'=>$locality);
 	
 	
 		return  $query_result_array;

@@ -18,6 +18,7 @@ $(document).ready(function()
 	     		
 						echo "
 									$('#search_city').val('".$city."');
+									$('#search_locality').val('".$address."')
 									$('#prop_type_dropdown').val('".$search_property_type1."');
 								";
 						if($search_type=='pg'){
