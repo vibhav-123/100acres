@@ -159,6 +159,17 @@ class Main_model extends CI_Model{
 		return $data;
 	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public function getRemovedPostings(){
+		$query = $this->db->query("SELECT * FROM PROPERTY_PG where isdeleted=1 and uid=".$this->session->userdata['uid']." ORDER BY pid DESC");
+		$pg_result=$query->result();
+		$query = $this->db->query("SELECT * FROM PROPERTY_RESIDENTIAL where isdeleted=1 and uid=".$this->session->userdata['uid']." ORDER BY pid DESC");
+		$resi_result=$query->result();
+		$query = $this->db->query("SELECT * FROM PROPERTY_COMMERCIAL where isdeleted=1 and uid=".$this->session->userdata['uid']." ORDER BY pid DESC");
+		$comm_result=$query->result();
+		$data=array('pg'=>$pg_result,'resi'=>$resi_result,'comm'=>$comm_result);
+		return $data;
+	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	 public function removePropertyPg(){
 		$data=array('isdeleted'=>1);
 		$this->db->where('pid',$_POST['pid']);
@@ -173,6 +184,24 @@ class Main_model extends CI_Model{
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public function removePropertyCommercial(){
 		$data=array('isdeleted'=>1);
+		$this->db->where('pid',$_POST['pid']);
+		$this->db->update('PROPERTY_COMMERCIAL',$data);
+	} 
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
+	 public function activatePropertyPg(){
+		$data=array('isdeleted'=>0);
+		$this->db->where('pid',$_POST['pid']);
+		$this->db->update('PROPERTY_PG',$data);
+	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public function activatePropertyResidential(){
+		$data=array('isdeleted'=>0);
+		$this->db->where('pid',$_POST['pid']);
+		$this->db->update('PROPERTY_RESIDENTIAL',$data);
+	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public function activatePropertyCommercial(){
+		$data=array('isdeleted'=>0);
 		$this->db->where('pid',$_POST['pid']);
 		$this->db->update('PROPERTY_COMMERCIAL',$data);
 	} 
@@ -337,11 +366,11 @@ class Main_model extends CI_Model{
 				'mob' => $_POST['phone'],
 				'created_on' => date("Y-m-d h:i:s")
 		));
-		$query=$this->db->query("select * from USER");
+		$query=$this->db->query($query_search);
 		$data;
 		foreach ($query->result() as $row)
 		{
-		    $data=$row->name." ".$row->email." ".$row->mob;
+		    $data=$row->name.";".$row->email.";".$row->mob;
 		}
 		return $data; 
 	}

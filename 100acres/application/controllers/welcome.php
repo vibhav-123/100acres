@@ -10,6 +10,11 @@ class Welcome extends CI_Controller {
 	{ 
 		$this->load->view('Main.php');
 	}
+	
+	public function test(){
+		//echo "thnrf";
+		echo  $this->session->userdata('uid');
+	}
 	///////////////////////////////////////////////////////////////////////////
 	// check whether the session is maintained
 	public function onOk() {
@@ -203,6 +208,9 @@ class Welcome extends CI_Controller {
 	public function forgotMail(){
 		$forgotData=forgotPass();
 		$forgotDataDecoded=json_decode($forgotData,true);
+		//echo $forgotDataDecoded['email'];
+		
+		
 		if($forgotDataDecoded['error']==""){
 			echo "webservice Error";
 		}else if($forgotDataDecoded['error']=="not found"){
@@ -212,7 +220,7 @@ class Welcome extends CI_Controller {
 			$forgotPassword=$forgotDataDecoded['password'];
 			if ( mail( $forgotEmail, 'your 100acres password', $forgotPassword) ) {
 				//echo "--".$to;
-				echo "your password has been sent to the registered email";   // mail sent seccesfully
+				echo "Your password has been sent to the registered email";   // mail sent seccesfully
 			} else {
 				echo "mail sending error... try again later";   // mail sending error
 			}
@@ -250,6 +258,20 @@ class Welcome extends CI_Controller {
 			
 	}
 	
+	////////////////////////////////////////////////////////////////
+	// it displays all the properties removed buy the user
+	public function gotoRemovedPostings(){
+		if(isset($this->session->userdata['email'])){
+			 $this->load->model('main_model');
+			$property_result=$this->main_model->getRemovedPostings(); 
+			$this->load->view('RemovedPostings.php',$property_result);
+		}
+		else{
+			$this->load->view('Main.php');
+		}
+			
+	}
+	
 	//////////////////////////////////////////////////////////////////
 	// when user edits his profile
 	public function editProfile(){
@@ -273,12 +295,29 @@ class Welcome extends CI_Controller {
 	}
 	
 	//////////////////////////////////////////////////////////////////
+	// for activating the properties
+	public function activatePosting(){
+		 $this->load->model('main_model');
+		 if($_POST["ptype"] == "pg"){
+			$this->main_model->activatePropertyPg();	
+		}
+		else if($_POST["ptype"] == "residential"){
+			$this->main_model->activatePropertyResidential();
+		
+		}else if($_POST["ptype"]== "commercial"){
+			$this->main_model->activatePropertyCommercial();
+		} 
+	}
+	
+	//////////////////////////////////////////////////////////////////
 	// main search function
 	public function search_main(){
 		$this->load->model('main_model');
 		$property_result;
 		if($_POST['search_type']=="pg"){
+			//echo "residential1";
 			$property_result=$this->main_model->search_pg();
+			//$this->main_model->search_pg();
 		}else{
 			$property_result=$this->main_model->search_comm_or_res();
 		}
@@ -287,7 +326,8 @@ class Welcome extends CI_Controller {
 	//////////////////////////////////////////////////////////////////
 	// for showing details page of residential properties
 	public function showDetails_residential($parameter_pid){
-
+		//$pp=json_decode($parameter_values);
+		//echo "yo yo  res".$parameter_pid;
 		$this->load->model('main_model');
 		$property_result=$this->main_model->search_full_residential($parameter_pid);
 		$this->load->view('show_details_residential.php',$property_result);
@@ -296,6 +336,7 @@ class Welcome extends CI_Controller {
 	//////////////////////////////////////////////////////////////////
 	//for showing details page of commercial properties
 	public function showDetails_commercial($parameter_pid){
+		//$this->load->view('show_details_commercial.php',$parameter_values);
 		$this->load->model('main_model');
 		$property_result=$this->main_model->search_full_commercial($parameter_pid);
 		$this->load->view('show_details_residential.php',$property_result);
@@ -303,6 +344,8 @@ class Welcome extends CI_Controller {
 	////////////////////////////////////////////////////////////////
 	//for showing details page of PG properties
 	public function showDetails_pg($parameter_pid){
+		//$this->load->view('show_details_pg.php',$parameter_values);
+		//echo "yo yo   pg".$parameter_pid;
 		$this->load->model('main_model');
 		$property_result=$this->main_model->search_full_pg($parameter_pid);
 		$this->load->view('show_details_residential.php',$property_result);

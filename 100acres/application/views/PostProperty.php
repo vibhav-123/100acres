@@ -182,6 +182,7 @@
         <li><a href="#"><?php echo $this->session->userdata['email'];?></a></li>        
         <li><a href="javascript:goToProfile()">Profile</a></li>         
         <li><a href="javascript:goToPostings()">Postings</a></li>
+        <li><a href="javascript:goToRemovedPostings()">RemovedPostings</a></li>
         <li><a href='javascript:logout()'>Logout</a></li>
     </ul>
 </div>

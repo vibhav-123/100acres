@@ -1,0 +1,1 @@
+function activateProp(a,b){$.post("http://www.100acres.com/index.php/welcome/activatePosting",{pid:a,ptype:b},function(d,c){});window.location.assign("http://www.100acres.com/index.php/welcome/gotoRemovedPostings")};

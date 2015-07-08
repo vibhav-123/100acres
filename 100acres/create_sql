@@ -1,3 +1,7 @@
+create database 100acres;
+
+use 100acres;
+
 CREATE TABLE `USER` (
   `uid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'User ID',
   `username` varchar(50) NOT NULL,

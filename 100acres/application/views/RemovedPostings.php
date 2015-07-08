@@ -8,7 +8,7 @@
 
 <script type="text/javascript" src="<?php echo $js; ?>jquery-1.11.3.min.js"></script>
 <script  src="<?php echo $js; ?>login_register.js"></script>
-<script  src="<?php echo $js; ?>posting.js"></script>
+<script  src="<?php echo $js; ?>activate_posting.js"></script>
 
 <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_posting.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>style_header.css">
@@ -74,7 +74,7 @@
 <!-- Posting div starts -->
 <div style="position: absolute;left:20%">
 <?php 
-echo "<div id='headd' ><h1>Property Details</h1></div>";
+echo "<div id='headd' ><h1>Removed Properties</h1></div>";
 foreach ($pg as $row) {
  echo "<div id='pg_cover'></div>
 	   <div id='pg_shadow'></div>
@@ -140,7 +140,7 @@ foreach ($pg as $row) {
        	   </p>	
        	  
        	  <button id='edit' onclick='editProfile()' class='myButton' style='display:none'>Edit</button>
-      	  <button id='pg' onclick='removeProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Remove Property</button>	
+      	  <button id='pg' onclick='activateProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Activate Property</button>	
        	  </div>
       <!-- Needed because other elements inside ProfilePage have floats -->
       <div style='clear:both'></div>		
@@ -168,7 +168,7 @@ foreach ($pg as $row) {
  	    <div id='Info'>
         	<p>
        	  	   	<strong>BHK</strong>
-       	  		<span class='_span'>: ";echo $row->bhk."</span>
+       	  		<span class='_span'>:Rs ";echo $row->bhk."</span>
        			<strong>Washroom</strong>
        			<span class='_span'>: ";echo $row->washroom."</span>
        	   </p>
@@ -240,7 +240,7 @@ foreach ($pg as $row) {
        	    		   <span id='addr'>: ";echo $row->address."</span>
        	  			 </p>
        	  <button id='edit' onclick='editProfile()' class='myButton' style='display:none' >Edit</button>
-      	  <button id='residential' onclick='removeProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Remove Property</button>
+      	  <button id='residential' onclick='activateProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Activate Property</button>
        	  </div>
       <!-- Needed because other elements inside ProfilePage have floats -->
       <div style='clear:both'></div>
@@ -335,7 +335,7 @@ foreach ($pg as $row) {
        	    		   <span id='addr'>: ";echo $row->address."</span>
        	  			 </p>
        	  <button id='edit' onclick='editProfile()' class='myButton' style='display:none'>Edit</button>
-      	  <button id='commercial' onclick='removeProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Remove Property</button>
+      	  <button id='commercial' onclick='activateProp(".$row->pid.",this.id)' class='myButton' style='margin-left:80px'>Activate Property</button>
        	  </div>
       <!-- Needed because other elements inside ProfilePage have floats -->
       <div style='clear:both'></div>
